@@ -179,6 +179,8 @@ with doc.head:
     with div():
         attr(cls='header')
         h1('RedditGetsDrawn Recent Reference')
+        p('updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
+
     
     
 

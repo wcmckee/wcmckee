@@ -177,7 +177,7 @@ with doc:
         attr(cls='body')
         p(razdiz)
         h1(randaz)
-        p(str(blogread))
+        p(blogread)
 
 print doc
 
