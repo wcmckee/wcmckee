@@ -252,4 +252,73 @@ time.asctime()
 
 # <codecell>
 
+doc.TAB)
+
+
+import math
+
+math.pi
+
+# <codecell>
+
+Doc
+
+# <codecell>
+
+print ('hell')
+import math
+
+# <codecell>
+
+I
+
+# <codecell>
+
+pim = math.pi
+
+# <codecell>
+
+
+
+pim
+
+# <codecell>
+
+os.chdir('/home/wcmckee/brobeur-blog-post/')
+
+# <codecell>
+
+
+we
+
+# <codecell>
+
+os.listdir('
+
+# <codecell>
+
+
+
+
+
+
+# <codecell>
+
+ls
+
+# <codecell>
+
+cat index.html
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
 

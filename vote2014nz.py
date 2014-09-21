@@ -20,7 +20,7 @@ import dominate
 
 # <codecell>
 
-elecreq = ('http://www.electionresults.govt.nz/partystatus.html')
+elecreq = ('http://www.electionresults.govt.nz/electionresults_2014/partystatus.html')
 
 # <codecell>
 
@@ -33,6 +33,15 @@ elecaz = requests.get(elecreq)
 # <codecell>
 
 eletextg = elecaz.text
+
+# <codecell>
+
+eletextg
+
+# <codecell>
+
+soup = BeautifulSoup(eletextg)
+print(soup.prettify())
 
 # <codecell>
 
@@ -81,12 +90,32 @@ for votez in votelis:
 # <codecell>
 
 for numz in votezcont:
-    print numz
+    print(numz)
 
 # <codecell>
 
-votez
-    
+votaz = votez.getText()
+
+# <codecell>
+
+numadd = []
+
+# <codecell>
+
+for lets in votaz:
+        print lets
+        numadd.append(lets)
+
+# <codecell>
+
+for numza in numadd:
+    print numza
+
+# <codecell>
+
+for numz in numadd:
+    if int in numz:
+        print numz
 
 # <codecell>
 
@@ -94,14 +123,7 @@ soup.find_all('tr')
 
 # <codecell>
 
-soup = BeautifulSoup(eletextg)
-print(soup.prettify())
-
-# <codecell>
-
-
-# <codecell>
-
+X
 
 # <codecell>
 
