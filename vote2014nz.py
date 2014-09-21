@@ -3,17 +3,20 @@
 
 # <markdowncell>
 
-# kim dot com
+# <h1>vote2014nz</h1>
 # 
-# linux
+# Python script to get data on Election 2014 New Zealand Results
 # 
+
+# <markdowncell>
+
+# TODO
 
 # <codecell>
 
 import requests
-
 from bs4 import BeautifulSoup
-
+import dominate
 
 # <codecell>
 
@@ -43,15 +46,46 @@ devsa = soup.findAll("td", { "class" : "orhdg"})
 
 # <codecell>
 
+votelis = []
+
+# <codecell>
+
 for divs in mydivs:
     print divs.findAll('th')
+    #votelis.append(divs.findALL('th'))
     print divs.findNext('td')
-    print divs.findNext('tr')
+    #votelis.append(divs.findNext('td'))
+    #print divs.findNext('tr')
     
 
 # <codecell>
 
-devsa
+for devz in devsa:
+    print(devz)
+    votelis.append(devz)
+
+# <codecell>
+
+votelis
+
+# <codecell>
+
+votezcont = []
+
+# <codecell>
+
+for votez in votelis:
+    print votez.contents
+    votezcont.append(votez.contents)
+
+# <codecell>
+
+for numz in votezcont:
+    print numz
+
+# <codecell>
+
+votez
     
 
 # <codecell>
@@ -62,6 +96,15 @@ soup.find_all('tr')
 
 soup = BeautifulSoup(eletextg)
 print(soup.prettify())
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 
