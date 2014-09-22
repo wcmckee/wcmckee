@@ -59,10 +59,15 @@ votelis = []
 
 # <codecell>
 
+divlist = []
+
 for divs in mydivs:
     print divs.findAll('th')
+    divlist.append(divs.findAll('th'))
     #votelis.append(divs.findALL('th'))
     print divs.findNext('td')
+    divlist.append(divs.findNext('td'))
+                   
     #votelis.append(divs.findNext('td'))
     #print divs.findNext('tr')
     
@@ -127,6 +132,28 @@ X
 
 # <codecell>
 
+TODO:
+    
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+for divs in mydivs:
+    print divs.findAll[('tr')
+
+# <codecell>
+
+for divs in mydivs:
+    print divs.find_next('tr')
+
+# <codecell>
+
+divlist
 
 # <codecell>
 

@@ -321,4 +321,35 @@ cat index.html
 
 # <codecell>
 
+brobeind = open('índex.html', 'r')
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+
+# <codecell>
+
+brotest = open('índex.html', 'r')
+brotest.read()
+
+# <codecell>
+
+ls
+
+# <codecell>
+
 
