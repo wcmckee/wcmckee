@@ -24,7 +24,11 @@ import os
 
 # <codecell>
 
-postsdir = (u'/home/wcmckee/wcmckee/artcontrolme/posts')
+#artcpost = ('/home/wcmckee/artcontrolme/posts')
+
+# <codecell>
+
+postsdir = (u'/home/wcmckee/artcontrolme/posts')
 
 # <codecell>
 
@@ -36,7 +40,7 @@ alfilz = []
 
 # <codecell>
 
-for filz in os.listdir('/home/wcmckee/wcmckee/artcontrolme/posts'):
+for filz in os.listdir(postsdir):
     print filz
     alfilz.append(filz)
 

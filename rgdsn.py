@@ -224,14 +224,6 @@ mkindex.close()
 
 # <codecell>
 
-pwd
-
-# <codecell>
-
-ls
-
-# <codecell>
-
 print str(doc)
 
 # <codecell>
@@ -252,39 +244,14 @@ time.asctime()
 
 # <codecell>
 
-os.chdir('/home/wcmckee/brobeur-blog-post/')
+#os.chdir('/home/wcmckee/brobeur-blog-post/')
 
 # <codecell>
 
-brobeind = open('índex.html', 'r')
+#brobeind = open('índex.html', 'r')
 
 # <codecell>
 
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-brotest = open('índex.html', 'r')
-brotest.read()
-
-# <codecell>
-
-ls
-
-# <codecell>
-
+#brotest = open('índex.html', 'r')
+#brotest.read()
 
