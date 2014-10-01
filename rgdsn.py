@@ -3,9 +3,14 @@
 
 # <markdowncell>
 
-# Reddit Gets Drawn Snatch Script
+# <h1>Reddit Gets Drawn Snatch Script</h1>
 # 
-# test
+# Creates the website redditgetsdrawnrecentreference. It contains the 25 most recent posts on r/redditgetsdrawn. title, image url, and username
+# 
+# TODO:
+# Contains artwork replies to each thread
+# 
+# This is a Python script that takes data from reddit and posts it to another subreddit. It also creates a html file with the images embed into. The images are the most recent 25 on r/redditgetsdrawn.
 
 # <codecell>
 
@@ -58,6 +63,8 @@
 
 # <codecell>
 
+# <codecell>
+
 import os
 import random
 import requests
@@ -72,7 +79,13 @@ from time import gmtime, strftime
 
 # <codecell>
 
-os.chdir('/home/wcmckee/artcontroldrawsyou')
+# <codecell>
+
+chdira = ('/home/wcmckee/artcontroldrawsyou')
+os.chdir(chdira)
+
+# <codecell>
+
 
 # <codecell>
 
@@ -93,25 +106,9 @@ istit = (subz.title)
 istxt = (subz.selftext_html)
 istick = (subz.stickied)
 
-# <codecell>
-
-istit
-
-# <codecell>
-
-istxt
-
-# <codecell>
-
 rdnewz = rd.get_new()
 
-# <codecell>
-
 rdnew = []
-
-# <codecell>
-
-rdnew
 
 # <codecell>
 
@@ -232,15 +229,19 @@ print strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 # <codecell>
 
-strftime("%d" + "/" + "%M" + "/" + "%Y")
+savedate = strftime("%d" + "-" + "%M" + "-" + "%Y" + "-" + "%H")
 
 # <codecell>
 
-time.localtime()
+savedate
 
 # <codecell>
 
-time.asctime()
+deepone = str(savedate + '.md')
+
+# <codecell>
+
+deepone
 
 # <codecell>
 
@@ -254,4 +255,34 @@ time.asctime()
 
 #brotest = open('índex.html', 'r')
 #brotest.read()
+
+# <codecell>
+
+redposts = ('/home/wcmckee/rgdrecentReference/posts')
+
+# <codecell>
+
+os.chdir(redposts)
+
+# <codecell>
+
+
+# <codecell>
+
+time.asctime()
+
+# <codecell>
+
+savinx = open(str(deepone), 'w')
+
+# <codecell>
+
+savinx.write(str(doc))
+
+# <codecell>
+
+savinx.close()
+
+# <codecell>
+
 

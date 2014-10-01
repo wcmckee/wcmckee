@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <markdowncell>
+
+# BroBeur Studios Blog
+# 
+# This is similar to the artcontrolme script but it deals with BroBeur Studios posts
+
 # <codecell>
 
 import random
@@ -8,12 +14,6 @@ import random
 # <codecell>
 
 import os
-
-# <markdowncell>
-
-# BroBeur Studios Blog
-# 
-# This is similar to the artcontrolme script but it deals with BroBeur Studios posts
 
 # <codecell>
 
