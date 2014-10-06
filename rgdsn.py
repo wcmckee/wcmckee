@@ -12,56 +12,50 @@
 # 
 # This is a Python script that takes data from reddit and posts it to another subreddit. It also creates a html file with the images embed into. The images are the most recent 25 on r/redditgetsdrawn.
 
-# <codecell>
-
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
-
 # <markdowncell>
 
 # RedditGetsDrawn Snatch
-# 
+#  
 # This is a Python script that takes data from reddit and posts it to another subreddit. It also creates a html file with the images embed into. The images are the most recent 25 on r/redditgetsdrawn.
+#  
 # 
-
 # <markdowncell>
-
+# 
 # TODO
-# 
+#  
 # submit art to users via website
-# 
+#  
 # fix image sizes (need to scale down to 550px)
-# 
+#  
 # Save to server rather than imgur
-# 
+#  
 # Archieve, snapshots of rgd
-# 
+#  
 # more artcontrol
-# 
+#  
 # itwillbemine comments to html - currently being saved in contact 
-# 
+#  
 # work on css, div up page, title, side, body, fo
+# 
 # update twitter with ONE IMAGE and announce that the list has been updated.
-# 
+#  
 # write blog post and submits to artcontroldrawsyou/blog 
-# 
+#  
 # gets sticked post on reddit
-# 
+#  
 # delete about/contact page and have on all same page. can still have link to blog. 
 # about 
 # contact etc... along the top.
 # other sections
-# 
+#  
 # post images to blog for archieve - save body to wcmckee.com/blog - md format?
-# 
+#  
 # nikola install - build site.
-# 
+#  
 # cronjob to update site ever ?? hours? 4?
-# 
+#  
 # photos section: latest 25 photos submitted to redditgetsdrawn.
 # art section: latest 25 art submitted to redditgetsdrawn. 
-
-# <codecell>
 
 # <codecell>
 
@@ -83,9 +77,6 @@ from time import gmtime, strftime
 
 chdira = ('/home/wcmckee/artcontroldrawsyou')
 os.chdir(chdira)
-
-# <codecell>
-
 
 # <codecell>
 
@@ -263,9 +254,6 @@ redposts = ('/home/wcmckee/rgdrecentReference/posts')
 # <codecell>
 
 os.chdir(redposts)
-
-# <codecell>
-
 
 # <codecell>
 
