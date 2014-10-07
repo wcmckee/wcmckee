@@ -20,7 +20,7 @@ import git
 
 # <codecell>
 
-g = Github('wcmckee', 'fig123now!')
+g = Github('wcmckee', 'cam123now!')
 
 # <codecell>
 
@@ -147,5 +147,8 @@ git.repository.Repository.clone()
 
 # <codecell>
 
-git.objects
+(git.objects)
+
+# <codecell>
+
 

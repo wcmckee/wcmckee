@@ -70,6 +70,8 @@ import praw
 import dominate
 from dominate.tags import *
 from time import gmtime, strftime
+import nose
+import unittest
 
 # <codecell>
 
@@ -112,6 +114,35 @@ getrddraw = reddraw.get_subreddit('redditgetsdrawn')
 # <codecell>
 
 subz = getrddraw.get_new()
+
+# <codecell>
+
+class TestRedditFunction(unittest.TestCase):
+    
+    def setUp(self):
+        self.seq = reddraw.get_subreddit('redditgetsdrawn')
+        
+    def testredit(self):
+        drawnew('redditgetsdrawn') 
+
+# <codecell>
+
+def drawnew(subred):
+    getrdraw = reddraw.get_subreddit(subred)
+    return getrdraw
+
+# <codecell>
+
+rdrws = drawnew('redditgetsdrawn')
+
+# <codecell>
+
+rtohr = rdrws.get_controversial_from_all()
+
+# <headingcell level=5>
+
+# for imgz in rtohr:
+#     print imgz.selftext
 
 # <codecell>
 
@@ -270,6 +301,12 @@ savinx.write(str(doc))
 # <codecell>
 
 savinx.close()
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 

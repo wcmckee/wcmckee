@@ -7,31 +7,24 @@
 # 
 # This is a python script used to sign in and signout, keeping track of hours and creating a more automative system.
 # 
-# Make sign in and out fast 
+# Make sign in and out faster, easier to keep track of.
 # 
 # Never forget. 
 # 
 # Auto roll check. 
+# 
+# Two random hex codes for security and correct checking. 
+# 
+# Creates xls file with data: 
+# input (or auto) name, reason, auto day/month/year hr/min - of signin
 
 # <codecell>
 
-import tweepy
 import os
 import time
 import xlutils
 import xlwt
-
-# <codecell>
-
-conke = 'DfrJQ56s4Hhr8MhTg92xw'
-consec = 'XCVXYLtK9mJ9a4aKpT0wXpmYexFvSFLxbdm1aZFPjFQ'
-ackey = '26423770-Z8AmtM2JCVFFJ708lddF72rO2qa9gjlT1hFuYJAQ1'
-acsec = '3lI7Bw262NOvKkqE7iw4vx1JORIasjMjAB4rkAE'
-
-# <codecell>
-
-auth = tweepy.OAuthHandler(conke, consec)
-auth.set_access_token(ackey, acsec)
+import dominate
 
 # <codecell>
 
@@ -50,7 +43,15 @@ ws = wb.add_sheet('visitor sign database')
 
 # <codecell>
 
-rawdets = ['In Date', 'In Time', 'Name', 'Reason', 'Out Date', 'Out Time']
+exran = os.urandom(128).encode('hex')
+
+# <codecell>
+
+ixran = os.urandom(128).encode('hex')
+
+# <codecell>
+
+rawdets = ['In Date', 'In Time', 'In Code', 'Name', 'Reason', 'Out Date', 'Out Time']
 
 # <codecell>
 
@@ -79,10 +80,12 @@ for rad in rawdets:
 
 ws.write(0, 0, 'In Date')
 ws.write(0, 1, 'In Time')
-ws.write(0, 2, 'Name')
-ws.write(0, 3, 'Reason')
-ws.write(0, 4, 'Out Date')
-ws.write(0, 5, 'Out Time')
+ws.write(0, 2, 'In Code')
+ws.write(0, 3, 'Name')
+ws.write(0, 4, 'Reason')
+ws.write(0, 5, 'Out Date')
+ws.write(0, 6, 'Out Time')
+ws.write(0, 7, 'Out Code')
 
 # <codecell>
 
@@ -99,15 +102,68 @@ getreason = raw_input('Reason: ')
 
 # <codecell>
 
-ws.write(1, 2, getname)
+ws.write(1, 2, exran)
 
 # <codecell>
 
-ws.write(1, 3, getreason)
+ws.write(1, 3, getname)
+
+# <codecell>
+
+ws.write(1, 4, getreason)
 
 # <codecell>
 
 wb.save('/home/wcmckee/whai/' + xlvs)
+
+# <codecell>
+
+wsdict = {getname: exran}
+
+# <codecell>
+
+wsdict
+
+# <codecell>
+
+wsdict.update({time.strftime("%d" + "-" + "%b" + "-" + "%Y"): time.strftime("%H:%M")})
+
+# <codecell>
+
+wsdict.update({getreason: ixran})
+
+# <codecell>
+
+wsdict
+
+# <codecell>
+
+wsdict.keys()
+
+# <codecell>
+
+import dominate
+from dominate.tags import *
+
+doc = dominate.document(title='visitor sign sheet')
+
+with doc.head:
+    link(rel='stylesheet', href='style.css')
+    script(type='text/javascript', src='script.js')
+
+with doc:
+    with div(id='header').add(ol()):
+        for i in wsdict.keys():
+            li(a(i))
+
+    with div():
+        attr(cls='body')
+        p('last updated: ' + time.strftime("%H:%M"))
+
+print doc
+
+# <codecell>
+
 
 # <codecell>
 
