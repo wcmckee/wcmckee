@@ -3,7 +3,7 @@
 
 # <markdowncell>
 
-# visitor sign system
+# <h2>visitor sign system</h2>
 # 
 # This is a python script used to sign in and signout, keeping track of hours and creating a more automative system.
 # 
@@ -15,8 +15,18 @@
 # 
 # Two random hex codes for security and correct checking. 
 # 
-# Creates xls file with data: 
-# input (or auto) name, reason, auto day/month/year hr/min - of signin
+# Creates xls file with data, also uses sqlalchemy for databases, web server: 
+# input (or auto) name, reason, auto day/month/year hr/min - of signin.
+# 
+# when launched asked if you want to signin or signout. 
+# 
+# how i want this to run for william:
+# 
+# william arrives into whai. On his phone he runs the signin script. On signing out for the day the script is run onto final part, signout. asks for comment first then records time, and date. 
+# 
+# comment system. leave comment for staff, parent, tag staff, area, story, parent, child.
+# 
+# signout - enter code of session you want to signout. 
 
 # <codecell>
 
@@ -24,13 +34,120 @@ import os
 import time
 import xlutils
 import xlwt
+import xlrd
 import dominate
+import sys
+#from sqlalchemy import Column, ForeignKey, Integer, String
+#from sqlalchemy.ext.declarative import declarative_base
+#from sqlalchemy.orm import relationship
+#from sqlalchemy import create_engine
 
 # <codecell>
 
 mname = ('William Mckee')
 ename = ('will@artcontrol.me')
 signin = ('ESW')
+
+# <codecell>
+
+#Base = declarative_base()
+ 
+#class Person(Base):
+#    __tablename__ = 'person'
+#    # Here we define columns for the table person
+#    # Notice that each column is also a normal Python instance attribute.
+#    id = Column(Integer, primary_key=True)
+#    name = Column(String(250), nullable=False)
+ 
+#class Address(Base):
+#    __tablename__ = 'address'
+#    # Here we define columns for the table address.
+#    # Notice that each column is also a normal Python instance attribute.
+#    id = Column(Integer, primary_key=True)
+#    datesignin = Column(String(250))
+#    hrminsignin = Column(String(250))
+#    usernamesignin = Column(String(250), nullable=False)
+#    reasonsignin = Column(String(250))
+#    person_id = Column(Integer, ForeignKey('person.id'))
+#    person = relationship(Person)
+ 
+# Create an engine that stores data in the local directory's
+# sqlalchemy_example.db file.
+#engine = create_engine('sqlite:///sqlalchemy_example.db')
+ 
+# Create a$ll tables in the engine. This is equivalent to "Create Table"
+# statements in raw SQL.
+#Base.metadata.create_all(engine)
+
+# <codecell>
+
+#from sqlalchemy import create_engine
+#from sqlalchemy.orm import sessionmaker
+ 
+#from sqlalchemy_declarative import Address, Base, Person
+ 
+#engine = create_engine('sqlite:///sqlalchemy_example.db')
+# Bind the engine to the metadata of the Base class so that the
+# declaratives can be accessed through a DBSession instance
+#Base.metadata.bind = engine
+ 
+#DBSession = sessionmaker(bind=engine)
+# A DBSession() instance establishes all conversations with the database
+# and represents a "staging zone" for all the objects loaded into the
+# database session object. Any change made against the objects in the
+# session won't be persisted into the database until you call
+# session.commit(). If you're not happy about the changes, you can
+# revert all of them back to the last commit by calling
+# session.rollback()
+#session = DBSession()
+ 
+# Insert a Person in the person table
+#new_person = Person(name='new person')
+#session.add(new_person)
+#session.commit()
+ 
+# Insert an Address in the address table
+#new_address = Address(post_code='00000', person=new_person)
+#session.add(new_address)
+#session.commit()
+
+# <codecell>
+
+wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+
+# <codecell>
+
+print wrkbook.sheet_names()
+
+worksheet = wrkbook.sheet_by_name('visitor sign database')
+
+# <codecell>
+
+swlis = []
+
+# <codecell>
+
+num_rows = worksheet.nrows - 1
+curr_row = -1
+while curr_row < num_rows:
+    curr_row += 1
+    row = worksheet.row(curr_row)
+    print row
+    swlis.append(row)
+
+# <codecell>
+
+valis = []
+
+# <codecell>
+
+for swl in swlis[1]:
+    print swl.value
+    valis.append(swl.value)
+
+# <codecell>
+
+valis
 
 # <codecell>
 
@@ -114,7 +231,8 @@ ws.write(1, 4, getreason)
 
 # <codecell>
 
-wb.save('/home/wcmckee/whai/' + xlvs)
+#wb.save('/home/wcmckee/whai/' + xlvs)
+wb.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
@@ -161,6 +279,9 @@ with doc:
         p('last updated: ' + time.strftime("%H:%M"))
 
 print doc
+
+# <codecell>
+
 
 # <codecell>
 

@@ -148,6 +148,18 @@ blogread
 
 # <codecell>
 
+ixran = os.urandom(128).encode('hex')
+
+# <codecell>
+
+randiz.update({blogread: ixran})
+
+# <codecell>
+
+randiz
+
+# <codecell>
+
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(blogread)
 
