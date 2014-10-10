@@ -13,9 +13,9 @@
 # 
 # Auto roll check. 
 # 
-# Two random hex codes for security and correct checking. 
+# Two random hex codes for security and correct checking. Made use of tthese by using one as file name when saving.
 # 
-# Creates xls file with data, also uses sqlalchemy for databases, web server: 
+# Creates xls file with data, also uses sqlalchemy for databases, web server, html page: 
 # input (or auto) name, reason, auto day/month/year hr/min - of signin.
 # 
 # when launched asked if you want to signin or signout. 
@@ -27,6 +27,8 @@
 # comment system. leave comment for staff, parent, tag staff, area, story, parent, child.
 # 
 # signout - enter code of session you want to signout. 
+# 
+# Screw the excel file, im just dealing with index page. i am saving achieve in posts folder under urandom 13 character code. 
 
 # <codecell>
 
@@ -37,6 +39,7 @@ import xlwt
 import xlrd
 import dominate
 import sys
+from dominate.tags import *
 #from sqlalchemy import Column, ForeignKey, Integer, String
 #from sqlalchemy.ext.declarative import declarative_base
 #from sqlalchemy.orm import relationship
@@ -113,41 +116,41 @@ signin = ('ESW')
 
 # <codecell>
 
-wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+#wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
-print wrkbook.sheet_names()
+#print wrkbook.sheet_names()
 
-worksheet = wrkbook.sheet_by_name('visitor sign database')
-
-# <codecell>
-
-swlis = []
+#worksheet = wrkbook.sheet_by_name('visitor sign database')
 
 # <codecell>
 
-num_rows = worksheet.nrows - 1
-curr_row = -1
-while curr_row < num_rows:
-    curr_row += 1
-    row = worksheet.row(curr_row)
-    print row
-    swlis.append(row)
+#swlis = []
 
 # <codecell>
 
-valis = []
+#num_rows = worksheet.nrows - 1
+#curr_row = -1
+#while curr_row < num_rows:
+#    curr_row += 1
+#    row = worksheet.row(curr_row)
+#    print row
+#    swlis.append(row)
 
 # <codecell>
 
-for swl in swlis[1]:
-    print swl.value
-    valis.append(swl.value)
+#valis = []
 
 # <codecell>
 
-valis
+#for swl in swlis[1]:
+#    print swl.value
+#    valis.append(swl.value)
+
+# <codecell>
+
+#valis
 
 # <codecell>
 
@@ -157,6 +160,20 @@ time.strftime("%a, %d %b %Y %H:%M: +0000", time.gmtime())
 
 wb = xlwt.Workbook()
 ws = wb.add_sheet('visitor sign database')
+
+# <codecell>
+
+rangen = []
+
+# <codecell>
+
+for genz in range(8):
+    print os.urandom(128).encode('hex')
+    rangen.append(os.urandom(128).encode('hex'))
+
+# <codecell>
+
+rangen
 
 # <codecell>
 
@@ -214,8 +231,8 @@ ws.write(1, 1, time.strftime("%H:%M"))
 
 # <codecell>
 
-getname = raw_input('Name: ')
-getreason = raw_input('Reason: ')
+#getname = raw_input('Name: ')
+#getreason = raw_input('Reason: ')
 
 # <codecell>
 
@@ -223,11 +240,11 @@ ws.write(1, 2, exran)
 
 # <codecell>
 
-ws.write(1, 3, getname)
+ws.write(1, 3, mname)
 
 # <codecell>
 
-ws.write(1, 4, getreason)
+ws.write(1, 4, signin)
 
 # <codecell>
 
@@ -236,7 +253,10 @@ wb.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
-wsdict = {getname: exran}
+
+# <codecell>
+
+wsdict = {mname: rangen[0]}
 
 # <codecell>
 
@@ -244,11 +264,15 @@ wsdict
 
 # <codecell>
 
-wsdict.update({time.strftime("%d" + "-" + "%b" + "-" + "%Y"): time.strftime("%H:%M")})
+wsdict.update({time.strftime("%d" + "-" + "%b" + "-" + "%Y"): rangen[1]})
 
 # <codecell>
 
-wsdict.update({getreason: ixran})
+wsdict.update({ time.strftime("%H:%M"): rangen[2]})
+
+# <codecell>
+
+wsdict.update({signin: rangen[3]})
 
 # <codecell>
 
@@ -259,9 +283,6 @@ wsdict
 wsdict.keys()
 
 # <codecell>
-
-import dominate
-from dominate.tags import *
 
 doc = dominate.document(title='visitor sign sheet')
 
@@ -282,9 +303,26 @@ print doc
 
 # <codecell>
 
+savindex = open('/home/wcmckee/visignsys/index.html', 'w')
 
 # <codecell>
 
+savindex.name
+
+# <codecell>
+
+savindex.write(str(doc))
+savindex.close()
+
+# <codecell>
+
+ixtwe = ixran[0:12]
+
+# <codecell>
+
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
+savpos.write(str(doc))
+savpos.close()
 
 # <codecell>
 
