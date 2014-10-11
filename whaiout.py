@@ -97,6 +97,28 @@ opind = open(indsav, 'w')
 
 # <codecell>
 
+import dominate
+from dominate.tags import *
+
+doc = dominate.document(title=wrkbook.sheet_names())
+
+with doc.head:
+    link(rel='stylesheet', href='style.css')
+    script(type='text/javascript', src='script.js')
+
+with doc:
+    with div(id='header').add(ol()):
+        for i in valis:
+            li(a(i))
+
+    with div():
+        attr(cls='body')
+        p('visitor sign database is open source. Visit https://github.com/wcmckee/wcmckee ')
+
+print doc
+
+# <codecell>
+
 opind.write(str(doc))
 
 # <codecell>
@@ -132,26 +154,4 @@ optrd.close()
 # <codecell>
 
 oplsav
-
-# <codecell>
-
-import dominate
-from dominate.tags import *
-
-doc = dominate.document(title=wrkbook.sheet_names())
-
-with doc.head:
-    link(rel='stylesheet', href='style.css')
-    script(type='text/javascript', src='script.js')
-
-with doc:
-    with div(id='header').add(ol()):
-        for i in valis:
-            li(a(i))
-
-    with div():
-        attr(cls='body')
-        p('visitor sign database is open source. Visit https://github.com/wcmckee/wcmckee ')
-
-print doc
 
