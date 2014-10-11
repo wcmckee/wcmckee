@@ -331,14 +331,6 @@ savpos.close()
 
 # <codecell>
 
-ls /home/wcmckee/visignsys/posts
-
-# <codecell>
-
-cat /home/wcmckee/visignsys/index.meta
-
-# <codecell>
-
 savpos = open('/home/wcmckee/visignsys/index.meta', 'w')
 savpos.write(str(wsdict.keys()))
 savpos.close()
