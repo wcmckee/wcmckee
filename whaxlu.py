@@ -200,10 +200,6 @@ for det in range(6):
 
 # <codecell>
 
-numroll
-
-# <codecell>
-
 for rad in rawdets:
     print rad
     #print len(rad)
@@ -284,6 +280,9 @@ wsdict.keys()
 
 # <codecell>
 
+
+# <codecell>
+
 doc = dominate.document(title='visitor sign sheet')
 
 with doc.head:
@@ -322,6 +321,26 @@ ixtwe = ixran[0:12]
 
 savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
 savpos.write(str(doc))
+savpos.close()
+
+# <codecell>
+
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.meta', 'w')
+savpos.write(str(wsdict.keys()))
+savpos.close()
+
+# <codecell>
+
+ls /home/wcmckee/visignsys/posts
+
+# <codecell>
+
+cat /home/wcmckee/visignsys/index.meta
+
+# <codecell>
+
+savpos = open('/home/wcmckee/visignsys/index.meta', 'w')
+savpos.write(str(wsdict.keys()))
 savpos.close()
 
 # <codecell>

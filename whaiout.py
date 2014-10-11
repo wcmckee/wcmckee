@@ -5,6 +5,11 @@
 
 # This is the signout script that opens the xl file and fill in signout info.
 # 
+# Opens up list of signin data. This is date of sign in, time, name, and reason.
+# This is .meta. This script appends sign out data. This is signout date, signout time, and comments.
+# 
+# 8 urandom 128 keys are generated. Used these in saving the achieve, as .html, and .meta files.
+# 
 # creates date and time mark and asks for comment
 
 # <codecell>
@@ -51,6 +56,26 @@ valis
 # <codecell>
 
 tiran = os.urandom(128).encode('hex')
+reran = os.urandom(128).encode('hex')
+
+# <codecell>
+
+endate = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
+          
+entim = time.strftime("%H:%M")
+
+# <codecell>
+
+signoutdic = {endate: tiran}
+timoutdic = {entim: reran}
+
+# <codecell>
+
+signoutdic.update({entim:reran})
+
+# <codecell>
+
+signkeys = signoutdic.keys()
 
 # <codecell>
 
@@ -61,6 +86,52 @@ w.get_sheet(0).write(1,6, time.strftime("%H:%M"))
 w.get_sheet(0).write(1,7, tiran)
 
 w.save('/home/wcmckee/whai/index.xls')
+
+# <codecell>
+
+indsav = ('/home/wcmckee/whai/index.html')
+
+# <codecell>
+
+opind = open(indsav, 'w')
+
+# <codecell>
+
+opind.write(str(doc))
+
+# <codecell>
+
+opind.close()
+
+# <codecell>
+
+liop = open('/home/wcmckee/visignsys/index.meta', 'a+')
+liop.write(str(signkeys))
+liop.close()
+
+# <codecell>
+
+oplis = open('/home/wcmckee/visignsys/index.meta', 'r')
+oplsav = oplis.read()
+oplis.close()
+
+# <codecell>
+
+trsor = tiran[0:12]
+
+# <codecell>
+
+trsor
+
+# <codecell>
+
+optrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.meta', 'w')
+optrd.write(oplsav)
+optrd.close()
+
+# <codecell>
+
+oplsav
 
 # <codecell>
 
@@ -83,28 +154,4 @@ with doc:
         p('visitor sign database is open source. Visit https://github.com/wcmckee/wcmckee ')
 
 print doc
-
-# <codecell>
-
-indsav = ('/home/wcmckee/whai/index.html')
-
-# <codecell>
-
-opind = open(indsav, 'w')
-
-# <codecell>
-
-opind.write(str(doc))
-
-# <codecell>
-
-opind.close()
-
-# <codecell>
-
-cat /home/wcmckee/whai/index.html
-
-# <codecell>
-
-lily allen live
 
