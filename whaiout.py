@@ -115,7 +115,7 @@ with doc:
         attr(cls='body')
         p('visitor sign database is open source. Visit https://github.com/wcmckee/wcmckee ')
 
-print doc
+#print doc
 
 # <codecell>
 

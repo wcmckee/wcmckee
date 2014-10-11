@@ -139,10 +139,10 @@ rdrws = drawnew('redditgetsdrawn')
 
 rtohr = rdrws.get_controversial_from_all()
 
-# <headingcell level=5>
+# <codecell>
 
-# for imgz in rtohr:
-#     print imgz.selftext
+for imgz in rtohr:
+    print imgz.selftext
 
 # <codecell>
 
@@ -170,6 +170,7 @@ for uz in rdnewz:
 
 datelis = []
 refdic = {}
+rgdef = {'test': 1234}
 
 # <codecell>
 
@@ -183,6 +184,13 @@ for rdz in rdnew:
     datelis.append(rdz.title)
     datelis.append(rdz.url)
     datelis.append(rdz.author)
+    rgdef.update({rdz.author: rdz.url})
+
+# <codecell>
+
+for rgt in rgdef.values():
+    if '.jpg' in rgt:
+        print rgt
 
 # <codecell>
 
@@ -225,7 +233,7 @@ with doc:
         p('RGDRecentReference is open source')
         a('http://github.com/wcmckee/wcmckee')
 
-print doc
+#print doc
 
 # <codecell>
 
@@ -237,13 +245,13 @@ os.chdir(rgdir)
 
 # <codecell>
 
-mkindex = open('index.html', 'w')
-mkindex.write(str(doc))
-mkindex.close()
+#mkindex = open('index.html', 'w')
+#mkindex.write(str(doc))
+#mkindex.close()
 
 # <codecell>
 
-print str(doc)
+#print str(doc)
 
 # <codecell>
 
@@ -296,7 +304,7 @@ savinx = open(str(deepone), 'w')
 
 # <codecell>
 
-savinx.write(str(doc))
+savinx.write(str(rgdef))
 
 # <codecell>
 
