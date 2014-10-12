@@ -249,10 +249,21 @@ wb.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
+usecom = raw_input('Comments: ')
+
+# <codecell>
+
+usecom
+
+# <codecell>
+
 
 # <codecell>
 
 wsdict = {mname: rangen[0]}
+
+# <codecell>
+
 
 # <codecell>
 
@@ -269,6 +280,10 @@ wsdict.update({ time.strftime("%H:%M"): rangen[2]})
 # <codecell>
 
 wsdict.update({signin: rangen[3]})
+
+# <codecell>
+
+wsdict.update({usecom: rangen[4]})
 
 # <codecell>
 

@@ -170,7 +170,7 @@ for uz in rdnewz:
 
 datelis = []
 refdic = {}
-rgdef = {'test': 1234}
+rgdef = {'test': 'testvalue'}
 
 # <codecell>
 
