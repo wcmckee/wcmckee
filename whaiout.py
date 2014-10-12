@@ -57,6 +57,11 @@ valis
 
 tiran = os.urandom(128).encode('hex')
 reran = os.urandom(128).encode('hex')
+comran = os.urandom(128).encode('hex')
+
+# <codecell>
+
+inpcom = raw_input('comment: ')
 
 # <codecell>
 
@@ -154,4 +159,7 @@ optrd.close()
 # <codecell>
 
 oplsav
+
+# <codecell>
+
 
