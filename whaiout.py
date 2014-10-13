@@ -20,6 +20,7 @@ import time
 from xlutils.copy import copy
 from xlrd import *
 import dominate
+import json
 
 # <codecell>
 
@@ -71,12 +72,26 @@ entim = time.strftime("%H:%M")
 
 # <codecell>
 
+snoutm = {'signout date': endate}
+snoutm.update({'signout time': entim})
+snoutm.update({'signout comment': inpcom})
+
+# <codecell>
+
+snoutm
+
+# <codecell>
+
 signoutdic = {endate: tiran}
 timoutdic = {entim: reran}
 
 # <codecell>
 
 signoutdic.update({entim:reran})
+
+# <codecell>
+
+signoutdic.update({inpcom: comran})
 
 # <codecell>
 
@@ -138,6 +153,9 @@ liop.close()
 
 # <codecell>
 
+
+# <codecell>
+
 oplis = open('/home/wcmckee/visignsys/index.meta', 'r')
 oplsav = oplis.read()
 oplis.close()
@@ -162,4 +180,7 @@ oplsav
 
 # <codecell>
 
+jsnrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.json', 'w')
+jsnrd.write(oplsav)
+jsnrd.close()
 

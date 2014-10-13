@@ -40,6 +40,7 @@ import xlrd
 import dominate
 import sys
 from dominate.tags import *
+import json
 #from sqlalchemy import Column, ForeignKey, Integer, String
 #from sqlalchemy.ext.declarative import declarative_base
 #from sqlalchemy.orm import relationship
@@ -264,10 +265,35 @@ wsdict = {mname: rangen[0]}
 
 # <codecell>
 
+betdict = {'name': mname}
 
 # <codecell>
 
 wsdict
+
+# <codecell>
+
+betdict
+
+# <codecell>
+
+dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
+hrmn = time.strftime("%H:%M")
+
+# <codecell>
+
+betdict.update({'reason': signin})
+betdict.update({'signin comment': usecom})
+betdict.update({'signin date': dayr})
+betdict.update({'signin hrmin': hrmn})
+
+# <codecell>
+
+betjsn = json.dumps(betdict)
+
+# <codecell>
+
+betjsn
 
 # <codecell>
 
@@ -352,6 +378,9 @@ savpos.close()
 
 # <codecell>
 
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.json', 'w')
+savpos.write(str(betjsn))
+savpos.close()
 
 # <codecell>
 
