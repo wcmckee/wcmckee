@@ -155,7 +155,7 @@ signin = ('ESW')
 
 # <codecell>
 
-time.strftime("%a, %d %b %Y %H:%M: +0000", time.gmtime())
+#time.strftime("%a, %d %b %Y %H:%M: +0000", time.gmtime())
 
 # <codecell>
 
@@ -169,12 +169,8 @@ rangen = []
 # <codecell>
 
 for genz in range(8):
-    print os.urandom(128).encode('hex')
+    #print os.urandom(128).encode('hex')
     rangen.append(os.urandom(128).encode('hex'))
-
-# <codecell>
-
-rangen
 
 # <codecell>
 
@@ -195,16 +191,16 @@ numroll = []
 # <codecell>
 
 for det in range(6):
-    print det
+    #print det
     numroll.append(det)
     #ws.write(0, det, )
 
 # <codecell>
 
-for rad in rawdets:
-    print rad
+#for rad in rawdets:
+ #   print rad
     #print len(rad)
-    print rad.upper()
+#    print rad.upper()
     #range(20)
 
 # <codecell>
@@ -254,26 +250,11 @@ usecom = raw_input('Comments: ')
 
 # <codecell>
 
-usecom
-
-# <codecell>
-
-
-# <codecell>
-
 wsdict = {mname: rangen[0]}
 
 # <codecell>
 
 betdict = {'name': mname}
-
-# <codecell>
-
-wsdict
-
-# <codecell>
-
-betdict
 
 # <codecell>
 
@@ -313,14 +294,6 @@ wsdict.update({usecom: rangen[4]})
 
 # <codecell>
 
-wsdict
-
-# <codecell>
-
-wsdict.keys()
-
-# <codecell>
-
 
 # <codecell>
 
@@ -339,15 +312,11 @@ with doc:
         attr(cls='body')
         p('last updated: ' + time.strftime("%H:%M"))
 
-print doc
+#print doc
 
 # <codecell>
 
 savindex = open('/home/wcmckee/visignsys/index.html', 'w')
-
-# <codecell>
-
-savindex.name
 
 # <codecell>
 
@@ -378,7 +347,7 @@ savpos.close()
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.json', 'w')
+savpos = open('/home/wcmckee/visignsys/index.json', 'w')
 savpos.write(str(betjsn))
 savpos.close()
 

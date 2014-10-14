@@ -49,12 +49,23 @@ alldic = []
 
 # <codecell>
 
+metaf
+
+# <codecell>
+
 for mea in metlis:
     file = open(mea, 'r')
     metaf = file.readlines()
-    chzdir = {metaf[2]: metaf[1]}#, file.readline()}
+    chzdir = ({'name': metaf[0]})#, file.readline()}
+    chzdir.update({'title': metaf[1]})
+    chzdir.update({'date': metaf[2]})
+    chzdir.update({'tags': metaf[3]})
     print chzdir
     alldic.append(chzdir)
+
+# <codecell>
+
+alldic
 
 # <codecell>
 
@@ -106,6 +117,10 @@ randiz
 # <codecell>
 
 razdiz = randiz.keys()
+
+# <codecell>
+
+razdiz
 
 # <codecell>
 
@@ -191,7 +206,7 @@ with doc:
         h1(randaz)
         p(blogread)
 
-print doc
+#print doc
 
 # <codecell>
 
@@ -203,15 +218,15 @@ os.chdir(brobeurblogpz)
 
 # <codecell>
 
-wriind = open('index.html', 'w')
+#wriind = open('index.html', 'w')
 
 # <codecell>
 
-wriind.write(str(doc))
+#wriind.write(str(doc))
 
 # <codecell>
 
-wriind.close()
+#wriind.close()
 
 # <codecell>
 

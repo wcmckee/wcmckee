@@ -28,7 +28,7 @@ wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
-print wrkbook.sheet_names()
+#print wrkbook.sheet_names()
 
 worksheet = wrkbook.sheet_by_name('visitor sign database')
 swlis = []
@@ -37,7 +37,7 @@ curr_row = -1
 while curr_row < num_rows:
     curr_row += 1
     row = worksheet.row(curr_row)
-    print row
+    #print row
     swlis.append(row)
 
 # <codecell>
@@ -49,10 +49,6 @@ valis = []
 for swl in swlis[1]:
     print swl.value
     valis.append(swl.value)
-
-# <codecell>
-
-valis
 
 # <codecell>
 
@@ -75,10 +71,6 @@ entim = time.strftime("%H:%M")
 snoutm = {'signout date': endate}
 snoutm.update({'signout time': entim})
 snoutm.update({'signout comment': inpcom})
-
-# <codecell>
-
-snoutm
 
 # <codecell>
 
@@ -176,11 +168,33 @@ optrd.close()
 
 # <codecell>
 
-oplsav
-
-# <codecell>
-
 jsnrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.json', 'w')
 jsnrd.write(oplsav)
 jsnrd.close()
+
+# <codecell>
+
+savpos = open('/home/wcmckee/visignsys/index.json', 'r')
+signindi = savpos.read()
+
+# <codecell>
+
+jsnaccept = signindi.replace("'", "\"")
+d = json.loads(jsnaccept)
+
+# <codecell>
+
+snct = dict(d.items() + snoutm.items())
+
+# <codecell>
+
+savpos = open('/home/wcmckee/visignsys/posts' + trsor + '.json', 'w')
+savpos.write(str(snct))
+
+# <codecell>
+
+savpos.close()
+
+# <codecell>
+
 
