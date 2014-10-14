@@ -5,15 +5,30 @@
 
 # BroBeur Studios Blog
 # 
-# This is similar to the artcontrolme script but it deals with BroBeur Studios posts
+# This is similar to the artcontrolme script but it deals with BroBeur Studios posts.
+# It takes a folder of .meta and .wp/md/html and mashes it together as a json object. 
+# It also outputs a html file with a random post, and all posts.
+
+# <markdowncell>
+
+# TODO
+# 
+# deal with images.
+# need bigger hard drive on local dev system (currently pi running debian)
+# 
+# combine brobeur, artcontrolme, and freshfigure.me/art into one site. Do this by merging all posts and images. 
+# 
 
 # <codecell>
 
+import dominate
+from dominate.tags import *
 import random
+import os
+import json
 
 # <codecell>
 
-import os
 
 # <codecell>
 
@@ -65,6 +80,11 @@ alldic
 
 # <codecell>
 
+for cha in chzdir:
+    print cha
+
+# <codecell>
+
 chzdir
 
 # <codecell>
@@ -104,6 +124,14 @@ alldic
 
 # <codecell>
 
+betjsn = json.dumps(alldic)
+
+# <codecell>
+
+betjsn
+
+# <codecell>
+
 randiz = alldic[ranit]
 
 # <codecell>
@@ -112,7 +140,7 @@ randiz
 
 # <codecell>
 
-razdiz = randiz.keys()
+razdiz = randiz.values()
 
 # <codecell>
 
@@ -163,11 +191,34 @@ ixran = os.urandom(128).encode('hex')
 
 # <codecell>
 
-randiz.update({blogread: ixran})
+randiz
 
 # <codecell>
 
-randiz
+randiz.update({'text': blogread})
+
+# <codecell>
+
+randiz['title']
+
+# <codecell>
+
+lendiz = len(randiz)
+
+# <codecell>
+
+def bugsearch():
+    for bugz in range(lendiz):
+        return (randiz[bugz])
+
+# <codecell>
+
+bugsearch()
+
+# <codecell>
+
+for ranv in randiz.values():
+    print ranv
 
 # <codecell>
 
@@ -181,9 +232,6 @@ print(soup.prettify())
 soup.findAll('html')
 
 # <codecell>
-
-import dominate
-from dominate.tags import *
 
 doc = dominate.document(title='BroBeur Blog Post')
 
@@ -214,15 +262,25 @@ os.chdir(brobeurblogpz)
 
 # <codecell>
 
-#wriind = open('index.html', 'w')
+wriind = open('index.html', 'w')
 
 # <codecell>
 
-#wriind.write(str(doc))
+jsnd = open('index.json', 'w')
+
+jsnd.write(str(betjsn))
 
 # <codecell>
 
-#wriind.close()
+jsnd.close()
+
+# <codecell>
+
+wriind.write(str(doc))
+
+# <codecell>
+
+wriind.close()
 
 # <codecell>
 
