@@ -80,6 +80,10 @@ teop = open('test.txt', 'w')
 
 # <codecell>
 
+metaf
+
+# <codecell>
+
 for bleh in alfilz:
     if '.meta' in bleh:
         #print bleh
@@ -97,6 +101,7 @@ for bleh in alfilz:
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
         chzdir = {metaf[2]: metaf[1]}#, file.readline()}
+        
         print chzdir
         finlis.append(chzdir)
         teop.write(file.read())
@@ -123,6 +128,10 @@ dez = collections.OrderedDict()
 
 # <codecell>
 
+metaf
+
+# <codecell>
+
 for bleh in alfilz:
     if '.meta' in bleh:
         #print bleh
@@ -139,13 +148,43 @@ for bleh in alfilz:
         #metablog.append(file.readline())
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
-        chzdir = {metaf[2]: metaf[1]}#, file.readline()}
+        chzdir = ({'name': metaf[0]})#, file.readline()}
+        chzdir.update({'title': metaf[1]})
+        chzdir.update({'date': metaf[2]})
+        chzdir.update({'tags': metaf[3]})
         print chzdir
         finlis.append(chzdir)
         teop.write(file.read())
 
 # <codecell>
 
+chzdir.keys()
+
+# <codecell>
+
+chzdir.items()
+
+# <codecell>
+
+chval = chzdir.values()
+
+# <codecell>
+
+itm = len(chval)
+
+# <codecell>
+
+itm
+
+# <codecell>
+
+for chre in range(itm):
+    print chval[chre]
+
+# <codecell>
+
+for chz in chzdir:
+    print chz
 
 # <codecell>
 
@@ -230,9 +269,8 @@ with doc.head:
 
 with doc:
     with div(id='header').add(ol()):
-        for bleh in alfilz:
-            if '.wp' in bleh:
-                li(str(bleh))
+        for chre in range(itm):
+            p(chval[chre])
 
     #with div():
      #   attr(cls='body')
