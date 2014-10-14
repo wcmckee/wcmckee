@@ -80,10 +80,6 @@ teop = open('test.txt', 'w')
 
 # <codecell>
 
-metaf
-
-# <codecell>
-
 for bleh in alfilz:
     if '.meta' in bleh:
         #print bleh

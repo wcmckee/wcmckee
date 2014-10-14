@@ -49,10 +49,6 @@ alldic = []
 
 # <codecell>
 
-metaf
-
-# <codecell>
-
 for mea in metlis:
     file = open(mea, 'r')
     metaf = file.readlines()
