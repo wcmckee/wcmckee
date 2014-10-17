@@ -188,11 +188,6 @@ snct = dict(d.items() + snoutm.items())
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/posts' + trsor + '.json', 'w')
-savpos.write(str(snct))
-
-# <codecell>
-
 savpos.close()
 
 # <codecell>

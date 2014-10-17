@@ -48,6 +48,9 @@ import json
 
 # <codecell>
 
+lasnam = ('Mckee')
+firnam = ('William')
+dopz = ('04/12/1988')
 mname = ('William Mckee')
 ename = ('will@artcontrol.me')
 signin = ('ESW')
@@ -254,15 +257,16 @@ wsdict = {mname: rangen[0]}
 
 # <codecell>
 
-betdict = {'name': mname}
+betdict = {'firstname': firnam}
 
 # <codecell>
 
 dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
-hrmn = time.strftime("%H:%M")
+hrmn = time.strftime("%H:%M:%S")
 
 # <codecell>
 
+betdict.update({'lastname': lasnam})
 betdict.update({'reason': signin})
 betdict.update({'signin comment': usecom})
 betdict.update({'signin date': dayr})
