@@ -193,7 +193,10 @@ for rdz in rdnew:
 
 # <codecell>
 
+<<<<<<< HEAD
 comdict
+=======
+>>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
 
 # <codecell>
 
@@ -207,7 +210,10 @@ for comaq in comdefz:
         print fdz.author
         print fdz.created_utc
         print fdz.replies
+<<<<<<< HEAD
         fddict = {'comtext': fdz.body}
+=======
+>>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
         comply.append(fdz.replies)
 
 # <codecell>
@@ -220,6 +226,7 @@ for coaz in comply:
 
 # <codecell>
 
+<<<<<<< HEAD
 chedict = {'blah': 'testing'}
 
 # <codecell>
@@ -289,6 +296,10 @@ for rez in rcoms:
 
 # <codecell>
 
+=======
+for coma in comdefz:
+    co
+>>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
 
 # <codecell>
 
