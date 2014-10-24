@@ -142,7 +142,8 @@ rtohr = rdrws.get_controversial_from_all()
 # <codecell>
 
 for imgz in rtohr:
-    print imgz.selftext
+    #print imgz.selftext
+    print imgz.num_comments
 
 # <codecell>
 
@@ -171,6 +172,7 @@ for uz in rdnewz:
 datelis = []
 refdic = {}
 rgdef = {'test': 'testvalue'}
+comdefz = []
 
 # <codecell>
 
@@ -181,10 +183,43 @@ for rdz in rdnew:
     print rdz.author
     print rdz.secure_media
     print rdz.num_comments
+    print rdz.comments
+    comdefz.append(rdz.comments)
     datelis.append(rdz.title)
     datelis.append(rdz.url)
     datelis.append(rdz.author)
+    comdict = {'comtxt':rdz.comments}
     rgdef.update({rdz.author: rdz.url})
+
+# <codecell>
+
+
+# <codecell>
+
+comply = []
+
+# <codecell>
+
+for comaq in comdefz:
+    for fdz in comaq:
+        print fdz
+        print fdz.author
+        print fdz.created_utc
+        print fdz.replies
+        comply.append(fdz.replies)
+
+# <codecell>
+
+for coaz in comply:
+    print coaz
+    for coa in coaz:
+        print coa.body
+        print coa.author
+
+# <codecell>
+
+for coma in comdefz:
+    co
 
 # <codecell>
 
