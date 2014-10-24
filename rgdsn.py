@@ -193,6 +193,7 @@ for rdz in rdnew:
 
 # <codecell>
 
+comdict
 
 # <codecell>
 
@@ -206,6 +207,7 @@ for comaq in comdefz:
         print fdz.author
         print fdz.created_utc
         print fdz.replies
+        fddict = {'comtext': fdz.body}
         comply.append(fdz.replies)
 
 # <codecell>
@@ -218,8 +220,75 @@ for coaz in comply:
 
 # <codecell>
 
+chedict = {'blah': 'testing'}
+
+# <codecell>
+
 for coma in comdefz:
-    co
+    #print coma
+    #chedict.update({'first': coma})
+    for co in coma:
+        print co
+        chedict.update({co.author: co.body})
+
+# <codecell>
+
+rcoms = chedict.keys()
+rvals = chedict.values()
+imcom = []
+
+# <codecell>
+
+for rvs in rvals:
+    print rvs
+    if '.jpg' or '.png' in rvs:
+        imcom.append(rvs)
+        
+
+# <codecell>
+
+for imc in imcom:
+    print imc
+
+# <codecell>
+
+doc = dominate.document(title='Dominate your HTML')
+
+with doc.head:
+    link(rel='stylesheet', href='style.css')
+    script(type='text/javascript', src='script.js')
+
+with doc:
+    with div(id='header').add(ol()):
+        for imz in imcom:
+            #print imz
+            li(p(str(imz)))
+
+    #with div():
+     #   attr(cls='body')
+     #   p('Lorem ipsum..')
+
+#print doc
+
+# <codecell>
+
+for dicaz in doc.children:
+    print dicaz
+
+# <codecell>
+
+for imz in imcom:
+    
+    print imz
+
+# <codecell>
+
+for rez in rcoms:
+    print rez
+    
+
+# <codecell>
+
 
 # <codecell>
 
