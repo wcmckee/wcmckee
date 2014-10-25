@@ -21,6 +21,7 @@
 import requests
 from bs4 import BeautifulSoup
 import os
+import json
 
 # <codecell>
 
@@ -96,11 +97,17 @@ for bleh in alfilz:
         #metablog.append(file.readline())
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
+        #chzdir = ({'test': 'test'})
+        #chzdir.update({metaf[2]: metaf[1]})
         chzdir = {metaf[2]: metaf[1]}#, file.readline()}
         
-        print chzdir
+        #print chzdir
         finlis.append(chzdir)
         teop.write(file.read())
+
+# <codecell>
+
+chzdir
 
 # <codecell>
 
@@ -128,6 +135,10 @@ metaf
 
 # <codecell>
 
+cherdict = {'test':'test'}
+
+# <codecell>
+
 for bleh in alfilz:
     if '.meta' in bleh:
         #print bleh
@@ -145,12 +156,18 @@ for bleh in alfilz:
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
         chzdir = ({'name': metaf[0]})#, file.readline()}
+        cherdict.update({metaf[2]: metaf[1]})
+        cherdict.update({metaf[1]: metaf[3]})
         chzdir.update({'title': metaf[1]})
         chzdir.update({'date': metaf[2]})
         chzdir.update({'tags': metaf[3]})
         print chzdir
         finlis.append(chzdir)
         teop.write(file.read())
+
+# <codecell>
+
+cherdict
 
 # <codecell>
 
