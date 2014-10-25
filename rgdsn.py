@@ -193,14 +193,15 @@ for rdz in rdnew:
 
 # <codecell>
 
-<<<<<<< HEAD
 comdict
-=======
->>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
 
 # <codecell>
 
 comply = []
+
+# <codecell>
+
+fddict = {'test': 'test'}
 
 # <codecell>
 
@@ -210,10 +211,7 @@ for comaq in comdefz:
         print fdz.author
         print fdz.created_utc
         print fdz.replies
-<<<<<<< HEAD
-        fddict = {'comtext': fdz.body}
-=======
->>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
+        fddict.update({fdz.author: fdz.body})
         comply.append(fdz.replies)
 
 # <codecell>
@@ -226,7 +224,14 @@ for coaz in comply:
 
 # <codecell>
 
-<<<<<<< HEAD
+fddict.keys()
+
+# <codecell>
+
+fddict.values()
+
+# <codecell>
+
 chedict = {'blah': 'testing'}
 
 # <codecell>
@@ -251,6 +256,26 @@ for rvs in rvals:
     if '.jpg' or '.png' in rvs:
         imcom.append(rvs)
         
+
+# <codecell>
+
+for docin in doc.head.children:
+    print docin
+
+# <codecell>
+
+for pain in docin.parent.children:
+    print pain
+
+# <codecell>
+
+doc.body.parent.children
+
+# <codecell>
+
+soup = BeautifulSoup(doc)
+
+print(soup.prettify())
 
 # <codecell>
 
@@ -284,6 +309,9 @@ for dicaz in doc.children:
 
 # <codecell>
 
+
+# <codecell>
+
 for imz in imcom:
     
     print imz
@@ -296,10 +324,6 @@ for rez in rcoms:
 
 # <codecell>
 
-=======
-for coma in comdefz:
-    co
->>>>>>> cebc23c0078684844ab3b731f413323f7c5b2c4d
 
 # <codecell>
 
