@@ -231,32 +231,32 @@ apgpls = []
 
 # <codecell>
 
-for filop in opjsnz:
+#for filop in opjsnz:
     #print filop
-    opt = open(opj, 'r')
-    thedict = str(opt.read())
-    thedict
-    opt.close()
+#    opt = open(opj, 'r')
+#    thedict = str(opt.read())
+#    thedict
+#    opt.close()
 
 # <codecell>
 
-opt = open(opj, 'r')
+#opt = open(opj, 'r')
 
 # <codecell>
 
-thedict = opt.read()
+#thedict = opt.read()
 
 # <codecell>
 
-thedict
+#thedict
 
 # <codecell>
 
-convgpj = json.loads(thedict)
+#convgpj = json.loads(thedict)
 
 # <codecell>
 
-convgpj.values()
+#convgpj.values()
 
 # <codecell>
 
