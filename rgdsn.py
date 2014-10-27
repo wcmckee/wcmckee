@@ -228,11 +228,34 @@ fddict.keys()
 
 # <codecell>
 
-fddict.values()
+def extractlinks(html):
+    soup = BeautifulSoup(html)
+    anchors = soup.findAll('a')
+    links = []
+    for a in anchors:
+        links.append(a['href'])
+    return links
+
+# <codecell>
+
+parseText("The website google.com is often user to search the internet, I used it to discover news.ycombinator.com which in turn led me to www.paulgraham.com/articles.html")
+
+# <codecell>
+
+cydict = fddict.values()
+
+# <codecell>
+
+for itz in cydict:
+    print itz   
 
 # <codecell>
 
 chedict = {'blah': 'testing'}
+
+# <codecell>
+
+fixurl = BeautifulSoup(fddict.values())
 
 # <codecell>
 
@@ -242,6 +265,14 @@ for coma in comdefz:
     for co in coma:
         print co
         chedict.update({co.author: co.body})
+
+# <codecell>
+
+chedict
+
+# <codecell>
+
+jsdum = json.loads(chedict)
 
 # <codecell>
 
@@ -259,6 +290,37 @@ for rvs in rvals:
 
 # <codecell>
 
+imcom
+
+# <codecell>
+
+fuldoc = doc.render()
+
+# <codecell>
+
+
+# <codecell>
+
+doc = dominate.document(title='Dominate your HTML')
+
+with doc.head:
+    link(rel='stylesheet', href='style.css')
+    script(type='text/javascript', src='script.js')
+
+with doc:
+    with div(id='header').add(ol()):
+        for imz in imcom:
+            #print imz
+            p(imz)
+
+    #with div():
+     #   attr(cls='body')
+     #   p('Lorem ipsum..')
+
+#print doc
+
+# <codecell>
+
 for docin in doc.head.children:
     print docin
 
@@ -273,9 +335,16 @@ doc.body.parent.children
 
 # <codecell>
 
+
+# <codecell>
+
 soup = BeautifulSoup(doc)
 
-print(soup.prettify())
+#print(soup.prettify())
+
+# <codecell>
+
+extractlinks()
 
 # <codecell>
 
@@ -284,23 +353,14 @@ for imc in imcom:
 
 # <codecell>
 
-doc = dominate.document(title='Dominate your HTML')
+doc.body
 
-with doc.head:
-    link(rel='stylesheet', href='style.css')
-    script(type='text/javascript', src='script.js')
+# <codecell>
 
-with doc:
-    with div(id='header').add(ol()):
-        for imz in imcom:
-            #print imz
-            li(p(str(imz)))
 
-    #with div():
-     #   attr(cls='body')
-     #   p('Lorem ipsum..')
+# <codecell>
 
-#print doc
+doc.render()
 
 # <codecell>
 

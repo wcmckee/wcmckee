@@ -68,9 +68,9 @@ entim = time.strftime("%H:%M")
 
 # <codecell>
 
-snoutm = {'signout date': endate}
-snoutm.update({'signout time': entim})
-snoutm.update({'signout comment': inpcom})
+snoutm = {'out-date': endate}
+snoutm.update({'out-time': entim})
+snoutm.update({'out-comment': inpcom})
 
 # <codecell>
 
@@ -189,6 +189,73 @@ snct = dict(d.items() + snoutm.items())
 # <codecell>
 
 savpos.close()
+
+# <codecell>
+
+os.chdir('/home/wcmckee/visignsys/posts')
+
+# <codecell>
+
+lismet = os.listdir('/home/wcmckee/visignsys/posts')
+
+# <codecell>
+
+lismet
+
+# <codecell>
+
+opjsnz = []
+
+# <codecell>
+
+for beca in lismet:
+    if '.json' in beca:
+        print beca
+        opjsnz.append(beca)
+
+# <codecell>
+
+optjz = []
+
+# <codecell>
+
+for opjw in opjsnz:
+    print opjw
+    optjsz.append(objw)
+    
+
+# <codecell>
+
+apgpls = []
+
+# <codecell>
+
+for filop in opjsnz:
+    #print filop
+    opt = open(opj, 'r')
+    thedict = str(opt.read())
+    thedict
+    opt.close()
+
+# <codecell>
+
+opt = open(opj, 'r')
+
+# <codecell>
+
+thedict = opt.read()
+
+# <codecell>
+
+thedict
+
+# <codecell>
+
+convgpj = json.loads(thedict)
+
+# <codecell>
+
+convgpj.values()
 
 # <codecell>
 
