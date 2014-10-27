@@ -216,17 +216,18 @@ for beca in lismet:
 # <codecell>
 
 optjz = []
-
-# <codecell>
-
-for opjw in opjsnz:
-    print opjw
-    optjsz.append(objw)
-    
+optjsz = []
 
 # <codecell>
 
 apgpls = []
+
+# <codecell>
+
+#for opjw in opjsnz:
+#    print opjw
+#    optjsz.append(objw)
+    
 
 # <codecell>
 
@@ -256,6 +257,9 @@ convgpj = json.loads(thedict)
 # <codecell>
 
 convgpj.values()
+
+# <codecell>
+
 
 # <codecell>
 
