@@ -213,10 +213,6 @@ def bugsearch():
 
 # <codecell>
 
-bugsearch()
-
-# <codecell>
-
 for ranv in randiz.values():
     print ranv
 
