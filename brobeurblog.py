@@ -67,16 +67,26 @@ alldic = []
 for mea in metlis:
     file = open(mea, 'r')
     metaf = file.readlines()
-    chzdir = ({'name': metaf[0]})#, file.readline()}
-    chzdir.update({'title': metaf[1]})
-    chzdir.update({'date': metaf[2]})
-    chzdir.update({'tags': metaf[3]})
+    chzdir = ({'name': metaf[0].rstrip()})#, file.readline()}
+    chzdir.update({'title': metaf[1].rstrip()})
+    chzdir.update({'date': metaf[2].rstrip()})
+    chzdir.update({'tags': metaf[3].rstrip()})
     print chzdir
     alldic.append(chzdir)
 
 # <codecell>
 
 alldic
+
+# <codecell>
+
+dicjsn = json.dumps(alldic)
+
+# <codecell>
+
+savdjsn = open('/home/wcmckee/visignsys/brobeur.json', 'w')
+savdjsn.write(dicjsn)
+savdjsn.close()
 
 # <codecell>
 
