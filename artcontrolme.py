@@ -47,6 +47,7 @@ for filz in os.listdir(postsdir):
 
 # <codecell>
 
+alfilz
 
 # <codecell>
 
@@ -99,7 +100,7 @@ for bleh in alfilz:
         #adrdir = {metaf[0]: metaf[2]}
         #chzdir = ({'test': 'test'})
         #chzdir.update({metaf[2]: metaf[1]})
-        chzdir = {metaf[2]: metaf[1]}#, file.readline()}
+        chzdir = {metaf[2].rstrip(): metaf[1].rstrip()}#, file.readline()}
         
         #print chzdir
         finlis.append(chzdir)
@@ -139,6 +140,10 @@ cherdict = {'test':'test'}
 
 # <codecell>
 
+jslis = []
+
+# <codecell>
+
 for bleh in alfilz:
     if '.meta' in bleh:
         #print bleh
@@ -155,23 +160,35 @@ for bleh in alfilz:
         #metablog.append(file.readline())
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
-        chzdir = ({'name': metaf[0]})#, file.readline()}
-        cherdict.update({metaf[2]: metaf[1]})
-        cherdict.update({metaf[1]: metaf[3]})
-        chzdir.update({'title': metaf[1]})
-        chzdir.update({'date': metaf[2]})
-        chzdir.update({'tags': metaf[3]})
+        chzdir = ({'name': metaf[0].rstrip()})#, file.readline()}
+        cherdict.update({metaf[2].rstrip(): metaf[1].rstrip()})
+        cherdict.update({metaf[1]: metaf[3].rstrip()})
+        chzdir.update({'title': metaf[1].rstrip()})
+        chzdir.update({'date': metaf[2].rstrip()})
+        chzdir.update({'tags': metaf[3].rstrip()})
         print chzdir
         finlis.append(chzdir)
+        cherjson = json.dumps(chzdir)
+        jslis.append(cherjson)
         teop.write(file.read())
 
 # <codecell>
 
-cherdict
+jslis
 
 # <codecell>
 
-chzdir.keys()
+cherjson = json.dumps(chzdir)
+
+# <codecell>
+
+cherjson
+
+# <codecell>
+
+savus = open('/home/wcmckee/visignsys/artcontrol.json', 'w')
+savus.write(str(jslis))
+savus.close()
 
 # <codecell>
 
