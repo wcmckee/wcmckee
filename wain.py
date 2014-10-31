@@ -39,9 +39,6 @@
 
 import os
 import time
-import xlutils
-import xlwt
-import xlrd
 import dominate
 import sys
 from dominate.tags import *
@@ -53,144 +50,16 @@ import json
 
 # <codecell>
 
-lasnam = ('Mckee')
-firnam = ('William')
-dopz = ('04/12/1988')
+lasnam = raw_input('Last Name: ')
+firnam = raw_input('First Name: ')
+dopz = raw_input('dob: ')
 mname = ('William Mckee')
-ename = ('will@artcontrol.me')
-signin = ('ESW')
+ename = raw_input('Email: ')
+signin = raw_input('Reason: ')
 
 # <codecell>
 
-#Base = declarative_base()
- 
-#class Person(Base):
-#    __tablename__ = 'person'
-#    # Here we define columns for the table person
-#    # Notice that each column is also a normal Python instance attribute.
-#    id = Column(Integer, primary_key=True)
-#    name = Column(String(250), nullable=False)
- 
-#class Address(Base):
-#    __tablename__ = 'address'
-#    # Here we define columns for the table address.
-#    # Notice that each column is also a normal Python instance attribute.
-#    id = Column(Integer, primary_key=True)
-#    datesignin = Column(String(250))
-#    hrminsignin = Column(String(250))
-#    usernamesignin = Column(String(250), nullable=False)
-#    reasonsignin = Column(String(250))
-#    person_id = Column(Integer, ForeignKey('person.id'))
-#    person = relationship(Person)
- 
-# Create an engine that stores data in the local directory's
-# sqlalchemy_example.db file.
-#engine = create_engine('sqlite:///sqlalchemy_example.db')
- 
-# Create a$ll tables in the engine. This is equivalent to "Create Table"
-# statements in raw SQL.
-#Base.metadata.create_all(engine)
-
-# <codecell>
-
-#from sqlalchemy import create_engine
-#from sqlalchemy.orm import sessionmaker
- 
-#from sqlalchemy_declarative import Address, Base, Person
- 
-#engine = create_engine('sqlite:///sqlalchemy_example.db')
-# Bind the engine to the metadata of the Base class so that the
-# declaratives can be accessed through a DBSession instance
-#Base.metadata.bind = engine
- 
-#DBSession = sessionmaker(bind=engine)
-# A DBSession() instance establishes all conversations with the database
-# and represents a "staging zone" for all the objects loaded into the
-# database session object. Any change made against the objects in the
-# session won't be persisted into the database until you call
-# session.commit(). If you're not happy about the changes, you can
-# revert all of them back to the last commit by calling
-# session.rollback()
-#session = DBSession()
- 
-# Insert a Person in the person table
-#new_person = Person(name='new person')
-#session.add(new_person)
-#session.commit()
- 
-# Insert an Address in the address table
-#new_address = Address(post_code='00000', person=new_person)
-#session.add(new_address)
-#session.commit()
-
-# <codecell>
-
-#wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
-
-# <codecell>
-
-#print wrkbook.sheet_names()
-
-#worksheet = wrkbook.sheet_by_name('visitor sign database')
-
-# <codecell>
-
-#swlis = []
-
-# <codecell>
-
-#num_rows = worksheet.nrows - 1
-#curr_row = -1
-#while curr_row < num_rows:
-#    curr_row += 1
-#    row = worksheet.row(curr_row)
-#    print row
-#    swlis.append(row)
-
-# <codecell>
-
-#valis = []
-
-# <codecell>
-
-#for swl in swlis[1]:
-#    print swl.value
-#    valis.append(swl.value)
-
-# <codecell>
-
-#valis
-
-# <codecell>
-
-#time.strftime("%a, %d %b %Y %H:%M: +0000", time.gmtime())
-
-# <codecell>
-
-wb = xlwt.Workbook()
-ws = wb.add_sheet('visitor sign database')
-
-# <codecell>
-
-rangen = []
-
-# <codecell>
-
-for genz in range(8):
-    #print os.urandom(128).encode('hex')
-    rangen.append(os.urandom(128).encode('hex'))
-
-# <codecell>
-
-exran = os.urandom(128).encode('hex')
-
-# <codecell>
-
-ixran = os.urandom(128).encode('hex')
-
-# <codecell>
-
-rawdets = ['In Date', 'In Time', 'In Code', 'Name', 'Reason', 'Out Date', 'Out Time']
+rawdets = raw_input('Enter keys: ')
 
 # <codecell>
 
@@ -213,22 +82,22 @@ for det in range(6):
 
 # <codecell>
 
-ws.write(0, 0, 'In Date')
-ws.write(0, 1, 'In Time')
-ws.write(0, 2, 'In Code')
-ws.write(0, 3, 'Name')
-ws.write(0, 4, 'Reason')
-ws.write(0, 5, 'Out Date')
-ws.write(0, 6, 'Out Time')
-ws.write(0, 7, 'Out Code')
+#ws.write(0, 0, 'In Date')
+#ws.write(0, 1, 'In Time')
+#ws.write(0, 2, 'In Code')
+#ws.write(0, 3, 'Name')
+#ws.write(0, 4, 'Reason')
+#ws.write(0, 5, 'Out Date')
+#ws.write(0, 6, 'Out Time')
+#ws.write(0, 7, 'Out Code')
 
 # <codecell>
 
 #strftime is %d (day), 
 
-ws.write(1, 0, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
+#ws.write(1, 0, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
 
-ws.write(1, 1, time.strftime("%H:%M"))
+#ws.write(1, 1, time.strftime("%H:%M"))
 
 # <codecell>
 
@@ -237,20 +106,20 @@ ws.write(1, 1, time.strftime("%H:%M"))
 
 # <codecell>
 
-ws.write(1, 2, exran)
+#ws.write(1, 2, exran)
 
 # <codecell>
 
-ws.write(1, 3, mname)
+#ws.write(1, 3, mname)
 
 # <codecell>
 
-ws.write(1, 4, signin)
+#ws.write(1, 4, signin)
 
 # <codecell>
 
 #wb.save('/home/wcmckee/whai/' + xlvs)
-wb.save('/home/wcmckee/whai/index.xls')
+#wb.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
@@ -362,7 +231,7 @@ savpos.close()
 
 # <codecell>
 
-print 'helli'
+print 'sign in complete'
 
 # <codecell>
 
