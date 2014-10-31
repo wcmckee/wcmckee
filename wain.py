@@ -43,12 +43,6 @@ import dominate
 import sys
 from dominate.tags import *
 import json
-#from sqlalchemy import Column, ForeignKey, Integer, String
-#from sqlalchemy.ext.declarative import declarative_base
-#from sqlalchemy.orm import relationship
-#from sqlalchemy import create_engine
-
-# <codecell>
 
 lasnam = raw_input('Last Name: ')
 firnam = raw_input('First Name: ')
@@ -57,12 +51,6 @@ mname = ('William Mckee')
 ename = raw_input('Email: ')
 signin = raw_input('Reason: ')
 
-# <codecell>
-
-rawdets = raw_input('Enter keys: ')
-
-# <codecell>
-
 numroll = []
 
 # <codecell>
@@ -70,66 +58,10 @@ numroll = []
 for det in range(6):
     #print det
     numroll.append(det)
-    #ws.write(0, det, )
-
-# <codecell>
-
-#for rad in rawdets:
- #   print rad
-    #print len(rad)
-#    print rad.upper()
-    #range(20)
-
-# <codecell>
-
-#ws.write(0, 0, 'In Date')
-#ws.write(0, 1, 'In Time')
-#ws.write(0, 2, 'In Code')
-#ws.write(0, 3, 'Name')
-#ws.write(0, 4, 'Reason')
-#ws.write(0, 5, 'Out Date')
-#ws.write(0, 6, 'Out Time')
-#ws.write(0, 7, 'Out Code')
-
-# <codecell>
-
-#strftime is %d (day), 
-
-#ws.write(1, 0, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
-
-#ws.write(1, 1, time.strftime("%H:%M"))
-
-# <codecell>
-
-#getname = raw_input('Name: ')
-#getreason = raw_input('Reason: ')
-
-# <codecell>
-
-#ws.write(1, 2, exran)
-
-# <codecell>
-
-#ws.write(1, 3, mname)
-
-# <codecell>
-
-#ws.write(1, 4, signin)
-
-# <codecell>
-
-#wb.save('/home/wcmckee/whai/' + xlvs)
-#wb.save('/home/wcmckee/whai/index.xls')
-
-# <codecell>
 
 usecom = raw_input('Comments: ')
 
-# <codecell>
 
-#wsdict = {mname: 'test'}
-
-# <codecell>
 
 betdict = {'firstname': firnam}
 
@@ -142,9 +74,9 @@ hrmn = time.strftime("%H:%M:%S")
 
 betdict.update({'lastname': lasnam})
 betdict.update({'reason': signin})
-betdict.update({'signin comment': usecom})
-betdict.update({'signin date': dayr})
-betdict.update({'signin hrmin': hrmn})
+betdict.update({'signin-comment': usecom})
+betdict.update({'signin-date': dayr})
+betdict.update({'signin-hrmin': hrmn})
 
 # <codecell>
 
@@ -163,6 +95,7 @@ with doc.head:
 
 with doc:
     with div(id='header').add(ol()):
+        h1('Visitor Sign Sheet')
         for i in betdict.values():
             li(a(i))
 
@@ -189,7 +122,7 @@ ixtwe = ixran[0:16]
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'a')
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
 savpos.write(str(doc))
 savpos.close()
 
@@ -207,16 +140,11 @@ savpos.close()
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/index.json', 'w')
+savpos = open('/home/wcmckee/visignsys/index.json', 'a')
 savpos.write(str(betjsn))
 savpos.close()
 
-# <codecell>
-
-print 'sign in complete'
-
-# <codecell>
-
+print ('sign in complete')
 
 # <codecell>
 
