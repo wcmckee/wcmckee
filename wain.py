@@ -63,7 +63,7 @@ usecom = raw_input('Comments: ')
 
 
 
-betdict = {'firstname': firnam}
+betdict = {'first': firnam}
 
 # <codecell>
 
@@ -103,7 +103,7 @@ with doc:
         attr(cls='body')
         p('last updated: ' + time.strftime("%H:%M"))
         p('Visitor Sign Sheet is open source')
-        a('http://github.com/wcmckee/wcmckee')
+        a('http://github.com/wcmckee/wcmckee', href='https://github.com/wcmckee/wcmckee')
 
 #print doc
 
