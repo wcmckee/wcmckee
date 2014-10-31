@@ -127,7 +127,7 @@ usecom = raw_input('Comments: ')
 
 # <codecell>
 
-wsdict = {mname: rangen[0]}
+#wsdict = {mname: 'test'}
 
 # <codecell>
 
@@ -154,28 +154,8 @@ betjsn = json.dumps(betdict)
 
 betjsn
 
-# <codecell>
 
-wsdict.update({time.strftime("%d" + "-" + "%b" + "-" + "%Y"): rangen[1]})
-
-# <codecell>
-
-wsdict.update({ time.strftime("%H:%M"): rangen[2]})
-
-# <codecell>
-
-wsdict.update({signin: rangen[3]})
-
-# <codecell>
-
-wsdict.update({usecom: rangen[4]})
-
-# <codecell>
-
-
-# <codecell>
-
-doc = dominate.document(title='visitor sign sheet')
+doc = dominate.document(title='Visitor Sign Sheet')
 
 with doc.head:
     link(rel='stylesheet', href='style.css')
@@ -183,12 +163,14 @@ with doc.head:
 
 with doc:
     with div(id='header').add(ol()):
-        for i in wsdict.keys():
+        for i in betdict.keys():
             li(a(i))
 
     with div():
         attr(cls='body')
         p('last updated: ' + time.strftime("%H:%M"))
+        p('Visitor Sign Sheet is open source')
+        a('http://github.com/wcmckee/wcmckee')
 
 #print doc
 
@@ -202,26 +184,26 @@ savindex.write(str(doc))
 savindex.close()
 
 # <codecell>
-
-ixtwe = ixran[0:12]
+ixran = os.urandom(16)
+ixtwe = ixran[0:16]
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'a')
 savpos.write(str(doc))
 savpos.close()
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.meta', 'w')
-savpos.write(str(wsdict.keys()))
+savpos = open('/home/wcmckee/visignsys/posts/' + ixtwe + '.json', 'w')
+savpos.write(str(betjsn))
 savpos.close()
 
 # <codecell>
 
-savpos = open('/home/wcmckee/visignsys/index.meta', 'w')
-savpos.write(str(wsdict.keys()))
-savpos.close()
+#savpos = open('/home/wcmckee/visignsys/index.meta', 'w')
+#savpos.write(str(wsdict.keys()))
+#savpos.close()
 
 # <codecell>
 
