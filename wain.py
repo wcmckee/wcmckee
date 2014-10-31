@@ -163,7 +163,7 @@ with doc.head:
 
 with doc:
     with div(id='header').add(ol()):
-        for i in betdict.keys():
+        for i in betdict.values():
             li(a(i))
 
     with div():
