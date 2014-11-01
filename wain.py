@@ -14,6 +14,44 @@
 
 # <markdowncell>
 
+# Currently I use the script to sign in and out at a early learning centre that I am employed to work 2 hours a day, 5 days a week. 
+# It could be applied in any area where you want to keep a record of time, comments, 
+# 
+# Similarity to twitter. 
+# 
+# Avatars
+# 
+# Mention, taging, hashtags
+# 
+# There is often a line around the sign in/out book.
+# 
+
+# <markdowncell>
+
+# The site was live. It was running on a simple python web server but it worked. The script was exacuted by the Raspberry Pi B+ computer running Debian. Red pixels appeared on the screen, or #543243 if you want to be fussy. 
+# Luck had nothing to do with it. Testing was the key.
+# 
+# The text had rendered. 
+# 
+# 1. Alfred Bunnings
+# 2. 09:00
+# 3. 01/Nov/2014
+# 4. InfoSec
+# 5. everything seems fine
+# 
+# Charlie MacDonald sat at his desk steering at the monitor. 
+# 'Alfred Bunnings, who is this guy?', he thought to himself. 'Jones, get over here and check this for me', Charlie yelled out to his Assistent.
+# 'Coming Sir!', a voice sharply replied. 
+# Into Charlies office walked Jones. Tall, 6 foot 3. Dark Brown hair, curly and down to his shoulders. On this day his hair was tied up, usually he left it down but today was special.
+# 'What's up sir', Jones asked, squinting at the monitor. 
+# 'Take a look for yourself', replied Charlie as he stood up. 
+# Jones took a seat at Charlies computer station. Charlie paced up and down his office.
+# 'Sir, I've seen nothing like this before. What the hell is going on?', Jones asked Charlie.
+# Standing still Charlie spoke:
+# 'It's a god damn nightmare that is, this Alfred character has breached the networks. We need to find them.'
+
+# <markdowncell>
+
 # TODO
 # 
 # html page of page 100 logins/logouts - append all json as one html
@@ -24,9 +62,21 @@
 # 
 # question that you comment on that includes the sketch daily reddit gets drawn. 
 # 
-# fake name encriputiom for kids
+# fake name encripution for kids/everyone?
 # 
 # records time when child eats/drinks
+# 
+# Sig for parents when signing in/out kids
+# 
+# txt/email alerts to parents on changes to kids signin/out
+# 
+# If someone doesnt signin/signout before certain time - alert
+# 
+# import pandas. Need to free up space on raspberry pi
+# 
+# Filter - new/popular comments, people, signins, signouts,  
+# 
+# 
 
 # <codecell>
 
