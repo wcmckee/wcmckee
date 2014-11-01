@@ -1,6 +1,33 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <markdowncell>
+
+# Visitor Sign System
+# 
+# This script was created as an altenative to a printed spreadsheet that you use a physical pen to write - date, name, reason, time in, time out. 
+# There is a comment book that this could be used to replace also. 
+# Currently people write comments in pen on lined refil. Comments 
+# The script is basic. It saves the time, date, name, reason, and added in comments as an html page and json object. Archieve of past logins are saved.
+# It is split into two scripts. The first wain or whaxlu is used for the login. 
+# The second script is whaiout which is the logout script. It takes the output of wain or whaxlu and appends logout data - time, date, and comment.
+
+# <markdowncell>
+
+# TODO
+# 
+# html page of page 100 logins/logouts - append all json as one html
+# 
+# graph of weekly/day hours and how they chage.
+# 
+# work out time between login and logout.
+# 
+# question that you comment on that includes the sketch daily reddit gets drawn. 
+# 
+# fake name encriputiom for kids
+# 
+# records time when child eats/drinks
+
 # <codecell>
 
 # -*- coding: utf-8 -*-
