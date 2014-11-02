@@ -49,6 +49,18 @@
 # 'Sir, I've seen nothing like this before. What the hell is going on?', Jones asked Charlie.
 # Standing still Charlie spoke:
 # 'It's a god damn nightmare that is, this Alfred character has breached the networks. We need to find them.'
+# 
+# Alfred sat on the bus. The same seat he had every day. The bus was old, 50 years old and rust was pealing rom the rail. At least the button still works. He was on his way to visit an old friend, he hasn't seen in five years. Normally lfred drives his car but today was different. He felt like relaxing on the buss.
+# His Dell laptop sat on his lap. The desktop enviorment was KDE, running Debian. He dudn't have much running. Two web browser windows, a terminal, and Pithos. On the left split was his IPython Notebook (running locallly), on the right split documation web page that he is following. The terminal window was behind the web page window. A TMUX session was running. The was split into three windows.  Inside the sessoion was The IPython Notebook Kernal running on port 80. One the second window - Motion. This is used to capture save mpeg files from the Dell laptop camera. 
+# 
+# The Streets were playing on Pithos. Stay Positive. Pithos is a desktop client for Pandora Radio. zj
+# 
+# 
+# 
+#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
+# <markdowncell>
+
 
 # <markdowncell>
 
@@ -56,13 +68,13 @@
 # 
 # html page of page 100 logins/logouts - append all json as one html
 # 
-# graph of weekly/day hours and how they chage.
+# graph of weekly/day hours and how they change.
 # 
 # work out time between login and logout.
 # 
 # question that you comment on that includes the sketch daily reddit gets drawn. 
 # 
-# fake name encripution for kids/everyone?
+# fake name encription for kids/everyone?
 # 
 # records time when child eats/drinks
 # 
@@ -76,6 +88,21 @@
 # 
 # Filter - new/popular comments, people, signins, signouts,  
 # 
+# Date 01 November 2014
+# 
+# 0000
+# 
+# Daily Rosted/Working chart. 
+# Spread sheet - names colum, time rows.
+# 
+# example:
+#      | Dino1 | Dino2 | Dino3 |
+# 
+# 0700 | signin + comment!
+# 
+# 0701 | signout + comment!
+# 
+# so on..
 # 
 
 # <codecell>
