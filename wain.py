@@ -252,4 +252,25 @@ print ('sign in complete')
 
 # <codecell>
 
+cat index.json
+
+# <codecell>
+
+opind = open('/home/wcmckee/visignsys/index.json', 'r')
+opred = opind.read()
+
+# <codecell>
+
+opred
+
+# <codecell>
+
+opjsnd = json.dumps(opred)
+
+# <codecell>
+
+opjsnd
+
+# <codecell>
+
 
