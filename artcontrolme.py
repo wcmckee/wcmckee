@@ -186,7 +186,7 @@ cherjson
 
 # <codecell>
 
-savus = open('/home/wcmckee/visignsys/artcontrol.json', 'w')
+savus = open('/home/wcmckee/visignsys/artcontrol.json', 'a')
 savus.write(str(jslis))
 savus.close()
 

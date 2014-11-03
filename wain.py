@@ -25,6 +25,8 @@
 # 
 # There is often a line around the sign in/out book.
 # 
+# Generates summery
+# 
 
 # <markdowncell>
 
@@ -53,7 +55,37 @@
 # Alfred sat on the bus. The same seat he had every day. The bus was old, 50 years old and rust was pealing rom the rail. At least the button still works. He was on his way to visit an old friend, he hasn't seen in five years. Normally lfred drives his car but today was different. He felt like relaxing on the buss.
 # His Dell laptop sat on his lap. The desktop enviorment was KDE, running Debian. He dudn't have much running. Two web browser windows, a terminal, and Pithos. On the left split was his IPython Notebook (running locallly), on the right split documation web page that he is following. The terminal window was behind the web page window. A TMUX session was running. The was split into three windows.  Inside the sessoion was The IPython Notebook Kernal running on port 80. One the second window - Motion. This is used to capture save mpeg files from the Dell laptop camera. 
 # 
-# The Streets were playing on Pithos. Stay Positive. Pithos is a desktop client for Pandora Radio. zj
+# The Streets were playing on Pithos. Stay Positive. Pithos is a desktop client for Pandora Radio.
+# 
+# SPIKE INFOSEC
+# 
+# The banner read. Alfred stood looking up above him. The skyscraper went on for miles. Squinting he could see the peak.
+# 
+# Today he was here for a job interview. Two days ago he had been sent a message that a position had came up and the company was interested in hiring him. 
+# 
+# The automate doors opened as he approched them. Inside stood three security guards and a metal detotor. 
+# 'Name and reason/person visit', one of the guards asked him. 
+# 'Alfred Bunnings, I'm here for a job interview with Janet Pears'.
+# The guard typed characters into the computer.
+# 'Alright, that seems fine sir', the guard replied'. 'Please make your way down the hall and take the second right on your left'.
+# 'Thank you', Afred said as he begain walking down the hallway. 
+# 
+# Everything was white. The ground, ceiling and floor. He passed the first turn off on the left and kept walking. He reached the second turn and turned left. 
+# 
+# The colour scheme changed, colours filled the walls. Character and Landscapes scatted the walls. It was painted with a dark naples yellow, red, and a light blue. The backgrounds were blue and the characters and foreground landscapes were yellow and red. 
+# 
+# Alfred admired the walls as he contined walking down the hallway. At the end of the hallway was a foylor with several desks setup with computers. A woman sat at the further one typing. 
+# She looked up and smiled at Alfred.
+# 'You must be Alfred', she exampled. 
+# Alfred approched her desk and held out he hand to shake it.
+# 'I'm Janet', she said - shaking his hand. 'Take a seat Alfred'. 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 # 
 # 
 # 
@@ -75,6 +107,7 @@
 # question that you comment on that includes the sketch daily reddit gets drawn. 
 # 
 # fake name encription for kids/everyone?
+# Take a name and turn into into a new name, run a script again to turn it back
 # 
 # records time when child eats/drinks
 # 
@@ -104,6 +137,59 @@
 # 
 # so on..
 # 
+# Live updates of the floor. 
+# Inside, Outside, Inside Float, Outside Float, General Float.
+# Tagging. Tag people for breaks. 
+# eg - you are busy with a project, but need a break/lunch. Someone tags you and takes over at area. You go for break/lunch. When you return, tag back and carry on.
+# The person that was just taged back moves onto the next person to tag for break/lunch.
+# This person cycles through a group of people.
+# 
+# Live updates of child location.
+# gps info of each area of centre and count how many children are there. 
+# 
+# Panic Button. Signal to call for assistence, part-tag, allow for image/sound record. 
+# 
+
+# <codecell>
+
+valname = ('lasnam', 'signin', 'usercom', 'dayr', 'htmn')
+
+# <codecell>
+
+
+# <codecell>
+
+for itzval in valname:
+    print itzval
+
+# <markdowncell>
+
+# This function creates a dict, another updates it. 
+# Function is working to create it but update is coming back with error.
+# 
+# How do I refer to the created dict as the one to update?
+
+# <codecell>
+
+def dictcreate(keyval, firnam):
+    return dict({keyval: firnam})
+
+def updatedict(keyvalz, othnam):
+    return dictcreate.update({keyvalz: othnam})
+
+# <codecell>
+
+dictcreate('name', 'wcm')
+#updatedict()
+
+# <codecell>
+
+updatedict('checking', 'this works')
+
+# <codecell>
+
+for itz in updatedict():
+    print itz
 
 # <codecell>
 
