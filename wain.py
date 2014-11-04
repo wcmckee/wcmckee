@@ -59,7 +59,7 @@
 # 
 # SPIKE INFOSEC
 # 
-# The banner read. Alfred stood looking up above him. The skyscraper went on for miles. Squinting he could see the peak.
+# The sign read. Alfred stood looking up above him. The skyscraper went on for miles. Squinting he could see the peak.
 # 
 # Today he was here for a job interview. Two days ago he had been sent a message that a position had came up and the company was interested in hiring him. 
 # 
@@ -80,16 +80,20 @@
 # Alfred approched her desk and held out he hand to shake it.
 # 'I'm Janet', she said - shaking his hand. 'Take a seat Alfred'. 
 # 
+# Alfred looked back at the sign on the building.
+# 
+# SPIKE INFOSEC
+# 
+# Twenty years he had worked there. Today he was moving on, had sold his shares of the company.
+# He approched the doors. They opened automatitly. 
+# Three security guards stood there. All with very serious looks on their faces.
+# 'Morning fellas', Alfred said as he flashed his ID badge and walked down the corodilol. 
+# The corodor was still completely white, like the first time he entered the building. 
+# He walked down the hallway. Passing the first door on the left, and turning left at the second turn. 
+# The murals had changed. The colour scheme had stayed the same but the images had changed. 
 # 
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+# He had plans to create his own Infomation Security company.                                               
 
 # <markdowncell>
 
@@ -171,11 +175,42 @@ for itzval in valname:
 
 # <codecell>
 
+class DictNows():
+
+    def dictcreate(keyval, firnam):
+        return dict({keyval: firnam})
+
+    def updatedict(keyvalz, othnam):
+        return dictcreate.update({keyvalz: 0                                                                                                                                                      ls
+                                  othnam})
+
+# <codecell>
+
+checkdict = dictcreate('check', 'this')
+
+# <codecell>
+
+checkdict
+
+# <codecell>
+
 def dictcreate(keyval, firnam):
     return dict({keyval: firnam})
 
 def updatedict(keyvalz, othnam):
-    return dictcreate.update({keyvalz: othnam})
+    return checkdict.update({keyvalz: othnam})
+
+# <codecell>
+
+updatedict('omg', 'not again')
+
+# <codecell>
+
+checkdict
+
+# <codecell>
+
+DictNows.dictcreate('check')
 
 # <codecell>
 
