@@ -97,9 +97,6 @@
 
 # <markdowncell>
 
-
-# <markdowncell>
-
 # TODO
 # 
 # html page of page 100 logins/logouts - append all json as one html
@@ -181,8 +178,7 @@ class DictNows():
         return dict({keyval: firnam})
 
     def updatedict(keyvalz, othnam):
-        return dictcreate.update({keyvalz: 0                                                                                                                                                      ls
-                                  othnam})
+        return dictcreate.update({keyvalz: othnam})
 
 # <codecell>
 
@@ -200,13 +196,31 @@ def dictcreate(keyval, firnam):
 def updatedict(keyvalz, othnam):
     return checkdict.update({keyvalz: othnam})
 
+def returndate():
+    return time.strftime(("%d" + "-" + "%b" + "-" + "%Y"))
+
+def returntime():
+    return time.strftime("%H:%M:%S")
+
+def returan():
+    return os.urandom(16)
+
+def blahblah():
+    with open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
+    #savpos.write(str(doc))
+    #savpos.close()
+
 # <codecell>
 
 updatedict('omg', 'not again')
 
 # <codecell>
 
-checkdict
+returan()
+
+# <codecell>
+
+returntime()
 
 # <codecell>
 
@@ -220,6 +234,23 @@ dictcreate('name', 'wcm')
 # <codecell>
 
 updatedict('checking', 'this works')
+
+# <codecell>
+
+dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
+hrmn = time.strftime("%H:%M:%S")
+
+# <codecell>
+
+betdict.update({'lastname': lasnam})
+betdict.update({'reason': signin})
+betdict.update({'signin-comment': usecom})
+betdict.update({'signin-date': dayr})
+betdict.update({'signin-hrmin': hrmn})
+
+# <codecell>
+
+betdict.update({'lastname': lasnam})
 
 # <codecell>
 
