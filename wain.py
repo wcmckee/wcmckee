@@ -90,7 +90,21 @@
 # 'Morning fellas', Alfred said as he flashed his ID badge and walked down the corodilol. 
 # The corodor was still completely white, like the first time he entered the building. 
 # He walked down the hallway. Passing the first door on the left, and turning left at the second turn. 
-# The murals had changed. The colour scheme had stayed the same but the images had changed. 
+# The murals had changed. The colour scheme had stayed the same but the images had changed. Alfred had contrubited several times to the repainting of the murals. It was a annual event, each year five people are awarded with the job of recreating the murals. 
+# He wondered down the colourful hallway.
+# He reached the foylor - desks with computers scatted the foylor. This was the main room where people worked. It was an open space, and the desks had wheels on so they were able to be moved around the building freely. There were several breakoff rooms where smaller groups could go to work.
+# 
+# Alfred scanned the room. People filled the desks. Sitting or standing they typed. 
+# 'Today is special', a familar voice for Alfred sounds from behind a monitor.
+# #Janets face poped out, with a smile. 
+# 'Goodmorning Janet', Alfred smiled.
+# Janet rose from her chair.
+# 'Time for a coffee I believe', she said.
+# 
+# The ground that Janet walked on was rough. Stones cut into her barefeet. The sun blinded her view, she held her arm above her eyes. Attempting to block out the rays. 
+# A figure amurged in the distance.. Squinting she made haste towards the figure.
+# 
+# 
 # 
 # 
 # He had plans to create his own Infomation Security company.                                               
@@ -205,10 +219,15 @@ def returntime():
 def returan():
     return os.urandom(16)
 
-def blahblah():
-    with open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
+#def blahblah():
+    #open('/home/wcmckee/visignsys/posts/' + ixtwe + '.html', 'w')
     #savpos.write(str(doc))
     #savpos.close()
+    
+    
+
+# <codecell>
+
 
 # <codecell>
 
