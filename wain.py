@@ -1,6 +1,15 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <codecell>
+
+import os
+import time
+import dominate
+import sys
+from dominate.tags import *
+import json
+
 # <markdowncell>
 
 # Visitor Sign System
@@ -210,19 +219,19 @@ class DictNows():
 
 # <codecell>
 
-checkdict = dictcreate('check', 'this')
+#checkdict = dictcreate('check', 'this')
 
 # <codecell>
 
-checkdict
+#checkdict
 
 # <codecell>
 
 def dictcreate(keyval, firnam):
     return dict({keyval: firnam})
 
-def updatedict(keyvalz, othnam):
-    return checkdict.update({keyvalz: othnam})
+#def updatedict(keyvalz, othnam):
+#    return checkdict.update({keyvalz: othnam})
 
 def returndate():
     return time.strftime(("%d" + "-" + "%b" + "-" + "%Y"))
@@ -245,7 +254,7 @@ def returan():
 
 # <codecell>
 
-updatedict('omg', 'not again')
+#updatedict('omg', 'not again')
 
 # <codecell>
 
@@ -266,7 +275,29 @@ dictcreate('name', 'wcm')
 
 # <codecell>
 
-updatedict('checking', 'this works')
+#updatedict('checking', 'this works')
+
+# <codecell>
+
+lasnam = raw_input('Last Name: ')
+firnam = raw_input('First Name: ')
+dopz = raw_input('dob: ')
+mname = ('William Mckee')
+ename = raw_input('Email: ')
+signin = raw_input('Reason: ')
+usecom = raw_input('Comments: ')
+
+# <codecell>
+
+#bitdict = 
+
+# <codecell>
+
+betdict = {'first-name': firnam}
+
+# <codecell>
+
+#betdict.update({'lastname': lasnam})
 
 # <codecell>
 
@@ -275,7 +306,7 @@ hrmn = time.strftime("%H:%M:%S")
 
 # <codecell>
 
-betdict.update({'lastname': lasnam})
+betdict.update({'last-name': lasnam})
 betdict.update({'reason': signin})
 betdict.update({'signin-comment': usecom})
 betdict.update({'signin-date': dayr})
@@ -283,12 +314,44 @@ betdict.update({'signin-hrmin': hrmn})
 
 # <codecell>
 
-betdict.update({'lastname': lasnam})
+betdict
 
 # <codecell>
 
-for itz in updatedict():
-    print itz
+betjsn = json.dumps(betdict)
+betjsn
+
+# <codecell>
+
+#for itz in updatedict():
+#    print itz
+
+# <codecell>
+
+opind = open('/home/wcmckee/visignsys/index.json', 'r')
+opred = opind.read()
+
+# <codecell>
+
+opred
+
+# <codecell>
+
+opjsnd = json.dumps(opred)
+
+# <codecell>
+
+str(opjsnd)
+
+# <codecell>
+
+
+# <codecell>
+
+#json.load(opred)
+
+# <codecell>
+
 
 # <codecell>
 
@@ -326,54 +389,9 @@ for itz in updatedict():
 
 # <codecell>
 
-import os
-import time
-import dominate
-import sys
-from dominate.tags import *
-import json
-
-lasnam = raw_input('Last Name: ')
-firnam = raw_input('First Name: ')
-dopz = raw_input('dob: ')
-mname = ('William Mckee')
-ename = raw_input('Email: ')
-signin = raw_input('Reason: ')
-
-numroll = []
-
-# <codecell>
-
-for det in range(6):
-    #print det
-    numroll.append(det)
-
-usecom = raw_input('Comments: ')
 
 
 
-betdict = {'first': firnam}
-
-# <codecell>
-
-dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
-hrmn = time.strftime("%H:%M:%S")
-
-# <codecell>
-
-betdict.update({'lastname': lasnam})
-betdict.update({'reason': signin})
-betdict.update({'signin-comment': usecom})
-betdict.update({'signin-date': dayr})
-betdict.update({'signin-hrmin': hrmn})
-
-# <codecell>
-
-betjsn = json.dumps(betdict)
-
-# <codecell>
-
-betjsn
 
 
 doc = dominate.document(title='Visitor Sign Sheet')
@@ -390,6 +408,7 @@ with doc:
 
     with div():
         attr(cls='body')
+        p(opred)
         p('last updated: ' + time.strftime("%H:%M"))
         p('Visitor Sign Sheet is open source')
         a('http://github.com/wcmckee/wcmckee', href='https://github.com/wcmckee/wcmckee')
@@ -434,27 +453,6 @@ savpos.write(str(betjsn))
 savpos.close()
 
 print ('sign in complete')
-
-# <codecell>
-
-cat index.json
-
-# <codecell>
-
-opind = open('/home/wcmckee/visignsys/index.json', 'r')
-opred = opind.read()
-
-# <codecell>
-
-opred
-
-# <codecell>
-
-opjsnd = json.dumps(opred)
-
-# <codecell>
-
-opjsnd
 
 # <codecell>
 
