@@ -110,7 +110,7 @@ import json
 # 'Goodmorning Janet', Alfred smiled.
 # Janet rose from her chair.
 # 'Time for a coffee I believe', she said.
-# Janet hadn't aged a day since Alfred met her. She had long straight brunette hair. Light complection skin, with frekles covering her face. She wore skinny horozonal glasses that had a light blue tint. On this day she wore a long silky dress. Her black leather jacket was spread out over the back of her computer chair. 
+# Janet hadn't aged a day since Alfred met her. She had long straiht brunette hair. Light complection skin, with frekles covering her face. She wore skinny horozonal glasses that had a light blue tint. On this day she wore a long silky dress. Her black leather jacket was spread out over the back of her computer chair. 
 # On her desk sat three wireless 22 inch monitors. 
 # 
 # The ground that Janet walked on was rough. Stones cut into her barefeet. The sun blinded her view, she held her arm above her eyes. Attempting to block out the rays. 
@@ -124,7 +124,7 @@ import json
 # Truck skretched to a halt on the street. Three toots. Both truck doors opened and two men leaped out. They begain walking towards the propatery at the end of the street. 
 # Goodwill could hear several people moving about outside. 
 # The drone showed three people exiting the truck. Two men and a woman. As they scretched to a halt outside the house of Elizebeth Goodwill, was in fact Janet lived there. It was a setup. The house was trapped so that when they entered - they were never going to leave again. 
-# Thirty years Noel Locksmart had been a prisnor in the house. He will never forget the night. It was just a standard robbery. Locksmart had recieved word of a computer scientice by the name of Elizebeth Goodwill that had developed software that allowed the replaying of events in the past. The system was complex but started with just one script when Goodwill was in her early twentys. It was a login and logout script. The first script was the login script. This created a JSON object that included firstname, lastname, date (04/Nov/2014), time (hr:min), reason, and comment. The logout script added to the JSON object logout date, time, and comment. 
+# Thirty years Noel Locksmart had been a prisnor in the house. He will never forget the night. It was just a standard robbery. Locksmart had recieved word of a computer scientice by the name of Elizebeth Goodwill that had developed software that allowed the replaying of events in the past. The system was complex but started with just one script when Goodwill was just six years old. It was a login and logout script. The first script was the login script. This created a JSON object that included firstname, lastname, date (04/Nov/2014), time (hr:min), reason, and comment. The logout script added to the JSON object logout date, time, and comment. She wrote the script in the programming language Python. Her father  -  Charlie MacDonald had taught her from an early age the basics of programming. She enjoyed it so carried on. At a four year old she was involved in setting up a programming club for children. This idea spread to other towns, cities, and countries. 
 # 
 # Ali Turbon wislied as he mixed the Indian spice together. Pandora radio was playing from his bluetooth speaker. It was on the family dinner table. Next to the speaker was a nonbranded laptop running Fedora. KDE was the desktop enviorment. Firefox was open with a IPython Notebook on the screen. This window was on the left side of the monitor. On the right top side of the monitor a television show played. It was   George Benson played. 'Onions are ready to go, confirm? Y/n', a device in Turbon's left chefs jacket beeped. Turbon reached for his phone and hit enter. Three claws reached inside the cubord and picked up an onion each. The bench was a woodern bench. The claws dropped the onions on the bench then went back to the cubard to collect more onions. Several more trips back and forward then the claws switched into the next phase - cutting of the onion. The onions were lined up perfectly on the bench. Three rows, five collums. Fifteen onions. Chef knives snapped out of the claws of the device and started to cut up the onions. Each onion was cut in half, then quarters, and finally sliced. The onions were scopped up and droped into a pan of oil to fry. Once the onions were a lovely gold color they were tiped into a slow cooker. 
 # 'Carrots are ready to go, confirm? Y/n', the device The claws grabbed a orange carrot and dropped it on the bench. The same amount of carrots were used as onions. The knives cut the carrots by a slice lengthways in half, then quarters, and finally slicing. Scopped up by the claws they are dropped in a pan to be fried with oil. Once goldern the carrots are tipped into the slow cooker. Fifteen cups of soft chickpeas are tipped into the pan of oil and fried. They are tipped into the slow cooker. Fifteen medium sized tomatoes travel through the room, being griped by the claw. They are crushed and tipped into the slowcooker.  
@@ -152,7 +152,29 @@ import json
 # Turbons dropped sixteen bags of curries. In each bag were 5 trays of curry. Eighty trays of curry in total. Every tray of curry also came with a tray of rice. Turbon dropped another sixteen bags. In each of these bags were 5 trays of rice.
 # 'Enjoy your curry', Turbons said. 
 # 'Thank you', the voice of Gardens replied. 
-# The dark shape placed the newspaper beside them and 
+# The dark shape placed the newspaper beside them and stood up. They took the bags of curries and slowly walked towards the door with a large green exit sign at the end of the far wall. 
+# Turbons stood frozen untill he heard the exit door close behind the figure. He let out a sigh of relief.
+# 'That went better than expected', Alfred spoke. 
+# 'Certainly sir, that was much calmer than last time', the voice of Gardens replied. 
+# Turbons had to be careful of these anonous bots that were being created. Last time he did an order of curries the bot attacked him and this lab. He had yet to figure out who sent the attack bot but had captured it for tests. He had increased secutiry in order to protect himself and business. 
+# Anon Bots that enter the building are now scanned with anti-malware software to test if it had code to attack. Turbons created a white list of bots that he allows to enter. Some of these do have attack code on their system but Turbons trusted the owner that they would not attack. 
+# 'Why would people want to attack a kitchen?', was the thought going through his brain. 
+# 
+# The door slammed behind the dark shaped as it entered the building. Three security guards stood in front. He moved forward ignoring the guards. They said nothing and didn't move. 
+# The alarm went off as the dark shape passed through the dectoror. A guard hit a switch and the alarm stopped. 
+# The dark shape moved down the hallway reaching the second door on the left. It turned left. As it passed, the artwork on the walls turned from a bright primary colour scheme to a grayscale, black and white scheme. The Dark Shape left a bitter taste in the air. 
+# It reached the foylor. Desks weree empty. It began to wislle as it walked around the desks. The Dark Spaes head darted back and forward between desks, looking for something.
+# It's head stopped moving - staring at an item on a desk it moved closer. An item sparkled from the desk.
+# The black shape reached out and picked up the item and placed it inside their pocket. 
+# It turned around and walked out of the building. 
+# Shortly after The Dark Shape left the building, it explodes. 
+# 
+# Fire engine roars down the road towards the building on fire. The Dark Shape walks down the country side as the engine passes him. Corn fields populate the farm land here. Flying drones fly above the corn - monitoring. The Dark Shape smiles as thir bare feet crunch on the grass. It feels better than the cloth feeing the building had. The Dark Shape turned and watch dark clouds of smoke emurging into the sky. 
+# 
+# The engine arrived at the building. Much of the building was englufed in flame but the fighters would do their best to save it. Over 
+# 
+# 
+# 
 # 
 # Charlie MacDonald. Rest in Peace. The grave stone read. Born 24 October 2014. Died 12 December 2093. Trist Gardens stood over the grave. Tears flowing from her eye. It had been two months since MacDonald passed away. She had worked with him for fifteen years at Spike InfoSec. Together they worked on a automatic cooking device. It was used in billions of home and businesses around the world. Spike InfoSec realeased blueprints of the device so anyone with a 3d printer can just print the device. 
 # 
@@ -167,6 +189,34 @@ import json
 # 'Cut', he spoke once again. 
 # 'Confirm', the device deeped back. 
 # The knife snapped out. The onion was sliced clean in half.
+# 'wonderful work sir', Jones smiled. 
+# 'Kill Jones', MacDonald spoke, his eyes fixed on Jones. 
+# The knife snapped out of the claw and started  traveling towards Jones. 
+# Jones terrified started moving backwards towards the door. He turned and began running towards the door. 
+# The knife traveled faster through the air.
+# A cracking sound shoock the room as the knife impayed the brain of Jones. His head was attached to the door. Part of the knife was impayed into the door. It was a instant death. MacDonald didn't have a choice. He was on orders from Trist Gardens. If he didn't follow through and kill his assistant his whole families lives were in danger. 
+# 'Clean this up', MacDonald spoke as he walked out of his office. 
+# He stood in the foylor. Light blue covered the area. MacDonald could see Janet in distance. She was interviewing a new comer. Alfred Bunnings his name was. MacDonald watched as Janet and Alfred shook hands and took a seat.
+# 'He looks like a good test subject', MacDonad spoke. 
+# 'Test subject: Alfred Bunnings', the device beeped back. 
+# 'Confirm', MacDonald confirmed.
+# MacDonald continued to watch Janet and Alfred as they talked. 
+# 'So tell me about yourself', Janet had the first question.
+# MacDonald had known Janet since she was a toddler. He would push her on the swings in the local park. MacDonalds daughter Elizebeth Goodwill would also be swinging. 
+# The Black Cat sat and watched the swings, following the figures in the seats as they moved backwards and forward. 
+# 'Black',  a voice behind called and The Black Cat twisted around.
+# The Black Cat  moved towards the voice. A dark black shape stood in the distance pouring fresh meat into the cats contaiiner.
+# 'Thanks ma'am', The Black Cat spoke, he began eating the meat. 
+# The Black Cat was a prototype for the humonald bot. It was used for testing. Under the fake fur and skin was metal and wires. A raspberry Pi computer inside the model with a cell phone and audino connected to that. 
+# The park ranger - Alfred Bunnings had created this one. He had printed the parts and soultered the robot together. Installing the software was easy - it was all in the software store. Bunnings also worked on scripts for Black. Today he was testing a script that made the robot smell and taste food. As people were pushing their children on the swing he ordered for a humonald robot to activate in the park and send off a signal to attract Black back.
+# This script could be used in many areas but Bunnings was developing it so he could find lost or stolen robots. 
+# Many times people come into the Park and walk away with a robot. Sometimes I don't relize it. They thing they have made a new friend but really it's a computer belonging to the park. The Park gets an alert that a bot has entered an unauthorised area and sends back gps data. 
+# The Park gives the person a friendly phone call or email and offers to either pick the robot up or let the person return the robot themselves. As long as the robot is returned the Park is not worried. Once the robot is returned it's rebooted in order to clear memories of leaving the park. The Park does not want robots remembering what is outside The Park as it causes more robots wanting to leave the park. Rebooting them isn't a problem but there is better work that the staff could be working on - such as new features. 
+# Black purred as he ate the fresh meat from his bowl.
+# The little girl on the swing with straight brunette hair hoped off the swing and ran toward Black. He purred louder as the girl - Elizebeth Goodwill patted Black. The adult continued to push the other child - a girl with blonde hair and a darker completion than Goodwill.
+# 
+# 
+# 
 # 
 # He had plans to create his own Infomation Security company.                                               
 
