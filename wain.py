@@ -91,18 +91,32 @@
 # The corodor was still completely white, like the first time he entered the building. 
 # He walked down the hallway. Passing the first door on the left, and turning left at the second turn. 
 # The murals had changed. The colour scheme had stayed the same but the images had changed. Alfred had contrubited several times to the repainting of the murals. It was a annual event, each year five people are awarded with the job of recreating the murals. 
-# He wondered down the colourful hallway.
+# He wondered down the colourful hallway. During his third year working for Spike Infosec he won along with four other people - Noel Locksmart, Elizebeth Goodwill, Trist Gardens, and Ali Turbon. Individially they started by working on sketches. 
 # He reached the foylor - desks with computers scatted the foylor. This was the main room where people worked. It was an open space, and the desks had wheels on so they were able to be moved around the building freely. There were several breakoff rooms where smaller groups could go to work.
 # 
 # Alfred scanned the room. People filled the desks. Sitting or standing they typed. 
 # 'Today is special', a familar voice for Alfred sounds from behind a monitor.
-# #Janets face poped out, with a smile. 
+# Janets face poped out, with a smile. 
 # 'Goodmorning Janet', Alfred smiled.
 # Janet rose from her chair.
 # 'Time for a coffee I believe', she said.
 # 
 # The ground that Janet walked on was rough. Stones cut into her barefeet. The sun blinded her view, she held her arm above her eyes. Attempting to block out the rays. 
-# A figure amurged in the distance.. Squinting she made haste towards the figure.
+# A figure amurged in the distance.. Squinting she made haste towards the figure. As she drew closer she noticed the figure was a copy of herself. A clone. 
+# 'You must be Janet', Janet exampled.
+# 
+# The number generater returned Noel Locksmart, Elizebeth Goodwill, Trist Gardens, and Ali Turbon. They were inserted into the text in order. Identitys were created. Credit Cards were the main source. Creating a fake identity and building up depit, and not paying it back. 
+# Janet scanned the card. Elizebeth Goodwill it the name on the license read. Born 06/11/2014. Spike Infosec: Help Desk 4. The photo was of a straight hair brunete in her early 20s, with frekles covering her face, petite.
+# The room reveled a server room with walkways. 
+# Goodwill plugged the patch cable from the Vodafone router. Connected on the otherside was a Raspberry Pi. A green and yellow light turned on by the ethernet port. It had a network. For development and testing Elizebeth perfered to use her own network connection. 
+# Truck skretched to a halt on the street. Three toots. Both truck doors opened and two men leaped out. They begain walking towards the propatery at the end of the street. 
+# Goodwill could hear several people moving about outside. 
+# The drone showed three people exiting the truck. Two men and a woman. As they scretched to a halt outside the house of Elizebeth Goodwill, was in fact Janet lived there. It was a setup. The house was trapped so that when they entered - they were never going to leave again. 
+# Thirty years Noel Locksmart had been a prisnor in the house. He will never forget the night. It was just a standard robbery. Locksmart had recieved word of a computer scientice by the name of Elizebeth Goodwill that had developed software that allowed the replaying of events in the past. The system was complex but started with just one script when Goodwill was in her early twentys. It was a login and logout script. The first script was the login script. This created a JSON object that included firstname, lastname, date (04/Nov/2014), time (hr:min), reason, and comment. The logout script added to the JSON object logout date, time, and comment. 
+# 
+# Ali Turbon wislied as he mixed the flour and eggs together. Pandora radio was playing from her bluetooth. George Benson played. 'Onions are ready to go, confirm? Y/n', a device in Turbon's left chefs jacket beeped. Turbon reached for her phone and hit enter. Three claws reached inside the cubord and picked up an onion each. The bench was a woodern bench. The claws dropped the onions on the bench then went back to the cubard to collect more onions. Several more trips back and forward then the claws switched into the next phase - cutting of the onion. The onions were lined up perfectly on the bench. Three rows, five collums. Fifteen onions. Chef knives snapped out of the claws of the device and started to cut up the onions. Each onion was cut in half, then quarters, and finally sliced. The onions were scopped up and droped into a pan of oil to fry. Once the onions were a lovely gold color they were tiped into a slow cooker. 
+# The claws grabbed a orange carrot and dropped it on the bench. The same amount of carrots were used as onions. The knives cut the carrots by a slice lengthways in half, then quarters, and finally slicing. Scopped up by the claws they are dropped in a pan to be fried with oil. Once goldern the carrots are tipped into the slow cooker. Fifteen cups of soft chickpeas are tipped into the pan of oil and fried. They are tipped into the slow cooker. Fifteen medium sized tomaroes travel through the room, being griped by the claw. They are crushed and tipped into the slowcooker.  
+# 
 # 
 # 
 # 
@@ -241,9 +255,9 @@ returan()
 
 returntime()
 
-# <codecell>
+# <markdowncell>
 
-DictNows.dictcreate('check')
+# DictNows.dictcreate('check')
 
 # <codecell>
 
