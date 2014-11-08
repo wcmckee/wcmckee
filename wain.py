@@ -110,7 +110,7 @@ import json
 # 'Goodmorning Janet', Alfred smiled.
 # Janet rose from her chair.
 # 'Time for a coffee I believe', she said.
-# Janet hadn't aged a day since Alfred met her. She had long straiht brunette hair. Light complection skin, with frekles covering her face. She wore skinny horozonal glasses that had a light blue tint. On this day she wore a long silky dress. Her black leather jacket was spread out over the back of her computer chair. 
+# Janet hadn't aged a day csince Alfred met her. She had long straiht brunette hair. Light complection skin, with frekles covering her face. She wore skinny horozonal glasses that had a light blue tint. On this day she wore a long silky dress. Her black leather jacket was spread out over the back of her computer chair. 
 # On her desk sat three wireless 22 inch monitors. 
 # 
 # The ground that Janet walked on was rough. Stones cut into her barefeet. The sun blinded her view, she held her arm above her eyes. Attempting to block out the rays. 
@@ -171,12 +171,17 @@ import json
 # 
 # Fire engine roars down the road towards the building on fire. The Dark Shape walks down the country side as the engine passes him. Corn fields populate the farm land here. Flying drones fly above the corn - monitoring. The Dark Shape smiles as thir bare feet crunch on the grass. It feels better than the cloth feeing the building had. The Dark Shape turned and watch dark clouds of smoke emurging into the sky. 
 # 
-# The engine arrived at the building. Much of the building was englufed in flame but the fighters would do their best to save it. Over 
+# The engine arrived at the building. Much of the building was englufed in flame but the fighters would do their best to save it. Humanolid Robot jumped out of the fire engine and entered the building to check for human that may be still in the building.
+# Two of the bots forced the front door open and entered the building. 
+# Three security guards stood there englufed in flames. They just beeped gibbish as the firefighters soaked them in anti flame powdered. The flames died down. 
+# The fighters contained down the hallway, spraying the ani flame powder as they moved.
+# One fighter opened the first door on the left. He entered a large foylor area. Desktop with computers on were englufed in flames. The fighter began to spray the powder at the computer. 
+# He noticed a humon figure in the room. It was sitting in the far corner sitting at the desk typing on a keyboard.
+# 'Must be a bot, can't be human', the fighter thought to himself. He moved closed to the humanold typing. 
+# The fact it didn't stopped typing is strange. Usually an emergeny mode activates when the bots are in danger. The activates a call to authorities and begins a self-repair task.
+# The fighter sprayed the bot with anti flame powder. It contined to  type.  
 # 
-# 
-# 
-# 
-# Charlie MacDonald. Rest in Peace. The grave stone read. Born 24 October 2014. Died 12 December 2093. Trist Gardens stood over the grave. Tears flowing from her eye. It had been two months since MacDonald passed away. She had worked with him for fifteen years at Spike InfoSec. Together they worked on a automatic cooking device. It was used in billions of home and businesses around the world. Spike InfoSec realeased blueprints of the device so anyone with a 3d printer can just print the device. 
+# Charlie MacDonald. Rest in Peace. The grave stone read. Born 24 October 2014. Died 12 December 2093. Trist Gardens stood over the grave. Tears flowing from her eyes. It had been two months since MacDonald passed away. She had worked with him for fifteen years at Spike InfoSec. Together they worked on a automatic cooking device. It was used in billions of home and businesses around the world. Spike InfoSec realeased blueprints of the device so anyone with a 3d printer can just print the device. 
 # 
 # Drone hovered by MacDonalds head. The claw was attached to a woodern board. MacDonald placed a onion on the board. 
 # 'Cut', he spoke clearly. 
@@ -208,17 +213,25 @@ import json
 # The Black Cat  moved towards the voice. A dark black shape stood in the distance pouring fresh meat into the cats contaiiner.
 # 'Thanks ma'am', The Black Cat spoke, he began eating the meat. 
 # The Black Cat was a prototype for the humonald bot. It was used for testing. Under the fake fur and skin was metal and wires. A raspberry Pi computer inside the model with a cell phone and audino connected to that. 
+# Human like personioltys were added to the computer. 
+# The speech 
 # The park ranger - Alfred Bunnings had created this one. He had printed the parts and soultered the robot together. Installing the software was easy - it was all in the software store. Bunnings also worked on scripts for Black. Today he was testing a script that made the robot smell and taste food. As people were pushing their children on the swing he ordered for a humonald robot to activate in the park and send off a signal to attract Black back.
 # This script could be used in many areas but Bunnings was developing it so he could find lost or stolen robots. 
 # Many times people come into the Park and walk away with a robot. Sometimes I don't relize it. They thing they have made a new friend but really it's a computer belonging to the park. The Park gets an alert that a bot has entered an unauthorised area and sends back gps data. 
 # The Park gives the person a friendly phone call or email and offers to either pick the robot up or let the person return the robot themselves. As long as the robot is returned the Park is not worried. Once the robot is returned it's rebooted in order to clear memories of leaving the park. The Park does not want robots remembering what is outside The Park as it causes more robots wanting to leave the park. Rebooting them isn't a problem but there is better work that the staff could be working on - such as new features. 
 # Black purred as he ate the fresh meat from his bowl.
 # The little girl on the swing with straight brunette hair hoped off the swing and ran toward Black. He purred louder as the girl - Elizebeth Goodwill patted Black. The adult continued to push the other child - a girl with blonde hair and a darker completion than Goodwill.
+# The Farm had rows of vegetables growing. On the pathway around the veges walked humonald robots working on the garden. 
+# Bunnings walked past the onion gardens. He smiled at the group of humanold robots in suits discussing the Onion garden. 
+# 'We need to speed haviousting up by 150% in the next three weeks', Bunnings overheard them as he walked past. 
+# The Onion Gardens were thriving. A cold and wet June month meant rain every day. The claw pulled the onion and dropped it into the crate with the rest of the onions that had been havested. 
+# The Claw moved fast, pulling another onion out of the ground in less than two seconds. 
+# Bunnings whisiled a tune as he walked past the Onion Gardens. Harvesting was excellent with the onions this year. They were experiencing a demand in onions and had increased the amount of The Claw that worked on the gardens. 
+# Bunnings entereded the carrot gardens. These parsely like vegetables added sweetness to the companies curries. Bunnings watched a The Claw plucked the carrots from the ground and dropped them in large containers. The next step for the carrots was washing, then it entered the kitchen.
+# Bunnings entereed the tomatoe gardens. Rich red tomatoes grew on the stalk. In this garden the company used humonald robots as a majority over the claw. The humonalds were given custom arms that allows for careful picking of the tomatoes. The tomatoes were dropped into containers where they were washed and moved into the kitchen. 
+# The herb gardens were next. Here coroondir and other herbs were grown for the Indian Spice Mix. 
 # 
-# 
-# 
-# 
-# He had plans to create his own Infomation Security company.                                               
+#  He had plans to create his own Infomation Security company.                                               
 
 # <markdowncell>
 
