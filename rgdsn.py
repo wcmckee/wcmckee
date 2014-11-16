@@ -238,10 +238,6 @@ def extractlinks(html):
 
 # <codecell>
 
-parseText("The website google.com is often user to search the internet, I used it to discover news.ycombinator.com which in turn led me to www.paulgraham.com/articles.html")
-
-# <codecell>
-
 cydict = fddict.values()
 
 # <codecell>
