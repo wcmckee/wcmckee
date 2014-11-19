@@ -118,6 +118,10 @@ getrddraw = reddraw.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
+decict = {'example':'wcmckee'}
+
+# <codecell>
+
 subz = getrddraw.get_new()
 
 # <codecell>
@@ -135,6 +139,14 @@ class TestRedditFunction(unittest.TestCase):
 def drawnew(subred):
     getrdraw = reddraw.get_subreddit(subred)
     return getrdraw
+
+def apred(deciz):
+    
+    return (deciz)
+
+# <codecell>
+
+apred('omg')
 
 # <codecell>
 
@@ -195,6 +207,8 @@ for rdz in rdnew:
     datelis.append(rdz.author)
     comdict = {'comtxt':rdz.comments}
     rgdef.update({rdz.author: rdz.url})
+    decict.update({'url':rdz.url})
+    decict.update({'title':rdz.title})
 
 # <codecell>
 
@@ -218,6 +232,14 @@ for comaq in comdefz:
         print fdz.replies
         fddict.update({fdz.author: fdz.body})
         comply.append(fdz.replies)
+        
+        decict.update({'author': fdz.author})
+        decict.update({'body':fdz.body})
+        decict.update({'replies':fdz.replies})
+
+# <codecell>
+
+decict
 
 # <codecell>
 
@@ -226,6 +248,13 @@ for coaz in comply:
     for coa in coaz:
         print coa.body
         print coa.author
+
+# <codecell>
+
+serz = Series(fddict)
+
+# <codecell>
+
 
 # <codecell>
 
@@ -515,6 +544,23 @@ savinx.close()
 
 # <codecell>
 
+decict
+
+# <codecell>
+
+depan = Series(decict)
+
+# <codecell>
+
+defed = DataFrame(depan)
+
+# <codecell>
+
+depan
+
+# <codecell>
+
+defed
 
 # <codecell>
 

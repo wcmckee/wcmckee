@@ -7,6 +7,8 @@ import numpy as np
 import pandas as pd
 from pandas import *
 import os
+import qgrid
+randn = np.random.randn
 
 # <rawcell>
 
@@ -73,7 +75,6 @@ for alt in altxt:
 
 for chem in checkem:
     print chem
-    sudo 
 
 # <codecell>
 
@@ -98,6 +99,10 @@ df = DataFrame(s)
 # <codecell>
 
 df
+
+# <codecell>
+
+qgrid.show_grid
 
 # <codecell>
 
@@ -390,4 +395,55 @@ ser
 
 # <codecell>
 
+for i in range(10):
+    randn()
+
+# <codecell>
+
+ilisz = []
+
+# <codecell>
+
+contnum = 
+
+# <codecell>
+
+if contnum = 10:
+    ilisz.append(randn())
+    contnum = contnum + 1
+
+# <codecell>
+
+while contnum = (-10):
+    ilitz.append(randn())
+    contnum = contnum + 1
+
+# <codecell>
+
+#!/usr/bin/python
+
+count = 0
+while (count < 9):
+   ilisz.append(randn())
+   print 'The count is:', count
+   count = count + 1
+    
+
+print "Good bye!"
+
+# <codecell>
+
+ilisz
+
+# <codecell>
+
+ser.append(ilisz)
+
+# <codecell>
+
+ser.index
+
+# <codecell>
+
+ser.
 
