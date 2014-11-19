@@ -56,6 +56,10 @@
 #  
 # photos section: latest 25 photos submitted to redditgetsdrawn.
 # art section: latest 25 art submitted to redditgetsdrawn. 
+# 
+# cleanup code 
+# 
+# import pandas into it and removed things i dont need like dominate
 
 # <codecell>
 
@@ -72,8 +76,9 @@ from dominate.tags import *
 from time import gmtime, strftime
 import nose
 import unittest
-
-# <codecell>
+import numpy as np
+import pandas as pd
+from pandas import *
 
 # <codecell>
 
@@ -454,7 +459,7 @@ print strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 # <codecell>
 
-savedate = strftime("%d" + "-" + "%M" + "-" + "%Y" + "-" + "%H")
+savedate = strftime("%d" + "-" + "%m" + "-" + "%Y" + "-" + "%H")
 
 # <codecell>
 
