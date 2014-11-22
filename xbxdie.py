@@ -367,6 +367,10 @@ mydef
 
 # <codecell>
 
+groupa = s.groupby(0)
+
+# <codecell>
+
 urdef = mydef.copy()
 
 # <codecell>
@@ -375,11 +379,21 @@ urdef.to_html()
 
 # <codecell>
 
+savindz = open('/home/wcmckee/visignsys/index.html', 'w')
+savindz.write(urdef.to_html())
+savindz.close()
+
+# <codecell>
+
 urdef.append(mydef)
 
 # <codecell>
 
 urdef
+
+# <codecell>
+
+ time.strftime("%d" + "-" + "%m" + "-" + "%Y")
 
 # <codecell>
 
