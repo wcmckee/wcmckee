@@ -207,8 +207,13 @@ for rdz in rdnew:
     datelis.append(rdz.author)
     comdict = {'comtxt':rdz.comments}
     rgdef.update({rdz.author: rdz.url})
+    pandic = DataFrame(rdz.json_dict)
     decict.update({'url':rdz.url})
     decict.update({'title':rdz.title})
+
+# <codecell>
+
+pandic
 
 # <codecell>
 
@@ -232,7 +237,7 @@ for comaq in comdefz:
         print fdz.replies
         fddict.update({fdz.author: fdz.body})
         comply.append(fdz.replies)
-        
+        decict.update({'created':fdz.created_utc})
         decict.update({'author': fdz.author})
         decict.update({'body':fdz.body})
         decict.update({'replies':fdz.replies})
@@ -489,6 +494,29 @@ print strftime("%a, %d %b %Y %H:%M:%S +0000")
 # <codecell>
 
 savedate = strftime("%d" + "-" + "%m" + "-" + "%Y" + "-" + "%H")
+
+# <codecell>
+
+def timeret():
+    return strftime("%d" + "-" + "%m" + "-" + "%Y" + "-" + "%H")
+
+def givmd():
+    return str(savedate + '.md')
+
+def givdic():
+    return rgdir.replace('/', '-')
+
+# <codecell>
+
+givdic()
+
+# <rawcell>
+
+# timeret()
+
+# <codecell>
+
+givmd()
 
 # <codecell>
 
