@@ -134,8 +134,27 @@ ledec = len(devices)
 
 # <codecell>
 
-for devz in devices[4]:
-    print devz
+for devz in devices[0]:
+    #print devz
+    print devices[0][devz]
+
+# <codecell>
+
+#tesz = pd.DataFrame('test')
+
+# <codecell>
+
+namdev = ({})
+
+# <codecell>
+
+for devi in devices:
+    print devi['tag']
+    namdev.update({devi['tag']:devi['id']})
+
+# <codecell>
+
+namdev
 
 # <codecell>
 
@@ -143,7 +162,7 @@ devices[0]
 
 # <codecell>
 
-susb = pd.Series(devices)
+susb = pd.Series(namdev)
 
 # <codecell>
 
@@ -155,20 +174,20 @@ usbdf
 
 # <codecell>
 
-for dev in df.values:
-    for bepb in dev:
+#for dev in df.values:
+#    for bepb in dev:
         #print bepb
-        print bepb['device']
+#        print bepb['device']
         #s.append(bepb['tag'])
-        print bepb['tag']
-        print bepb['id']
+#        print bepb['tag']
+#        print bepb['id']
 
 # <codecell>
 
 
 # <codecell>
 
-pd.Series(bepb)
+#pd.Series(bepb)
 
 # <codecell>
 
