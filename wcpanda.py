@@ -58,15 +58,7 @@ for dou in doubme:
 
 # <codecell>
 
-import arudino
-
-# <codecell>
-
 dev = usb.core.find()
-
-# <codecell>
-
-dev()
 
 # <codecell>
 
@@ -120,10 +112,6 @@ dev.iSerialNumber
 
 # <codecell>
 
-dev.filename
-
-# <codecell>
-
 repr(dev)
 
 # <codecell>
@@ -142,7 +130,16 @@ print devices
 
 # <codecell>
 
-devices.sort
+ledec = len(devices)
+
+# <codecell>
+
+for devz in devices[4]:
+    print devz
+
+# <codecell>
+
+devices[0]
 
 # <codecell>
 
@@ -150,16 +147,15 @@ susb = pd.Series(devices)
 
 # <codecell>
 
-df = pd.DataFrame(susb)
+usbdf = pd.DataFrame(susb)
 
 # <codecell>
 
-df
+usbdf
 
 # <codecell>
 
 for dev in df.values:
-    #print dev
     for bepb in dev:
         #print bepb
         print bepb['device']
@@ -176,15 +172,15 @@ pd.Series(bepb)
 
 # <codecell>
 
-    print dev
+print dev
 
 # <codecell>
 
-dev = usb.core.find(idVendor='1d6b:0002')
+#dev = usb.core.find(idVendor='1d6b:0002')
 
 # was it found?
-if dev is None:
-    raise ValueError('Device not found')
+#if dev is None:
+#    raise ValueError('Device not found')
 
 # <codecell>
 
@@ -196,11 +192,7 @@ os.listdir('/dev/input')
 
 # <codecell>
 
-ls
-
-# <codecell>
-
-runpan = os.system('python wcpanda')
+runpan = os.system('python wcpanda.py')
 
 # <codecell>
 
@@ -209,6 +201,65 @@ runpan
 # <codecell>
 
 runpan.denominator
+
+# <codecell>
+
+camjpg = os.listdir('/media/Storage/videos/')
+
+# <codecell>
+
+for cjp in camjpg:
+    print cjp
+    
+
+# <codecell>
+
+jpser = pd.Series(camjpg)
+
+# <codecell>
+
+jpser
+
+# <codecell>
+
+df = pd.DataFrame(jpser)
+
+# <codecell>
+
+df.values
+
+# <codecell>
+
+df.sort
+
+# <codecell>
+
+df.to_html
+
+# <codecell>
+
+df.merge
+
+# <codecell>
+
+df.tail()
+
+# <codecell>
+
+savmo = open('/home/wcmckee/motsav/index.html', 'w')
+savmo.write(str(df.to_html()))
+
+# <codecell>
+
+savmo.close()
+
+# <codecell>
+
+opmo = open('/home/wcmckee/motsav/index.html', 'r')
+
+# <codecell>
+
+opmo.read()
 
 # <codecell>
 
