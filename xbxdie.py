@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from pandas import *
 import os
-import qgrid
+#import qgrid
 randn = np.random.randn
 
 # <rawcell>
@@ -102,7 +102,7 @@ df
 
 # <codecell>
 
-qgrid.show_grid
+#qgrid.show_grid
 
 # <codecell>
 
@@ -367,7 +367,7 @@ mydef
 
 # <codecell>
 
-groupa = s.groupby(0)
+#groupa = s.groupby(0)
 
 # <codecell>
 
@@ -418,22 +418,6 @@ ilisz = []
 
 # <codecell>
 
-contnum = 
-
-# <codecell>
-
-if contnum = 10:
-    ilisz.append(randn())
-    contnum = contnum + 1
-
-# <codecell>
-
-while contnum = (-10):
-    ilitz.append(randn())
-    contnum = contnum + 1
-
-# <codecell>
-
 #!/usr/bin/python
 
 count = 0
@@ -448,16 +432,4 @@ print "Good bye!"
 # <codecell>
 
 ilisz
-
-# <codecell>
-
-ser.append(ilisz)
-
-# <codecell>
-
-ser.index
-
-# <codecell>
-
-ser.
 
