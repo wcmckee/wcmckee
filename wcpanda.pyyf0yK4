@@ -218,23 +218,6 @@ server.sendmail(fromz, toz, msg)
 
 # <codecell>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #dev = usb.core.find(idVendor='1d6b:0002')
 
 # was it found?
