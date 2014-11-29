@@ -10,6 +10,8 @@ import usb
 import os
 import re
 import subprocess
+import email
+import smtplib
 
 # <markdowncell>
 
@@ -19,6 +21,12 @@ import subprocess
 # 
 # Alert if any changes to devices or ping. 
 # Generate email that contains - lsusb - ping - recent music played - video snapshots
+# 
+# Altenative logins to password - something kids can remember and use.
+# 
+# Sign in/Sing Out script 
+# generate reports of end of week/month
+# 
 
 # <codecell>
 
@@ -218,23 +226,6 @@ server.sendmail(fromz, toz, msg)
 
 # <codecell>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #dev = usb.core.find(idVendor='1d6b:0002')
 
 # was it found?
@@ -243,7 +234,23 @@ server.sendmail(fromz, toz, msg)
 
 # <codecell>
 
-os.listdir('/dev/bus/usb/001')
+usbus = os.listdir('/home/wcmckee')
+
+# <codecell>
+
+chelis = []
+
+# <codecell>
+
+for usbz in usbus:
+    #chelis.append(os.listdir(usbz))
+    print usbz
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 
@@ -251,19 +258,19 @@ os.listdir('/dev/input')
 
 # <codecell>
 
-runpan = os.system('python wcpanda.py')
+#runpan = os.system('python wcpanda.py')
 
 # <codecell>
 
-runpan
+#runpan
 
 # <codecell>
 
-runpan.denominator
+#runpan.denominator
 
 # <codecell>
 
-camjpg = os.listdir('/media/Storage/videos/')
+camjpg = os.listdir('/home/wcmckee/')
 
 # <codecell>
 
@@ -285,7 +292,13 @@ df = pd.DataFrame(jpser)
 
 # <codecell>
 
-df.values
+lslit = []
+
+# <codecell>
+
+for fgvsl in df.values:
+    print fgvsl
+    #str(os.listdir(fgvsl))
 
 # <codecell>
 
@@ -319,6 +332,12 @@ opmo = open('/home/wcmckee/motsav/index.html', 'r')
 # <codecell>
 
 opmo.read()
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 

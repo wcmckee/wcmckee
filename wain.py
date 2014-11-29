@@ -9,6 +9,7 @@ import dominate
 import sys
 from dominate.tags import *
 import json
+import pandas as pd
 
 # <markdowncell>
 
@@ -590,6 +591,35 @@ savpos.write(str(betjsn))
 savpos.close()
 
 print ('sign in complete')
+
+# <codecell>
+
+reser = pd.Series(opred)
+
+# <codecell>
+
+pd.DataFrame(reser)
+
+# <codecell>
+
+rezda = []
+
+# <codecell>
+
+for res in reser:
+    print res
+    rezda.append(res)
+
+# <codecell>
+
+rezda
+
+# <codecell>
+
+len(rezda)
+
+# <codecell>
+
 
 # <codecell>
 
