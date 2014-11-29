@@ -188,7 +188,7 @@ for uz in rdnewz:
 
 datelis = []
 refdic = {}
-rgdef = {'test': 'testvalue'}
+rgdef = {'testz': 'testvalue'}
 comdefz = []
 
 # <codecell>
@@ -227,7 +227,7 @@ comply = []
 
 # <codecell>
 
-fddict = {'test': 'test'}
+fddict = {'testblah': 'testblah'}
 
 # <codecell>
 
@@ -616,6 +616,10 @@ fepan
 
 # <codecell>
 
+feram
+
+# <codecell>
+
 mepan
 
 # <codecell>
@@ -632,7 +636,18 @@ depan
 
 # <codecell>
 
-merfem = feram.join(defed)
+fepan
+
+# <codecell>
+
+mergz = depan.append(fepan)
+
+# <codecell>
+
+mergz
+
+# <codecell>
+
 
 # <codecell>
 
@@ -640,7 +655,7 @@ defed
 
 # <codecell>
 
-defhtml = defed.to_html()
+defhtml = mergz.to_html()
 
 # <codecell>
 
@@ -651,6 +666,9 @@ wrhtm.close()
 # <codecell>
 
 cat index.html
+
+# <codecell>
+
 
 # <codecell>
 
