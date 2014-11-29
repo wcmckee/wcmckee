@@ -292,6 +292,10 @@ df = pd.DataFrame(jpser)
 
 # <codecell>
 
+df
+
+# <codecell>
+
 lslit = []
 
 # <codecell>
@@ -311,6 +315,9 @@ df.to_html()
 # <codecell>
 
 df.merge
+
+# <codecell>
+
 
 # <codecell>
 

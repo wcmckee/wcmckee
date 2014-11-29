@@ -210,6 +210,8 @@ for rdz in rdnew:
     pandic = DataFrame(rdz.json_dict)
     decict.update({'url':rdz.url})
     decict.update({'title':rdz.title})
+    decict.update({'ups': rdz.ups})
+    decict.update({'downs': rdz.downs})
 
 # <codecell>
 
@@ -235,7 +237,11 @@ for comaq in comdefz:
         print fdz.author
         print fdz.created_utc
         print fdz.replies
-        fddict.update({fdz.author: fdz.body})
+        fddict.update({'combody': fdz.body})
+        fddict.update({'comauthor': fdz.author})
+        fddict.update({'comup': fdz.ups})
+        fddict.update({'comdown': fdz.downs})
+        
         comply.append(fdz.replies)
         decict.update({'created':fdz.created_utc})
         decict.update({'author': fdz.author})
@@ -245,6 +251,10 @@ for comaq in comdefz:
 # <codecell>
 
 decict
+
+# <codecell>
+
+fddict
 
 # <codecell>
 
@@ -260,6 +270,7 @@ serz = Series(fddict)
 
 # <codecell>
 
+fddict
 
 # <codecell>
 
@@ -569,6 +580,7 @@ savinx.close()
 
 # <codecell>
 
+deepone
 
 # <codecell>
 
@@ -576,11 +588,19 @@ decict
 
 # <codecell>
 
+decict.update({'datehour': givmd()})
+
+# <codecell>
+
 depan = Series(decict)
 
 # <codecell>
 
-defed = DataFrame(depan)
+fepan = Series(fddict)
+
+# <codecell>
+
+mepan = (fepan)+(depan)
 
 # <codecell>
 
@@ -588,7 +608,49 @@ depan
 
 # <codecell>
 
+feram = pd.DataFrame(fepan)
+
+# <codecell>
+
+fepan
+
+# <codecell>
+
+mepan
+
+# <codecell>
+
+defed = DataFrame(depan)
+
+# <codecell>
+
+defed.append(fepan)
+
+# <codecell>
+
+depan
+
+# <codecell>
+
+merfem = feram.join(defed)
+
+# <codecell>
+
 defed
+
+# <codecell>
+
+defhtml = defed.to_html()
+
+# <codecell>
+
+wrhtm = open('index.html', 'w')
+wrhtm.write(defhtml)
+wrhtm.close()
+
+# <codecell>
+
+cat index.html
 
 # <codecell>
 
