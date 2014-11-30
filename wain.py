@@ -623,8 +623,4 @@ len(rezda)
 
 # <codecell>
 
-ls
-
-# <codecell>
-
 

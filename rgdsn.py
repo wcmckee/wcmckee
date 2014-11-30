@@ -11,6 +11,17 @@
 # Contains artwork replies to each thread
 # 
 # This is a Python script that takes data from reddit and posts it to another subreddit. It also creates a html file with the images embed into. The images are the most recent 25 on r/redditgetsdrawn.
+# 
+# The script returns the comments from the most recent 25 posts along with the comments of comments.
+# 
+# Pandas is used to append everything into a series and DataFrame. 
+# The pandas allows youto easily append these together. 
+# 
+# get all artwork and append into reference image -> 
+# artwork. 
+# 
+# Generate sites again.
+# 
 
 # <markdowncell>
 
@@ -666,6 +677,9 @@ wrhtm.close()
 # <codecell>
 
 cat index.html
+
+# <codecell>
+
 
 # <codecell>
 
