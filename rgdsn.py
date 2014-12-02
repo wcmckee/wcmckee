@@ -395,48 +395,48 @@ doc.body.parent.children
 
 # <codecell>
 
-soup = BeautifulSoup(doc)
+#soup = BeautifulSoup(doc)
 
 #print(soup.prettify())
 
 # <codecell>
 
-extractlinks()
+#extractlinks()
 
 # <codecell>
 
-for imc in imcom:
-    print imc
+#for imc in imcom:
+#    print imc
 
 # <codecell>
 
-doc.body
-
-# <codecell>
-
-
-# <codecell>
-
-doc.render()
-
-# <codecell>
-
-for dicaz in doc.children:
-    print dicaz
+#doc.body
 
 # <codecell>
 
 
 # <codecell>
 
-for imz in imcom:
+#doc.render()
+
+# <codecell>
+
+#for dicaz in doc.children:
+#    print dicaz
+
+# <codecell>
+
+
+# <codecell>
+
+#for imz in imcom:
     
-    print imz
+#    print imz
 
 # <codecell>
 
-for rez in rcoms:
-    print rez
+#for rez in rcoms:
+#    print rez
     
 
 # <codecell>
@@ -444,9 +444,9 @@ for rez in rcoms:
 
 # <codecell>
 
-for rgt in rgdef.values():
-    if '.jpg' in rgt:
-        print rgt
+#for rgt in rgdef.values():
+#    if '.jpg' in rgt:
+#        print rgt
 
 # <codecell>
 
@@ -639,7 +639,7 @@ defed = DataFrame(depan)
 
 # <codecell>
 
-defed.append(fepan)
+#defed.append(fepan)
 
 # <codecell>
 
@@ -666,7 +666,7 @@ defed
 
 # <codecell>
 
-defhtml = mergz.to_html()
+defhtml = defed.to_html()
 
 # <codecell>
 
