@@ -246,7 +246,7 @@ for comaq in comdefz:
     for fdz in comaq:
         print fdz
         print fdz.author
-        print fdz.creatted_utc
+        print fdz.created_utc
         print fdz.replies
         fddict.update({'combody': fdz.body})
         fddict.update({'comauthor': fdz.author})
@@ -312,7 +312,7 @@ chedict = {'blah': 'testing'}
 
 # <codecell>
 
-fixurl = BeautifulSoup(fddict.values())
+#fixurl = BeautifulSoup(fddict.values())
 
 # <codecell>
 
@@ -329,7 +329,7 @@ chedict
 
 # <codecell>
 
-jsdum = json.loads(chedict)
+#jsdum = json.loads(chedict)
 
 # <codecell>
 
@@ -351,7 +351,7 @@ imcom
 
 # <codecell>
 
-fuldoc = doc.render()
+#fuldoc = doc.render()
 
 # <codecell>
 
@@ -501,9 +501,9 @@ os.chdir(rgdir)
 
 # <codecell>
 
-#mkindex = open('index.html', 'w')
-#mkindex.write(str(doc))
-#mkindex.close()
+mkindex = open('index.html', 'w')
+mkindex.write(str(doc))
+mkindex.close()
 
 # <codecell>
 
@@ -567,7 +567,7 @@ deepone
 
 # <codecell>
 
-redposts = ('/home/wcmckee/rgdrecentReference/posts')
+redposts = ('/home/wcmckee/rgdrecentReference/posts/pandas')
 
 # <codecell>
 
