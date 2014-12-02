@@ -246,7 +246,7 @@ for comaq in comdefz:
     for fdz in comaq:
         print fdz
         print fdz.author
-        print fdz.created_utc
+        print fdz.creatted_utc
         print fdz.replies
         fddict.update({'combody': fdz.body})
         fddict.update({'comauthor': fdz.author})
@@ -673,17 +673,4 @@ defhtml = mergz.to_html()
 wrhtm = open('index.html', 'w')
 wrhtm.write(defhtml)
 wrhtm.close()
-
-# <codecell>
-
-cat index.html
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
 
