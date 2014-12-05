@@ -7,4 +7,12 @@
 
 # <codecell>
 
+import os
+
+# <codecell>
+
+os.listdir('/home')
+
+# <codecell>
+
 
