@@ -7,6 +7,11 @@ import numpy as np
 import pandas as pd
 from pandas import *
 import os
+
+
+
+
+
 #import qgrid
 randn = np.random.randn
 
@@ -432,4 +437,11 @@ print "Good bye!"
 # <codecell>
 
 ilisz
+
+# <codecell>
+
+ilisz
+
+# <codecell>
+
 

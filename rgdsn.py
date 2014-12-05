@@ -269,6 +269,14 @@ fddict
 
 # <codecell>
 
+qwedict = decict.items() + fddict.items()
+
+# <codecell>
+
+qwedict
+
+# <codecell>
+
 for coaz in comply:
     print coaz
     for coa in coaz:
@@ -673,4 +681,10 @@ defhtml = defed.to_html()
 wrhtm = open('index.html', 'w')
 wrhtm.write(defhtml)
 wrhtm.close()
+
+# <codecell>
+
+
+# <codecell>
+
 
