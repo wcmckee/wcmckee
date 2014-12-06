@@ -85,8 +85,8 @@ import praw
 import dominate
 from dominate.tags import *
 from time import gmtime, strftime
-import nose
-import unittest
+#import nose
+#import unittest
 import numpy as np
 import pandas as pd
 from pandas import *
@@ -129,7 +129,7 @@ getrddraw = reddraw.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
-decict = {'example':'wcmckee'}
+decict = dict()
 
 # <codecell>
 
@@ -175,10 +175,6 @@ for imgz in rtohr:
 
 # <codecell>
 
-rdnew = []
-
-# <codecell>
-
 rdnewz = getrddraw.get_new()
 
 # <codecell>
@@ -199,7 +195,7 @@ for uz in rdnewz:
 
 datelis = []
 refdic = {}
-rgdef = {'testz': 'testvalue'}
+rgdef = dict()
 comdefz = []
 
 # <codecell>
@@ -242,7 +238,7 @@ comply = []
 
 # <codecell>
 
-fddict = {'testblah': 'testblah'}
+fddict = dict()
 
 # <codecell>
 
@@ -274,6 +270,20 @@ fddict
 # <codecell>
 
 qwedict = decict.items() + fddict.items()
+
+# <codecell>
+
+alldixz = dict()
+
+# <codecell>
+
+for qwpz in qwedict:
+    print qwpz
+    alldixz.update({qwpz: 'test'})
+
+# <codecell>
+
+alldixz
 
 # <codecell>
 

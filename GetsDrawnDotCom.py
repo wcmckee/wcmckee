@@ -62,6 +62,7 @@ for mi in mincom:
 # <codecell>
 
 bodycom = []
+bodyicv = dict()
 
 # <codecell>
 
@@ -71,6 +72,7 @@ for shtz in shtweet:
     print shtz.body
     print shtz.replies
     bodycom.append(shtz.body)
+    bodyic
 
 # <codecell>
 
