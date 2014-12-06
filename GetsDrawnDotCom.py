@@ -7,9 +7,26 @@
 
 # <markdowncell>
 
-# This is a python script to generate the website GetsDrawn. It takes data from RedditGetsDrawn and makes something awesome.
+# This is a python script to generate the website GetsDrawn. It takes data from /r/RedditGetsDrawn and makes something awesome.
 # 
 # The script has envolved and been rewritten several times. 
+# 
+# The first script for rgdsnatch was written after I got banned from posting my artwork on /r/RedditGetsDrawn. The plan was to create a new site that displayed stuff from /r/RedditGetsDrawn. 
+# 
+# Currently it only displays the most recent 25 items on redditgetsdrawn.
+# 
+# This is moving forward from rgdsnatch.py because I am stuck on it.  
+# 
+# TODO
+# 
+# Fix the links that don't link to png/jpeg and link to webaddress. 
+# Needs to get the images that are at that web address and embed them.
+# 
+# Display artwork submitted under the images. 
+# 
+# Upload artwork to user. Sends them a message on redditgetsdrawn with links. 
+# 
+# More pandas
 
 # <codecell>
 
@@ -28,6 +45,7 @@ from time import gmtime, strftime
 import numpy as np
 import pandas as pd
 from pandas import *
+import pyttsx
 
 # <codecell>
 
@@ -66,17 +84,35 @@ bodyicv = dict()
 
 # <codecell>
 
+engine = pyttsx.init()
+
+beginz = pyttsx.init()
+
+# <codecell>
+
 for shtz in shtweet:
     print shtz.downs
     print shtz.ups
     print shtz.body
     print shtz.replies
+    beginz.say(shtz.author)
+    beginz.say(shtz.body)
+    engine.runAndWait()
     bodycom.append(shtz.body)
-    bodyic
+    #bodyic
 
 # <codecell>
 
-bodycom
+engine = pyttsx.init()
+voices = engine.getProperty('voices')
+for voice in voices:
+   engine.setProperty('voice', voice.id)
+   engine.say('The quick brown fox jumped over the lazy dog.')
+engine.runAndWait()
+
+# <codecell>
+
+bodycom 
 
 # <codecell>
 
@@ -116,7 +152,7 @@ panz = opsinz.read()
 
 # <codecell>
 
-panz()
+#panz()
 
 # <codecell>
 
