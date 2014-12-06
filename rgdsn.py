@@ -226,6 +226,10 @@ for rdz in rdnew:
 
 # <codecell>
 
+decict
+
+# <codecell>
+
 pandic
 
 # <codecell>
@@ -502,6 +506,10 @@ with doc:
 # <codecell>
 
 rgdir = ('/home/wcmckee/rgdrecentReference/')
+
+# <codecell>
+
+doc.render()
 
 # <codecell>
 

@@ -56,13 +56,8 @@ lisrgc = []
 # <codecell>
 
 for uz in rdnew:
-    print uz
+    #print uz
     lisrgc.append(uz)
-
-# <codecell>
-
-for lizq in lisrgc:
-    print lizq
 
 # <codecell>
 
@@ -79,7 +74,74 @@ for lisr in lisrgc:
 
 # <codecell>
 
+doc = dominate.document(title='GetsDrawn')
+
+with doc.head:
+    link(rel='stylesheet', href='style.css')
+    script(type='text/javascript', src='script.js')
+    
+    with div():
+        attr(cls='header')
+        h1('GetsDrawn')
+        p(img('imgs/getsdrawn-bw.png', src='imgs/getsdrawn-bw.png'))
+        p('updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
+
+    
+    
+
+with doc:
+    with div(id='body').add(ol()):
+        for rdz in lisrgc:
+            h1(rdz.title)
+            a(rdz.url)
+            if '.jpg' or '.png' in rdz.url:
+                #print rdz.url
+                p(img(rdz.url, src='%s' % rdz.url))
+            #print rdz.url
+            #if '.jpg' in rdz.url:
+            #    img(rdz.urlz)
+            #else:
+            #    a(rdz.urlz)
+            p(str(rdz.author))
+            
+            #li(img(i.lower(), src='%s' % i))
+
+    with div():
+        attr(cls='body')
+        p('GetsDrawn is open source')
+        a('http://github.com/wcmckee/wcmckee')
+
+#print doc
+
+# <codecell>
+
 gtdrndic
+
+# <codecell>
+
+doc.render()
+
+# <codecell>
+
+indfil = ('/home/wcmckee/getsdrawndotcom/index.html')
+
+# <codecell>
+
+mkind = open(indfil, 'w')
+mkind.write(str(doc))
+mkind.close()
+
+# <codecell>
+
+#os.system('scp -r /home/wcmckee/getsdrawndotcom/ wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom')
+
+# <codecell>
+
+os.system('scp -r /home/wcmckee/getsdrawndotcom/index.html wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/index.html')
+
+# <codecell>
+
+os.system('scp -r /home/wcmckee/getsdrawndotcom/style.css wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/style.css')
 
 # <codecell>
 
