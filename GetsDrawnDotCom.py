@@ -43,6 +43,41 @@ r = praw.Reddit(user_agent='getsdrawndotcom')
 
 # <codecell>
 
+getmin = r.get_redditor('itwillbemine')
+
+# <codecell>
+
+mincom = getmin.get_comments()
+
+# <codecell>
+
+shtweet = []
+
+# <codecell>
+
+for mi in mincom:
+    print mi
+    shtweet.append(mi)
+
+# <codecell>
+
+bodycom = []
+
+# <codecell>
+
+for shtz in shtweet:
+    print shtz.downs
+    print shtz.ups
+    print shtz.body
+    print shtz.replies
+    bodycom.append(shtz.body)
+
+# <codecell>
+
+bodycom
+
+# <codecell>
+
 getnewr = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
@@ -74,6 +109,15 @@ for lisr in lisrgc:
 
 # <codecell>
 
+opsinz = open('/home/wcmckee/visignsys/index.meta', 'r')
+panz = opsinz.read()
+
+# <codecell>
+
+panz()
+
+# <codecell>
+
 doc = dominate.document(title='GetsDrawn')
 
 with doc.head:
@@ -84,8 +128,9 @@ with doc.head:
         attr(cls='header')
         h1('GetsDrawn')
         p(img('imgs/getsdrawn-bw.png', src='imgs/getsdrawn-bw.png'))
-        p('updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
-
+        p('Updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
+        p(panz)
+        p(bodycom)
     
     
 
@@ -93,7 +138,7 @@ with doc:
     with div(id='body').add(ol()):
         for rdz in lisrgc:
             h1(rdz.title)
-            a(rdz.url)
+            #a(rdz.url)
             if '.jpg' or '.png' in rdz.url:
                 #print rdz.url
                 p(img(rdz.url, src='%s' % rdz.url))
