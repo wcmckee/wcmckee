@@ -33,9 +33,6 @@ lisfire('/home/wcmckee/Documents/getsdrawn-line.png', 'wcmckee@getsdrawn.com', '
 
 checkred = refzem('wcmckee', 'wcmckee.com')
 
-# <rawcell>
-
-
 # <codecell>
 
 checkred.real

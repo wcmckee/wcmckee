@@ -6,7 +6,7 @@
 import numpy as np
 import pandas as pd
 import math
-import usb
+#import usb
 import os
 import re
 import subprocess
@@ -75,7 +75,18 @@ for dou in doubme:
 
 # <codecell>
 
-dev = usb.core.find()
+#dev = usb.core.find()
+
+# <codecell>
+
+import pyttsx
+
+# <codecell>
+
+engine = pyttsx.init()
+
+engine.say('The quick brown fox jumped over the lazy dog.')
+engine.runAndWait()
 
 # <codecell>
 

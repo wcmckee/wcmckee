@@ -45,7 +45,7 @@ from time import gmtime, strftime
 import numpy as np
 import pandas as pd
 from pandas import *
-import pyttsx
+#import pyttsx
 
 # <codecell>
 
@@ -69,6 +69,13 @@ mincom = getmin.get_comments()
 
 # <codecell>
 
+#engine = pyttsx.init()
+
+#engine.say('The quick brown fox jumped over the lazy dog.')
+#engine.runAndWait()
+
+# <codecell>
+
 shtweet = []
 
 # <codecell>
@@ -84,9 +91,7 @@ bodyicv = dict()
 
 # <codecell>
 
-engine = pyttsx.init()
-
-beginz = pyttsx.init()
+#beginz = pyttsx.init()
 
 # <codecell>
 
@@ -95,20 +100,12 @@ for shtz in shtweet:
     print shtz.ups
     print shtz.body
     print shtz.replies
-    beginz.say(shtz.author)
-    beginz.say(shtz.body)
-    engine.runAndWait()
+    #beginz.say(shtz.author)
+    #beginz.say(shtz.body)
+    #beginz.runAndWait()
+    
     bodycom.append(shtz.body)
     #bodyic
-
-# <codecell>
-
-engine = pyttsx.init()
-voices = engine.getProperty('voices')
-for voice in voices:
-   engine.setProperty('voice', voice.id)
-   engine.say('The quick brown fox jumped over the lazy dog.')
-engine.runAndWait()
 
 # <codecell>
 
@@ -180,6 +177,7 @@ with doc:
             if '.jpg' or '.png' in rdz.url:
                 #print rdz.url
                 p(img(rdz.url, src='%s' % rdz.url))
+                
             #print rdz.url
             #if '.jpg' in rdz.url:
             #    img(rdz.urlz)

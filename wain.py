@@ -436,7 +436,7 @@ usecom = raw_input('Comments: ')
 
 # <codecell>
 
-betdict = {'first-name': firnam}
+betdict = dict()
 
 # <codecell>
 
@@ -617,6 +617,9 @@ rezda
 # <codecell>
 
 len(rezda)
+
+# <codecell>
+
 
 # <codecell>
 
