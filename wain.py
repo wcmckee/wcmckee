@@ -1,16 +1,6 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
-# <codecell>
-
-import os
-import time
-import dominate
-import sys
-from dominate.tags import *
-import json
-import pandas as pd
-
 # <markdowncell>
 
 # Visitor Sign System
@@ -333,6 +323,21 @@ import pandas as pd
 
 # <codecell>
 
+import os
+import time
+import dominate
+import sys
+from dominate.tags import *
+import json
+import pandas as pd
+
+# <markdowncell>
+
+# Profile. Profile has data in it that is then used in sign system
+# 
+
+# <codecell>
+
 valname = ('lasnam', 'signin', 'usercom', 'dayr', 'htmn')
 
 # <codecell>
@@ -422,13 +427,25 @@ dictcreate('name', 'wcm')
 
 # <codecell>
 
-lasnam = raw_input('Last Name: ')
-firnam = raw_input('First Name: ')
-dopz = raw_input('dob: ')
-mname = ('William Mckee')
-ename = raw_input('Email: ')
-signin = raw_input('Reason: ')
-usecom = raw_input('Comments: ')
+newprof = raw_input('New Profile yes/no: ')
+
+if 'y' in newprof:
+    lasnam = raw_input('Last Name: ')
+    firnam = raw_input('First Name: ')
+    dopz = raw_input('dob: ')
+    mname = ('William Mckee')
+    ename = raw_input('Email: ')
+    signin = raw_input('Reason: ')
+    usecom = raw_input('Comments: ')
+    
+elif 'n' in newprof:
+    lasnam = ("mckee")
+    firnam = ('First Name: ')
+    dopz = ('dob: ')
+    mname = ('William Mckee')
+    ename = ('Email: ')
+    signin = ('Reason: ')
+    usecom = ('Comments: ')
 
 # <codecell>
 
@@ -452,8 +469,8 @@ hrmn = time.strftime("%H:%M:%S")
 betdict.update({'last-name': lasnam})
 betdict.update({'reason': signin})
 betdict.update({'signin-comment': usecom})
-betdict.update({'signin-date': dayr})
-betdict.update({'signin-hrmin': hrmn})
+betdict.update({'signin-date': returndate()})
+betdict.update({'signin-hrmin': returntime()})
 
 # <codecell>
 
@@ -598,7 +615,7 @@ reser = pd.Series(opred)
 
 # <codecell>
 
-pd.DataFrame(reser)
+#pd.DataFrame(reser)
 
 # <codecell>
 

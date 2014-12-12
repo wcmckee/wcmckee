@@ -12,43 +12,56 @@
 # 
 # creates date and time mark and asks for comment
 
+# <markdowncell>
+
+# This needs rewriten to remove xl stuff opening. keep it to json and dict. 
+
 # <codecell>
 
-import xlrd
+#import xlrd
 import os
 import time
-from xlutils.copy import copy
-from xlrd import *
+#from xlutils.copy import copy
+#from xlrd import *
 import dominate
 import json
 
 # <codecell>
 
-wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+#wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+
+# <codecell>
+
+jsopn = open('/home/wcmckee/visignsys/index.json', 'r')
+jsrdv = jsopn.read()
+
+# <codecell>
+
+jsrdv
 
 # <codecell>
 
 #print wrkbook.sheet_names()
 
-worksheet = wrkbook.sheet_by_name('visitor sign database')
-swlis = []
-num_rows = worksheet.nrows - 1
-curr_row = -1
-while curr_row < num_rows:
-    curr_row += 1
-    row = worksheet.row(curr_row)
+#worksheet = wrkbook.sheet_by_name('visitor sign database')
+#swlis = []
+#num_rows = worksheet.nrows - 1
+#curr_row = -1
+#while curr_row < num_rows:
+#    curr_row += 1
+#    row = worksheet.row(curr_row)
     #print row
-    swlis.append(row)
+#    swlis.append(row)
 
 # <codecell>
 
-valis = []
+#valis = []
 
 # <codecell>
 
-for swl in swlis[1]:
-    print swl.value
-    valis.append(swl.value)
+#for swl in swlis[1]:
+#    print swl.value
+#    valis.append(swl.value)
 
 # <codecell>
 
@@ -91,13 +104,14 @@ signkeys = signoutdic.keys()
 
 # <codecell>
 
+wha = open('/home/wcmckee/visignsys/index.json', 'a')
 
-w = copy(open_workbook('/home/wcmckee/whai/index.xls'))
-w.get_sheet(0).write(1,5, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
-w.get_sheet(0).write(1,6, time.strftime("%H:%M"))
-w.get_sheet(0).write(1,7, tiran)
+#w = copy(open_workbook('/home/wcmckee/whai/index.xls'))
+#w.get_sheet(0).write(1,5, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
+#w.get_sheet(0).write(1,6, time.strftime("%H:%M"))
+#w.get_sheet(0).write(1,7, tiran)
 
-w.save('/home/wcmckee/whai/index.xls')
+#w.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
