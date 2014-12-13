@@ -61,11 +61,11 @@ r = praw.Reddit(user_agent='getsdrawndotcom')
 
 # <codecell>
 
-getmin = r.get_redditor('itwillbemine')
+#getmin = r.get_redditor('itwillbemine')
 
 # <codecell>
 
-mincom = getmin.get_comments()
+#mincom = getmin.get_comments()
 
 # <codecell>
 
@@ -76,13 +76,13 @@ mincom = getmin.get_comments()
 
 # <codecell>
 
-shtweet = []
+#shtweet = []
 
 # <codecell>
 
-for mi in mincom:
-    print mi
-    shtweet.append(mi)
+#for mi in mincom:
+#    print mi
+#    shtweet.append(mi)
 
 # <codecell>
 
@@ -95,21 +95,21 @@ bodyicv = dict()
 
 # <codecell>
 
-for shtz in shtweet:
-    print shtz.downs
-    print shtz.ups
-    print shtz.body
-    print shtz.replies
+#for shtz in shtweet:
+#    print shtz.downs
+#    print shtz.ups
+#    print shtz.body
+#    print shtz.replies
     #beginz.say(shtz.author)
     #beginz.say(shtz.body)
     #beginz.runAndWait()
     
-    bodycom.append(shtz.body)
+#    bodycom.append(shtz.body)
     #bodyic
 
 # <codecell>
 
-bodycom 
+#bodycom 
 
 # <codecell>
 
@@ -136,11 +136,13 @@ gtdrndic = dict()
 # <codecell>
 
 for lisr in lisrgc:
-    print lisr.url
-    print lisr.title
-    print lisr.author
-    print lisr.comments
+    #print lisr.url
+    #print lisr.title
+    #print lisr.author
+    #print lisr.comments
     gtdrndic.update({'title': lisr.title})
+    print lisr.json_dict
+    
 
 # <codecell>
 
@@ -200,7 +202,11 @@ gtdrndic
 
 # <codecell>
 
-doc.render()
+docr = doc.render()
+
+# <codecell>
+
+docr.decode('ascii', 'ignore')
 
 # <codecell>
 

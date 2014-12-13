@@ -137,13 +137,13 @@ subz = getrddraw.get_new()
 
 # <codecell>
 
-class TestRedditFunction(unittest.TestCase):
+#class TestRedditFunction(unittest.TestCase):
     
-    def setUp(self):
-        self.seq = reddraw.get_subreddit('redditgetsdrawn')
+#    def setUp(self):
+#        self.seq = reddraw.get_subreddit('redditgetsdrawn')
         
-    def testredit(self):
-        drawnew('redditgetsdrawn') 
+#    def testredit(self):
+#        drawnew('redditgetsdrawn') 
 
 # <codecell>
 
@@ -239,6 +239,10 @@ comply = []
 # <codecell>
 
 fddict = dict()
+
+# <codecell>
+
+fdz.body
 
 # <codecell>
 
