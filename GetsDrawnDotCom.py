@@ -202,11 +202,7 @@ gtdrndic
 
 # <codecell>
 
-docr = doc.render()
-
-# <codecell>
-
-docr.decode('ascii', 'ignore')
+doc.render()
 
 # <codecell>
 
