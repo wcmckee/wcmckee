@@ -206,7 +206,7 @@ docre = doc.render()
 
 # <codecell>
 
-s = docre.decode('ascii', 'ignore')
+#s = docre.decode('ascii', 'ignore')
 
 # <codecell>
 
