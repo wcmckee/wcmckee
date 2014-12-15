@@ -1,11 +1,27 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # <h1>GetsDrawn DotCom</h1>
 
-# <markdowncell>
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
+
 
 # This is a python script to generate the website GetsDrawn. It takes data from /r/RedditGetsDrawn and makes something awesome.
 # 
@@ -28,7 +44,7 @@
 # 
 # More pandas
 
-# <codecell>
+# In[70]:
 
 import os 
 import requests
@@ -47,53 +63,64 @@ import pandas as pd
 from pandas import *
 #import pyttsx
 
-# <codecell>
+
+# In[71]:
 
 gtsdrndir = ('/home/wcmckee/getsdrawndotcom')
 
-# <codecell>
+
+# In[72]:
 
 os.chdir(gtsdrndir)
 
-# <codecell>
+
+# In[73]:
 
 r = praw.Reddit(user_agent='getsdrawndotcom')
 
-# <codecell>
+
+# In[74]:
 
 #getmin = r.get_redditor('itwillbemine')
 
-# <codecell>
+
+# In[75]:
 
 #mincom = getmin.get_comments()
 
-# <codecell>
+
+# In[76]:
 
 #engine = pyttsx.init()
 
 #engine.say('The quick brown fox jumped over the lazy dog.')
 #engine.runAndWait()
 
-# <codecell>
+
+# In[77]:
 
 #shtweet = []
 
-# <codecell>
+
+# In[78]:
 
 #for mi in mincom:
 #    print mi
 #    shtweet.append(mi)
 
-# <codecell>
+
+# In[79]:
 
 bodycom = []
 bodyicv = dict()
 
-# <codecell>
+
+# In[80]:
 
 #beginz = pyttsx.init()
 
-# <codecell>
+
+# In[81]:
 
 #for shtz in shtweet:
 #    print shtz.downs
@@ -107,33 +134,40 @@ bodyicv = dict()
 #    bodycom.append(shtz.body)
     #bodyic
 
-# <codecell>
+
+# In[82]:
 
 #bodycom 
 
-# <codecell>
+
+# In[83]:
 
 getnewr = r.get_subreddit('redditgetsdrawn')
 
-# <codecell>
+
+# In[84]:
 
 rdnew = getnewr.get_new()
 
-# <codecell>
+
+# In[85]:
 
 lisrgc = []
 
-# <codecell>
+
+# In[86]:
 
 for uz in rdnew:
     #print uz
     lisrgc.append(uz)
 
-# <codecell>
+
+# In[87]:
 
 gtdrndic = dict()
 
-# <codecell>
+
+# In[88]:
 
 for lisr in lisrgc:
     #print lisr.url
@@ -144,16 +178,19 @@ for lisr in lisrgc:
     print lisr.json_dict
     
 
-# <codecell>
+
+# In[89]:
 
 opsinz = open('/home/wcmckee/visignsys/index.meta', 'r')
 panz = opsinz.read()
 
-# <codecell>
+
+# In[90]:
 
 #panz()
 
-# <codecell>
+
+# In[91]:
 
 doc = dominate.document(title='GetsDrawn')
 
@@ -196,36 +233,45 @@ with doc:
 
 #print doc
 
-# <codecell>
+
+# In[92]:
 
 gtdrndic
 
-# <codecell>
+
+# In[93]:
 
 doc.render()
 
-# <codecell>
+
+# In[94]:
 
 indfil = ('/home/wcmckee/getsdrawndotcom/index.html')
 
-# <codecell>
+
+# In[95]:
 
 mkind = open(indfil, 'w')
 mkind.write(str(doc))
 mkind.close()
 
-# <codecell>
+
+# In[96]:
 
 #os.system('scp -r /home/wcmckee/getsdrawndotcom/ wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom')
 
-# <codecell>
+
+# In[97]:
 
 os.system('scp -r /home/wcmckee/getsdrawndotcom/index.html wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/index.html')
 
-# <codecell>
+
+# In[ ]:
 
 os.system('scp -r /home/wcmckee/getsdrawndotcom/style.css wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/style.css')
 
-# <codecell>
+
+# In[ ]:
+
 
 
