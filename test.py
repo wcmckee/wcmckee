@@ -26,10 +26,10 @@ def refzem(remotehost, remotefolder):
     return os.system('scp "%s":"%s" ls -R' % (remotehost, remotefolder))
 
 def rsyzmpush(localfile, remotehost, remotefile):
-    return os.system('rsync -azp "%s" "%s:%s"' % (localfile, remotehost, remotefile))
+    return os.system('rsync -azP "%s" "%s:%s"' % (localfile, remotehost, remotefile))
 
 def rsyzmpull(remotehost, remotefile, localfile):
-    return os.system('rsync -azp "%s:%s": "%s"' % (localfile, remotehost, remotefile))
+    return os.system('rsync -azP "%s:%s": "%s"' % (localfile, remotehost, remotefile))
 
 def rsyzmloc(localfile, dilocfil):
     return os.system('rsync -a "%s" "%s' % (localfile, dilocfil))

@@ -314,6 +314,7 @@ print doc
 
 # <codecell>
 
+im ogoing to just 
 
 # <codecell>
 

@@ -79,22 +79,22 @@ for dou in doubme:
 
 # <codecell>
 
-import pyttsx
+#import pyttsx
 
 # <codecell>
 
-engine = pyttsx.init()
+#engine = pyttsx.init()
 
-engine.say('The quick brown fox jumped over the lazy dog.')
-engine.runAndWait()
-
-# <codecell>
-
-import serial
+#engine.say('The quick brown fox jumped over the lazy dog.')
+#engine.runAndWait()
 
 # <codecell>
 
-serial.time
+#import serial
+
+# <codecell>
+
+#serial.time
 
 # <codecell>
 

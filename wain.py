@@ -32,7 +32,7 @@
 
 # The site was live. It was running on a simple python web server but it worked. The script was exacuted by the Raspberry Pi B+ computer running Debian. Red pixels appeared on the screen, or #543243 if you want to be fussy. 
 # Luck had nothing to do with it. Testing was the key.
-# 
+# 22
 # The text had rendered. 
 # 
 # 1. Alfred Bunnings
@@ -258,8 +258,14 @@
 # "I'm feeling better now", The Claw said to the humanold robot. The Claw was loading onions from the garden to the containers. These onions had been enjected with a toxin that would later cause much of the human race to die. The toxins had been placed in the onions by robots in the future with the help from a few remainings humans. Their plan was to wipeout a certain amount of humans, presuving human life in the future. Robots more in the future realized that this was a mistake and sent robots back in order to revirse the toxin.
 # The only way for the toxin to not be created was to make sure the Spike InfoSec never waas founded. Humans were sent back in order to stop the foundation. Janet Goodwill was the number one target. The humans killed Goodwill many times but each time it was a clone. If the human form of Janet Goodwill is killed then the humans can insert the toxin into her system - sending it back generations. This simple exercise causes the company Spike InfoSec to never be founded. 
 # Alfred stood outside an empty building. He looked up. He remembers there was a Spike InfoSec sign hanging here. Instead it's a old video game store mixed with a coke logo, both fading and pealing off. The glass sliding doors didnt excist. A woodern door stood in front of Alfred. He turned the handle. It opened to a small foylor that looks like it was used for a small supermarket. Old broken trolies were scatted around the room. Cobwebs covered the room. A rat scatted accross the room. Followed by a black cat. Alfred walked down the hallway - it was filled with posters from ancient movies. They were faded and pealing off the room. Behind was a light blue textured wallpaper. the ground was a grey-blue carpet. It despritly needed a clean as dirt and grime covered it. 
+# 
+# The humanolid robot monitored the children. Four children to every one humanold robot. The robots only monitored and did not interact with them. For every eight children one human teacher. Sixteen children, one support worker.
+# It was all in the math. 
+# 113
 #                                 
 # How shell this day end? 
+# 
+# on top of tht shr hda to decife to fire him for the leaking of private documents. her private key was broken 
 # 
 # 
 #  He had plans to create his own Infomation Security company.                                               
@@ -412,9 +418,9 @@ returan()
 
 returntime()
 
-# <markdowncell>
+# <codecell>
 
-# DictNows.dictcreate('check')
+#DictNows.dictcreate('check')
 
 # <codecell>
 
@@ -427,7 +433,7 @@ dictcreate('name', 'wcm')
 
 # <codecell>
 
-newprof = raw_input('New Profile yes/no: ')
+newprof = raw_input('New Profile y/n: ')
 
 if 'y' in newprof:
     lasnam = raw_input('Last Name: ')

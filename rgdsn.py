@@ -351,6 +351,14 @@ for coma in comdefz:
 
 # <codecell>
 
+getsdrdir = ('/home/wcmckee/getsdrawndotcom/')
+
+# <codecell>
+
+os.listdir(getsdrdir)
+
+# <codecell>
+
 chedict
 
 # <codecell>
