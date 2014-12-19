@@ -172,20 +172,31 @@ dayzpath = (monzpath + '/' + dayz)
 
 # <codecell>
 
-if os.path.isdir(imgzdir + yearz) = True:
+if os.path.isdir(imgzdir + yearz) == True:
     print 'its true'
 else:
     print 'its false'
-
-#os.mkdir(imgzdir + yearz)
-
-# <codecell>
-
-os.mkdir(monzpath)
+    os.mkdir(imgzdir + yearz)
 
 # <codecell>
 
-os.mkdir(dayzpath)
+if os.path.isdir(monzpath) == True:
+    print 'its true'
+else:
+    print 'its false'
+    os.mkdir(monzpath)
+
+#os.mkdir(monzpath)
+
+# <codecell>
+
+if os.path.isdir(dayzpath) == True:
+    print 'its true'
+else:
+    print 'its false'
+    os.mkdir(dayzpath)
+
+#os.mkdir(dayzpath)
 
 # <codecell>
 
@@ -208,6 +219,14 @@ for lisr in lisrgc:
 
 # <codecell>
 
+os.chdir(dayzpath)
+
+# <codecell>
+
+os.listdir(dayzpath)
+
+# <codecell>
+
 for lisa in lisauth:
     #print lisa + '-line.png'
     im = Image.new("RGB", (512, 512), "white")
@@ -223,7 +242,7 @@ for lisa in lisauth:
 
 # <codecell>
 
-os.lisdir('/home/wcmckee/getsdrawndotcom/imgs')
+os.listdir('/home/wcmckee/getsdrawndotcom/imgs')
 
 # <codecell>
 
