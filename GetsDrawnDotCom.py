@@ -27,6 +27,10 @@
 # Upload artwork to user. Sends them a message on redditgetsdrawn with links. 
 # 
 # More pandas
+# 
+# 
+# Currently saves username-line-bw-colour.png to imgs folder. Instead get it to save to imgs/year/month/day/usernames.png.
+# Script checks the year/month/day and if folder isnt created, it creates it. If folder is there, exit. 
 
 # <codecell>
 
@@ -157,22 +161,22 @@ for lisr in lisrgc:
 
 # <codecell>
 
-ls
-
-# <codecell>
-
 for lisa in lisauth:
-    print lisa + '-line.png'
+    #print lisa + '-line.png'
     im = Image.new("RGB", (512, 512), "white")
     im.save(lisa + '-line.png')
     im = Image.new("RGB", (512, 512), "white")
     im.save(lisa + '-bw.png')
 
-    print lisa + '-bw.png'
+    #print lisa + '-bw.png'
     im = Image.new("RGB", (512, 512), "white")
     im.save(lisa + '-colour.png')
 
-    print lisa + '-colour.png'
+    #print lisa + '-colour.png'
+
+# <codecell>
+
+lisauth
 
 # <markdowncell>
 
