@@ -270,6 +270,12 @@ panz = opsinz.read()
 # <codecell>
 
 #panz()
+for rdz in lisrgc:
+            (rdz.title)
+            #a(rdz.url)
+            if 'http://i.imgur.com' in rdz.url:
+                #print rdz.url
+                print (rdz.url)           
 
 # <codecell>
 
@@ -294,7 +300,7 @@ with doc:
         for rdz in lisrgc:
             h1(rdz.title)
             #a(rdz.url)
-            if '.jpg' or '.png' in rdz.url:
+            if 'http://i.imgur.com' in rdz.url:
                 #print rdz.url
                 p(img(rdz.url, src='%s' % rdz.url))
                 
