@@ -45,6 +45,8 @@ from time import gmtime, strftime
 import numpy as np
 import pandas as pd
 from pandas import *
+from PIL import Image
+from pprint import pprint
 #import pyttsx
 
 # <codecell>
@@ -122,6 +124,7 @@ rdnew = getnewr.get_new()
 # <codecell>
 
 lisrgc = []
+lisauth = []
 
 # <codecell>
 
@@ -135,14 +138,55 @@ gtdrndic = dict()
 
 # <codecell>
 
+imgdir = ('/home/wcmckee/getsdrawndotcom/imgs')
+
+# <codecell>
+
+os.chdir(imgdir)
+
+# <codecell>
+
+#im = Image.new("RGB", (512, 512), "white")
+#im.save(file + ".thumbnail", "JPEG")
+
+# <codecell>
+
 for lisr in lisrgc:
-    #print lisr.url
-    #print lisr.title
-    #print lisr.author
-    #print lisr.comments
     gtdrndic.update({'title': lisr.title})
-    print lisr.json_dict
-    
+    lisauth.append(str(lisr.author))
+
+# <codecell>
+
+ls
+
+# <codecell>
+
+for lisa in lisauth:
+    print lisa + '-line.png'
+    im = Image.new("RGB", (512, 512), "white")
+    im.save(lisa + '-line.png')
+    im = Image.new("RGB", (512, 512), "white")
+    im.save(lisa + '-bw.png')
+
+    print lisa + '-bw.png'
+    im = Image.new("RGB", (512, 512), "white")
+    im.save(lisa + '-colour.png')
+
+    print lisa + '-colour.png'
+
+# <markdowncell>
+
+# I want to save the list of usernames that submit images as png files in a dir. 
+# Currently when I call the list of authors it returns Redditor(user_name='theusername'). I want to return 'theusername'.
+# Once this is resolved I can add '-line.png' '-bw.png' '-colour.png' to each folder. 
+
+# <codecell>
+
+lisr.author
+
+# <codecell>
+
+namlis = []
 
 # <codecell>
 
