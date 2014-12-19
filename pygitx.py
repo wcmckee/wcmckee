@@ -20,11 +20,19 @@ import git
 
 # <codecell>
 
-p = open('/home/wcmckee/ps', 'r')
+p = open('/home/wcmckee/ps.txt', 'r')
 
 # <codecell>
 
-g = Github('wcmckee', 'cam123now!')
+#str(p.read())
+
+# <codecell>
+
+pred = str(p.read())
+
+# <codecell>
+
+g = Github('wcmckee', 'test')
 
 # <codecell>
 
@@ -50,12 +58,21 @@ replist =  list(grrep)
 # <codecell>
 
 repolisx = []
+repocom = []
 
 # <codecell>
 
 for repoz in replist:
     print repoz.name
     repolisx.append(repoz.name)
+    print repoz.size
+    print repoz.updated_at
+  #  repocom.append(repoz.get_commits)
+
+# <codecell>
+
+#for repz in repocom:
+#    print repoz.ssh_url
 
 # <codecell>
 
@@ -68,7 +85,7 @@ repolisx
 
 # <codecell>
 
-homlaz = ('/home/wcmckee/')
+homlaz = ('/home/wcmckee/pygitx')
 
 # <codecell>
 
@@ -76,15 +93,15 @@ os.chdir(homlaz)
 
 # <codecell>
 
-opgitp = open('gitp.txt', 'r')
+#opgitp = open('gitp.txt', 'r')
 
 # <codecell>
 
-rpa = str(opgitp.read())
+#_LOKDD
 
 # <codecell>
 
-rpa
+#rpa
 
 # <codecell>
 
@@ -119,7 +136,8 @@ merglis
 
 for repoit in repolisx:
     print repoit
-    git.Git().clone('https://github.com/wcmckee/' + repoit)
+    os.system('git clone https://github.com/wcmckee/' + repoit)
+    #git.Git().clone('https://github.com/wcmckee/' + repoit)
 
 # <codecell>
 

@@ -172,7 +172,12 @@ dayzpath = (monzpath + '/' + dayz)
 
 # <codecell>
 
-os.mkdir(imgzdir + yearz)
+if os.path.isdir(imgzdir + yearz) = True:
+    print 'its true'
+else:
+    print 'its false'
+
+#os.mkdir(imgzdir + yearz)
 
 # <codecell>
 
