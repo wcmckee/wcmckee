@@ -20,6 +20,10 @@ import git
 
 # <codecell>
 
+p = open('/home/wcmckee/ps', 'r')
+
+# <codecell>
+
 g = Github('wcmckee', 'cam123now!')
 
 # <codecell>
