@@ -31,6 +31,7 @@
 # 
 # Currently saves username-line-bw-colour.png to imgs folder. Instead get it to save to imgs/year/month/day/usernames.png.
 # Script checks the year/month/day and if folder isnt created, it creates it. If folder is there, exit. 
+# Maybe get the reference image and save it with the line/bw/color.pngs
 
 # <codecell>
 
@@ -146,7 +147,48 @@ imgdir = ('/home/wcmckee/getsdrawndotcom/imgs')
 
 # <codecell>
 
-os.chdir(imgdir)
+artlist = os.listdir(imgdir)
+
+# <codecell>
+
+from time import time
+
+# <codecell>
+
+yearz = strftime("%y", gmtime())
+monthz = strftime("%m", gmtime())
+dayz = strftime("%d", gmtime())
+
+
+#strftime("%y %m %d", gmtime())
+
+
+# <codecell>
+
+imgzdir = ('/home/wcmckee/getsdrawndotcom/imgs/')
+yrzpat = (imgzdir + yearz)
+monzpath = (yrzpat + '/' + monthz)
+dayzpath = (monzpath + '/' + dayz)
+
+# <codecell>
+
+os.mkdir(imgzdir + yearz)
+
+# <codecell>
+
+os.mkdir(monzpath)
+
+# <codecell>
+
+os.mkdir(dayzpath)
+
+# <codecell>
+
+artlist
+
+# <codecell>
+
+httpad = ('http://getsdrawn.com/imgs')
 
 # <codecell>
 
@@ -173,6 +215,10 @@ for lisa in lisauth:
     im.save(lisa + '-colour.png')
 
     #print lisa + '-colour.png'
+
+# <codecell>
+
+os.lisdir('/home/wcmckee/getsdrawndotcom/imgs')
 
 # <codecell>
 
