@@ -53,6 +53,7 @@ from pandas import *
 from PIL import Image
 from pprint import pprint
 #import pyttsx
+import shutil
 
 # <codecell>
 
@@ -269,13 +270,26 @@ panz = opsinz.read()
 
 # <codecell>
 
+url = 'http://example.com/img.png'
+response = requests.get(url, stream=True)
+with open('img.png', 'wb') as out_file:
+    shutil.copyfileobj(response.raw, out_file)
+del response
+
+# <codecell>
+
 #panz()
 for rdz in lisrgc:
-            (rdz.title)
-            #a(rdz.url)
-            if 'http://i.imgur.com' in rdz.url:
-                #print rdz.url
-                print (rdz.url)           
+    (rdz.title)
+    #a(rdz.url)
+    if 'http://i.imgur.com' in rdz.url:
+        #print rdz.url
+        print (rdz.url)
+        url = rdz.url
+        response = requests.get(url, stream=True)
+        with open(str(rdz.author) + '-reference.png', 'wb') as out_file:
+            shutil.copyfileobj(response.raw, out_file)
+            del response
 
 # <codecell>
 
@@ -289,7 +303,7 @@ with doc.head:
         attr(cls='header')
         h1('GetsDrawn')
         p(img('imgs/getsdrawn-bw.png', src='imgs/getsdrawn-bw.png'))
-        p('Updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
+        h1('Updated ', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
         p(panz)
         p(bodycom)
     
