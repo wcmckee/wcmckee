@@ -170,14 +170,30 @@ imgzdir = ('/home/wcmckee/getsdrawndotcom/imgs/')
 yrzpat = (imgzdir + yearz)
 monzpath = (yrzpat + '/' + monthz)
 dayzpath = (monzpath + '/' + dayz)
+rmgzdays = (dayzpath + '/reference')
+imgzdays = (dayzpath + '/art')
 
 # <codecell>
 
-if os.path.isdir(imgzdir + yearz) == True:
-    print 'its true'
-else:
-    print 'its false'
-    os.mkdir(imgzdir + yearz)
+def ospacheck():
+    if os.path.isdir(imgzdir + yearz) == True:
+        print 'its true'
+    else:
+        print 'its false'
+        os.mkdir(imgzdir + yearz)
+    
+
+# <codecell>
+
+ospacheck()
+
+# <codecell>
+
+#if os.path.isdir(imgzdir + yearz) == True:
+#    print 'its true'
+#else:
+#    print 'its false'
+#    os.mkdir(imgzdir + yearz)
 
 # <codecell>
 
@@ -201,7 +217,23 @@ else:
 
 # <codecell>
 
-artlist
+if os.path.isdir(imgzdays) == True:
+    print 'its true'
+else:
+    print 'its false'
+    os.mkdir(imgzdays)
+
+# <codecell>
+
+if os.path.isdir(rmgzdays) == True:
+    print 'its true'
+else:
+    print 'its false'
+    os.mkdir(rmgzdays)
+
+# <codecell>
+
+#artlist
 
 # <codecell>
 
@@ -220,11 +252,20 @@ for lisr in lisrgc:
 
 # <codecell>
 
-os.chdir(dayzpath)
+rmgzdays = (dayzpath + '/reference')
+imgzdays = (dayzpath + '/art')
 
 # <codecell>
 
-os.listdir(dayzpath)
+os.chdir(imgzdays)
+
+# <codecell>
+
+imgzdays
+
+# <codecell>
+
+#os.listdir(dayzpath)
 
 # <codecell>
 
@@ -270,11 +311,7 @@ panz = opsinz.read()
 
 # <codecell>
 
-url = 'http://example.com/img.png'
-response = requests.get(url, stream=True)
-with open('img.png', 'wb') as out_file:
-    shutil.copyfileobj(response.raw, out_file)
-del response
+os.chdir(rmgzdays)
 
 # <codecell>
 
@@ -290,6 +327,30 @@ for rdz in lisrgc:
         with open(str(rdz.author) + '-reference.png', 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
             del response
+
+# <codecell>
+
+apsize = []
+
+# <codecell>
+
+for rmglis in os.listdir(rmgzdays):
+    print rmglis
+    im = Image.open(rmglis)
+    print im.size
+    apsize.append(im.size)
+
+# <codecell>
+
+for numz in apsize:
+    print numz[0]
+    if numz[0] > 800:
+        print ('greater than 800')
+    else:
+        print ('less than 800!')
+
+# <codecell>
+
 
 # <codecell>
 
@@ -364,6 +425,22 @@ mkind.close()
 # <codecell>
 
 #os.system('scp -r /home/wcmckee/getsdrawndotcom/ wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom')
+
+# <codecell>
+
+rsync -azP source destination
+
+# <codecell>
+
+updatehtm = raw_input('Update index? Y/n')
+updateref = raw_input('Update reference? Y/n')
+
+if 'y' or '' in updatehtm:
+    os.system('scp -r /home/wcmckee/getsdrawndotcom/index.html wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/index.html')
+elif 'n' in updatehtm:
+    print 'not uploading'
+if 'y' or '' in updateref:
+    os.system('rsync -azP /home/wcmckee/getsdrawndotcom/ wcmckee@getsdrawn.com:/home/wcmckee/getsdrawndotcom/')
 
 # <codecell>
 
