@@ -32,6 +32,12 @@
 # Currently saves username-line-bw-colour.png to imgs folder. Instead get it to save to imgs/year/month/day/usernames.png.
 # Script checks the year/month/day and if folder isnt created, it creates it. If folder is there, exit. 
 # Maybe get the reference image and save it with the line/bw/color.pngs
+# 
+# The script now filters the jpeg and png image and skips links to imgur pages. This needs to be fixed by getting the images from the imgur pages.
+# It renames the image files to the redditor username followed by a -reference tag (and ending with png of course).
+# It opens these files up with PIL and checks the sizes. 
+# It needs to resize the images that are larger than 800px to 800px.
+# These images need to be linked in the index.html instead of the imgur altenatives. 
 
 # <codecell>
 

@@ -19,4 +19,22 @@
 
 # <codecell>
 
+import os
+import 
+
+# <codecell>
+
+os.utime()
+
+# <codecell>
+
+os.getuid()
+
+# <codecell>
+
+os.getgroups()
+
+# <codecell>
+
+os.
 
