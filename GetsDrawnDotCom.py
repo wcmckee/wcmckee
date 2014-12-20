@@ -340,11 +340,23 @@ apsize = []
 
 # <codecell>
 
+basewidth = 600
+
+# <codecell>
+
 for rmglis in os.listdir(rmgzdays):
     print rmglis
-    im = Image.open(rmglis)
     print im.size
     apsize.append(im.size)
+
+# <codecell>
+
+#basewidth = 300
+#img = Image.open('somepic.jpg')
+#wpercent = (basewidth/float(img.size[0]))
+#hsize = int((float(img.size[1])*float(wpercent)))
+#img = img.resize((basewidth,hsize), PIL.Image.ANTIALIAS)
+#img.save('sompic.jpg')
 
 # <codecell>
 
@@ -434,7 +446,7 @@ mkind.close()
 
 # <codecell>
 
-rsync -azP source destination
+#rsync -azP source destination
 
 # <codecell>
 
