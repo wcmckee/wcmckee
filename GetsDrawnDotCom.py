@@ -309,14 +309,15 @@ with doc:
             #    img(rdz.urlz)
             #else:
             #    a(rdz.urlz)
-            p(str(rdz.author))
+            h1(str(rdz.author))
             
             #li(img(i.lower(), src='%s' % i))
 
     with div():
         attr(cls='body')
         p('GetsDrawn is open source')
-        a('http://github.com/wcmckee/wcmckee')
+        a('https://github.com/wcmckee/wcmckee')
+        a('https://reddit.com/r/redditgetsdrawn')
 
 #print doc
 
