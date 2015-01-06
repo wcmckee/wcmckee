@@ -23,10 +23,6 @@ import os
 
 # <codecell>
 
-os.utime()
-
-# <codecell>
-
 os.getuid()
 
 # <codecell>
@@ -35,5 +31,11 @@ os.getgroups()
 
 # <codecell>
 
-os.
+os.system('rsync -azP /home/wcmckee/motion/ wcmckee@getsdrawn.com:/home/wcmckee/motion/')
+
+# <codecell>
+
+
+# <codecell>
+
 
