@@ -259,11 +259,20 @@ for repoit in repolisx:
 
 # <codecell>
 
-pwd
+gitredir = ('/var/host/media/removable/USB Drive/wcmckee-git/')
 
 # <codecell>
 
-ls
+osredir = os.listdir(gitredir)
+
+# <codecell>
+
+for osre in osredir:
+    #print osre
+    lisreo = os.listdir(gitredir + osre)
+    for lisr in lisreo:
+        if '.ipynb' in lisr:
+            print lisr
 
 # <codecell>
 

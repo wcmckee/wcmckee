@@ -36,11 +36,11 @@ os.getgroups()
 
 # <codecell>
 
-os.system('rsync -azP /home/wcmckee/motion/ wcmckee@getsdrawn.com:/home/wcmckee/motion/')
+#os.system('rsync -azP /home/wcmckee/motion/ wcmckee@getsdrawn.com:/home/wcmckee/motion/')
 
 # <codecell>
 
-opfair = os.listdir('/home/wcmckee/fairfieldcode/posts')
+opfair = os.listdir('/home/wcmckee/ipy/wcmckee-ipython/posts')
 
 # <codecell>
 
@@ -113,7 +113,7 @@ os.listdir('/home/wcmckee/fairfieldcode/posts/')
 for ipos in os.listdir('/home/wcmckee/fairfieldcode/posts/'):
     print ipos
     
-    spliz.append([os.path.splitext(x)[0] for x in ipos])
+    spliz.append([os.path.splitext(' ')[0] for x in ipos])
 
 # <codecell>
 
