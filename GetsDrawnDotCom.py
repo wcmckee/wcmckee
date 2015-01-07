@@ -321,7 +321,7 @@ os.chdir(rmgzdays)
 
 # <codecell>
 
-#panz()
+#panz
 for rdz in lisrgc:
     (rdz.title)
     #a(rdz.url)

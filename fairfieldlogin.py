@@ -35,6 +35,65 @@ os.system('rsync -azP /home/wcmckee/motion/ wcmckee@getsdrawn.com:/home/wcmckee/
 
 # <codecell>
 
+opfair = os.listdir('/home/wcmckee/fairfieldcode/posts')
+
+# <codecell>
+
+namfil = []
+
+# <codecell>
+
+opfair
+
+# <markdowncell>
+
+# If space in the filename then change to - for url-friendly.
+
+# <codecell>
+
+opsrip = []
+
+# <codecell>
+
+for opfa in opfair:
+    print opfa.strip('.ipynb')
+    opsrip.append(opfa.strip('.ipynb'))
+   # if (' ') in opfa.strip('.ipynb'):
+    #    print opfa.strip('.ipython')
+
+# <codecell>
+
+os.chdir('/home/wcmckee/fairfieldcode/posts/')
+
+# <codecell>
+
+import time
+
+# <codecell>
+
+time.gmtime()
+
+# <codecell>
+
+for opfilz in opsrip:
+    print opfilz
+    with open(str(opfilz) + '.meta', "w") as f:
+            rstrin = opfilz.encode('ascii', 'ignore').decode('ascii')
+            #print matdict
+            #metadict = dict()
+            #for lisz in lisrgc:
+            #    metadict.update({'up': lisz.ups})
+            #    metadict.update({'down': lisz.downs})
+            #    metadict.update({'title': lisz.title})
+            #    metadict.update({'created': lisz.created})
+            f.write(rstrin + '\n' + 
+
+# <codecell>
+
+
+# <codecell>
+
+opsrip
 
 # <codecell>
 

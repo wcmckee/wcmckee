@@ -23,7 +23,7 @@
 # cats: lang? doc, novel
 # 
 # 
-# Site name repo name
+# Site name repo name .ipynb/meta
 # 
 
 # <codecell>
@@ -44,7 +44,15 @@ p = open('/home/wcmckee/ps.txt', 'r')
 
 # <codecell>
 
+usr = open('/home/wcmckee/us.txt', 'r')
+
+# <codecell>
+
 #str(p.read())
+
+# <codecell>
+
+usred = str(usr.read())
 
 # <codecell>
 
@@ -53,10 +61,15 @@ pred = str(p.read())
 # <codecell>
 
 pstrip = pred.strip('\n')
+ustrip = usred.strip('\n')
 
 # <codecell>
 
-g = Github('wcmckee', pstrip)
+ustrip
+
+# <codecell>
+
+g = Github(ustrip, pstrip)
 
 # <codecell>
 
@@ -65,6 +78,9 @@ grepo = g.search_users('wcmckee')
 # <codecell>
 
 repoev = []
+
+# <codecell>
+
 
 # <codecell>
 
@@ -112,28 +128,49 @@ os.chdir('/home/wcmckee/ipy/wcmckee-ipython/posts')
 
 # <codecell>
 
+regecomm = []
+
+# <markdowncell>
+
+# I need to lookup each notebook in these repos.
+# Hey why not just do it with looking at the dir that the repos are downloaded to. All repos are downloaded then os.listdir(where they are), filter ipynb. lookup when last modified. save title (remove -), save url-friendly, save last modified. 
+# 
+# Filename is repo name followed by script name. Two files ipynb/meta.
+# 
+# reponame-pyscript.ipynb/meta
+
+# <codecell>
+
 for repoz in replist:
     print repoz.name
     with open(str(repoz.name) + '.meta', "w") as f:
             repna = repoz.name.encode('ascii', 'ignore').decode('ascii')
             f.write(repoz.name + '\n' + repoz.name + '\n' + str(repoz.updated_at))
-    #repolisx.append(repoz.name)
+    repolisx.append(repoz.name)
     #print repoz.size
     print repoz.updated_at
     #print repoz.get_contents
-    print (repoz.get_commits())
+    #print (repoz.get_commits())
+    #regecomm.append(repoz.get_commits())
     repocont.append(repoz.get_contents)
   #  repocom.append(repoz.get_commits)
+    #print repoz.contents_url
+    print gre.get_repos()
+    
 
 # <codecell>
 
+#for rega in regecomm:
+ #   print rega.get_page[0]
 
 # <codecell>
 
 for repoc in repocont:
-    print repoc
-    gre.get_repo()
-    
+    print (repoc)
+
+# <codecell>
+
+ 
 
 # <codecell>
 
@@ -204,7 +241,14 @@ merglis = set(dirlis) & set(repolisx)
 
 # <codecell>
 
-pwd
+
+# <codecell>
+
+repolisx
+
+# <codecell>
+
+os.listdir('/home/wcmckee/fairfieldcode/')
 
 # <codecell>
 
@@ -212,4 +256,15 @@ for repoit in repolisx:
     print repoit
     os.system('git clone https://github.com/wcmckee/' + repoit)
     #git.Git().clone('https://github.com/wcmckee/' + repoit)
+
+# <codecell>
+
+pwd
+
+# <codecell>
+
+ls
+
+# <codecell>
+
 
