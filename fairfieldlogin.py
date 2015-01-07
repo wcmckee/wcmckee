@@ -56,9 +56,9 @@ opsrip = []
 # <codecell>
 
 for opfa in opfair:
-    print opfa.strip('.ipynb')
     opfa.replace(" ", "")
     opsrip.append(opfa.strip('.ipynb'))
+    print opfa.strip('.ipynb')
    # if (' ') in opfa.strip('.ipynb'):
     #    print opfa.strip('.ipython')
 
@@ -89,7 +89,7 @@ for opfilz in opsrip:
             #    metadict.update({'down': lisz.downs})
             #    metadict.update({'title': lisz.title})
             #    metadict.update({'created': lisz.created})
-            f.write(rstrin + '\n' + rstrin + '\n' + endate + entim)
+            f.write(rstrin.strip(' ') + '\n' + rstrin + '\n' + endate + entim)
 
 # <codecell>
 

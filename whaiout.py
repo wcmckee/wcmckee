@@ -3,12 +3,17 @@
 
 # <markdowncell>
 
-# This is the signout script that opens the xl file and fill in signout info.
+# <h3>WhaiOut</h3>
+# 
+# This is the signout script that opens the login file and fills in signout info.
 # 
 # Opens up list of signin data. This is date of sign in, time, name, and reason.
 # This is .meta. This script appends sign out data. This is signout date, signout time, and comments.
 # 
 # 8 urandom 128 keys are generated. Used these in saving the achieve, as .html, and .meta files.
+# Why not save as yr-month-day-hr-min.meta /html
+# 
+# Turn it into a Nikola blog. Three blog posts. login (whaxlu.py), logout (whaiout.py), and the result of both of them. Perhaps it
 # 
 # creates date and time mark and asks for comment
 
@@ -172,17 +177,30 @@ trsor = tiran[0:12]
 
 # <codecell>
 
-trsor
+from time import strftime, gmtime
 
 # <codecell>
 
-optrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.meta', 'w')
+yearz = strftime("%y", gmtime())
+monthz = strftime("%m", gmtime())
+dayz = strftime("%d", gmtime())
+
+hurz = strftime("%H", gmtime())
+minz = strftime("%M", gmtime())
+
+# <codecell>
+
+dform = (yearz + monthz + dayz +hurz + minz)
+
+# <codecell>
+
+optrd = open('/home/wcmckee/visignsys/posts/' + dform + '.meta', 'w')
 optrd.write(oplsav)
 optrd.close()
 
 # <codecell>
 
-jsnrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.json', 'w')
+jsnrd = open('/home/wcmckee/visignsys/posts/' + dform + '.json', 'w')
 jsnrd.write(oplsav)
 jsnrd.close()
 
