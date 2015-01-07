@@ -16,6 +16,11 @@
 # 
 # Give 45 mins to everybody. Add for bonus.
 # 
+# 
+# All the ipynb files in a folder. 
+# script opens ipynb filename striping the .ipynb add .meta instead. Opens the .meta and saves filename title, slug, time year-month-day-hour-min.
+# 
+# 
 
 # <codecell>
 
@@ -55,8 +60,71 @@ opsrip = []
 
 # <codecell>
 
+os.system('rm -rf /home/wcmckee/fairfieldcode/posts/*.meta')
+
+# <codecell>
+
+spliz = []
+
+# <codecell>
+
+saost = os.stat('/home/wcmckee/fairfieldcode/posts')
+
+# <codecell>
+
+saost.st_mtime
+
+# <codecell>
+
+saost.st_mtime
+
+# <codecell>
+
+saost.st_size
+
+# <codecell>
+
+saost.st_uid
+
+# <codecell>
+
+saost.st_atime
+
+# <codecell>
+
+saost.st_atime
+
+# <codecell>
+
+oswa = os.walk('/home/wcmckee')
+
+# <codecell>
+
+os.sysconf('SC_2_CHAR_TERM')
+
+# <codecell>
+
+os.sysconf_names
+
+# <codecell>
+
+os.listdir('/home/wcmckee/fairfieldcode/posts/')
+
+for ipos in os.listdir('/home/wcmckee/fairfieldcode/posts/'):
+    print ipos
+    
+    spliz.append([os.path.splitext(x)[0] for x in ipos])
+
+# <codecell>
+
+spliz
+
+# <codecell>
+
 for opfa in opfair:
-    opfa.replace(" ", "")
+    #opfa.replace(" ", "")
+    print opfa
+    [os.path.splitext(x)[0] for x in a]
     opsrip.append(opfa.strip('.ipynb'))
     print opfa.strip('.ipynb')
    # if (' ') in opfa.strip('.ipynb'):
@@ -75,6 +143,10 @@ import time
 endate = time.strftime("%d" + "-" + "%b" + "-" + "%Y" + "-")
           
 entim = time.strftime("%H:%M")
+
+# <codecell>
+
+endate
 
 # <codecell>
 
