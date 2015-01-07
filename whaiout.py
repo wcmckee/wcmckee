@@ -30,6 +30,8 @@ import time
 #from xlrd import *
 import dominate
 import json
+from dominate.tags import *
+from time import strftime, gmtime
 
 # <codecell>
 
@@ -128,9 +130,6 @@ opind = open(indsav, 'w')
 
 # <codecell>
 
-import dominate
-from dominate.tags import *
-
 doc = dominate.document(title=wrkbook.sheet_names())
 
 with doc.head:
@@ -177,10 +176,6 @@ trsor = tiran[0:12]
 
 # <codecell>
 
-from time import strftime, gmtime
-
-# <codecell>
-
 yearz = strftime("%y", gmtime())
 monthz = strftime("%m", gmtime())
 dayz = strftime("%d", gmtime())
@@ -212,7 +207,7 @@ signindi = savpos.read()
 # <codecell>
 
 jsnaccept = signindi.replace("'", "\"")
-d = json.loads(jsnaccept)
+snoutm = json.loads(jsnaccept)
 
 # <codecell>
 
