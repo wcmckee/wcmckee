@@ -57,6 +57,7 @@ opsrip = []
 
 for opfa in opfair:
     print opfa.strip('.ipynb')
+    opfa.replace(" ", "")
     opsrip.append(opfa.strip('.ipynb'))
    # if (' ') in opfa.strip('.ipynb'):
     #    print opfa.strip('.ipython')
@@ -71,7 +72,9 @@ import time
 
 # <codecell>
 
-time.gmtime()
+endate = time.strftime("%d" + "-" + "%b" + "-" + "%Y" + "-")
+          
+entim = time.strftime("%H:%M")
 
 # <codecell>
 
@@ -86,14 +89,34 @@ for opfilz in opsrip:
             #    metadict.update({'down': lisz.downs})
             #    metadict.update({'title': lisz.title})
             #    metadict.update({'created': lisz.created})
-            f.write(rstrin + '\n' + 
+            f.write(rstrin + '\n' + rstrin + '\n' + endate + entim)
 
 # <codecell>
 
+import nikola
 
 # <codecell>
 
-opsrip
+os.chdir('/home/wcmckee/fairfieldcode/')
+
+# <codecell>
+
+os.system('nikola build')
+
+# <codecell>
+
+os.system('rsync -azP /home/wcmckee/fairfieldcode wcmckee@wcmckee.com:/home/wcmckee/fairfieldcode/')
+
+# <codecell>
+
+opconf = open('/home/wcmckee/fairfieldcode/conf.py', 'r')
+
+# <codecell>
+
+opconf.read()
+
+# <codecell>
+
 
 # <codecell>
 
