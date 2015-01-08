@@ -271,17 +271,28 @@ import time
 
 # <codecell>
 
+lidtime = []
+
+# <codecell>
+
 for osre in osredir:
     #print osre
     lisreo = os.listdir(gitredir + osre)
     os.chdir(gitredir + osre)
     for lisr in lisreo:
         if '.ipynb' in lisr:
-            #print lisr
+            print lisr
             #(mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(lisr)
             #print "last modified: %s" % time.ctime(mtime)
-            print "last modified: %s" % time.ctime(os.path.getmtime(lisr))
-            print "created: %s" % time.ctime(os.path.getctime(lisr))
+            #print "last modified: %s" % time.ctime(os.path.getmtime(lisr))
+            
+            #print ("%s") % time.ctime(os.path.getmtime(lisr))
+            
+            lidtime.append(("%s") % time.localtime(os.path.getmtime(lisr)))
+            #print "created: %s" % time.ctime(os.path.getctime(lisr))
+
+# <codecell>
+
 
 # <codecell>
 

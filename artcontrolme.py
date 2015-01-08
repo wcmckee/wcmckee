@@ -18,11 +18,9 @@
 
 # <codecell>
 
-import requests
-from bs4 import BeautifulSoup
 import os
-import json
 import pandas as pd
+import json
 
 # <codecell>
 
@@ -55,7 +53,6 @@ alfilz
 for bleh in alfilz:
     if '.wp' in bleh:
         print bleh
-    
 
 # <codecell>
 
@@ -80,6 +77,9 @@ teop = open('test.txt', 'w')
 #lines=f.readlines()
 #print lines[26]
 #print lines[30]
+
+# <codecell>
+
 
 # <codecell>
 
@@ -137,7 +137,11 @@ metaf
 
 # <codecell>
 
-cherdict = {'test':'test'}
+cherdict = dict()
+
+# <codecell>
+
+listag = []
 
 # <codecell>
 
@@ -164,6 +168,7 @@ for bleh in alfilz:
         chzdir = ({'name': metaf[0].rstrip()})#, file.readline()}
         cherdict.update({metaf[2].rstrip(): metaf[1].rstrip()})
         cherdict.update({metaf[1]: metaf[3].rstrip()})
+        listag.append(metaf[3].rstrip())
         chzdir.update({'title': metaf[1].rstrip()})
         chzdir.update({'date': metaf[2].rstrip()})
         chzdir.update({'tags': metaf[3].rstrip()})
@@ -175,11 +180,11 @@ for bleh in alfilz:
 
 # <codecell>
 
-jslis
+cherjson = json.dumps(chzdir)
 
 # <codecell>
 
-cherjson = json.dumps(chzdir)
+listag
 
 # <codecell>
 
@@ -311,10 +316,6 @@ print doc
 
 # <codecell>
 
-
-# <codecell>
-
-im ogoing to just 
 
 # <codecell>
 
