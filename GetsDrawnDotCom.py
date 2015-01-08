@@ -275,16 +275,16 @@ imgzdays
 
 # <codecell>
 
-for lisa in lisauth:
-    #print lisa + '-line.png'
-    im = Image.new("RGB", (512, 512), "white")
-    im.save(lisa + '-line.png')
-    im = Image.new("RGB", (512, 512), "white")
-    im.save(lisa + '-bw.png')
+#for lisa in lisauth:
+#    #print lisa + '-line.png'
+#    im = Image.new("RGB", (512, 512), "white")
+#    im.save(lisa + '-line.png')
+#    im = Image.new("RGB", (512, 512), "white")
+#    im.save(lisa + '-bw.png')
 
     #print lisa + '-bw.png'
-    im = Image.new("RGB", (512, 512), "white")
-    im.save(lisa + '-colour.png')
+#    im = Image.new("RGB", (512, 512), "white")
+#    im.save(lisa + '-colour.png')
 
     #print lisa + '-colour.png'
 
@@ -346,8 +346,8 @@ basewidth = 600
 
 for rmglis in os.listdir(rmgzdays):
     print rmglis
-    print im.size
-    apsize.append(im.size)
+    #print rmglis.size
+    #apsize.append(im.size)
 
 # <codecell>
 
@@ -360,12 +360,12 @@ for rmglis in os.listdir(rmgzdays):
 
 # <codecell>
 
-for numz in apsize:
-    print numz[0]
-    if numz[0] > 800:
-        print ('greater than 800')
-    else:
-        print ('less than 800!')
+#for numz in apsize:
+#    print numz[0]
+#    if numz[0] > 800:
+#        print ('greater than 800')
+#    else:
+#        print ('less than 800!')
 
 # <codecell>
 

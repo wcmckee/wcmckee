@@ -165,14 +165,19 @@ for bleh in alfilz:
         #metablog.append(file.readline())
         #print metaf[2]
         #adrdir = {metaf[0]: metaf[2]}
-        chzdir = ({'name': metaf[0].rstrip()})#, file.readline()}
-        cherdict.update({metaf[2].rstrip(): metaf[1].rstrip()})
-        cherdict.update({metaf[1]: metaf[3].rstrip()})
-        listag.append(metaf[3].rstrip())
-        chzdir.update({'title': metaf[1].rstrip()})
-        chzdir.update({'date': metaf[2].rstrip()})
-        chzdir.update({'tags': metaf[3].rstrip()})
+        #chzdir = ({'name': metaf[0].rstrip()})#, file.readline()}
+        #cherdict.update({metaf[2].rstrip(): metaf[1].rstrip()})
+        #cherdict.update({metaf[1]: metaf[3].rstrip()})
+        #listag.append(metaf[3].rstrip())
+        #chzdir.update({'title': metaf[1].rstrip()})
+        #chzdir.update({'date': metaf[2].rstrip()})
+        #chzdir.update({'tags': metaf[3].rstrip()})
         print chzdir
+        
+        metawnm = open(bleh, 'w')
+        metawnm.write(metaf[0] + metaf[1] + metaf[2])
+        print (metaf[0] + metaf[1] + metaf[2])
+        metawnm.close()
         finlis.append(chzdir)
         cherjson = json.dumps(chzdir)
         jslis.append(cherjson)
@@ -313,6 +318,9 @@ with doc:
       #  p('Lorem ipsum..')
 
 print doc
+
+# <codecell>
+
 
 # <codecell>
 
