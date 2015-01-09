@@ -8,6 +8,8 @@
 # 
 # Python script to deal with exported artcontrolme static files. The files are located at https://github.com/artcontrol/artcontrolme. '.wp' files that contain HTML of posts. '.meta' files contain name, permalink, date, cat, tags, id.
 # 
+# The script deletes all tag data f
+# 
 
 # <markdowncell>
 
