@@ -124,7 +124,7 @@ spliz
 for opfa in opfair:
     #opfa.replace(" ", "")
     print opfa
-    [os.path.splitext(x)[0] for x in a]
+    #[os.path.splitext(x)[0] for x in a]
     opsrip.append(opfa.strip('.ipynb'))
     print opfa.strip('.ipynb')
    # if (' ') in opfa.strip('.ipynb'):
@@ -141,6 +141,7 @@ import time
 # <codecell>
 
 endate = time.strftime("%d" + "-" + "%b" + "-" + "%Y" + "-")
+#print time.strftime(("%d" + "-" + "%b" + "-" + "%Y"))
           
 entim = time.strftime("%H:%M")
 
