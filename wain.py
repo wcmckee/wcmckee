@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# coding: utf-8
 
 # Visitor Sign System
 # 
@@ -11,8 +9,6 @@
 # The script is basic. It saves the time, date, name, reason, and added in comments as an html page and json object. Archieve of past logins are saved.
 # It is split into two scripts. The first wain or whaxlu is used for the login. 
 # The second script is whaiout which is the logout script. It takes the output of wain or whaxlu and appends logout data - time, date, and comment.
-
-# <markdowncell>
 
 # Currently I use the script to sign in and out at a early learning centre that I am employed to work 2 hours a day, 5 days a week. 
 # It could be applied in any area where you want to keep a record of time, comments, 
@@ -27,8 +23,7 @@
 # 
 # Generates summery
 # 
-
-# <markdowncell>
+# 
 
 # The site was live. It was running on a simple python web server but it worked. The script was exacuted by the Raspberry Pi B+ computer running Debian. Red pixels appeared on the screen, or #543243 if you want to be fussy. 
 # Luck had nothing to do with it. Testing was the key.
@@ -270,8 +265,6 @@
 # 
 #  He had plans to create his own Infomation Security company.                                               
 
-# <markdowncell>
-
 # TODO
 # 
 # html page of page 100 logins/logouts - append all json as one html
@@ -326,8 +319,9 @@
 # 
 # Panic Button. Signal to call for assistence, part-tag, allow for image/sound record. 
 # 
+# 
 
-# <codecell>
+# In[1]:
 
 import os
 import time
@@ -337,31 +331,33 @@ from dominate.tags import *
 import json
 import pandas as pd
 
-# <markdowncell>
 
 # Profile. Profile has data in it that is then used in sign system
 # 
+# 
 
-# <codecell>
+# In[2]:
 
 valname = ('lasnam', 'signin', 'usercom', 'dayr', 'htmn')
 
-# <codecell>
+
+# In[2]:
 
 
-# <codecell>
+
+
+# In[3]:
 
 for itzval in valname:
     print itzval
 
-# <markdowncell>
 
 # This function creates a dict, another updates it. 
 # Function is working to create it but update is coming back with error.
 # 
 # How do I refer to the created dict as the one to update?
 
-# <codecell>
+# In[4]:
 
 class DictNows():
 
@@ -371,15 +367,18 @@ class DictNows():
     def updatedict(keyvalz, othnam):
         return dictcreate.update({keyvalz: othnam})
 
-# <codecell>
+
+# In[5]:
 
 #checkdict = dictcreate('check', 'this')
 
-# <codecell>
+
+# In[6]:
 
 #checkdict
 
-# <codecell>
+
+# In[7]:
 
 def dictcreate(keyval, firnam):
     return dict({keyval: firnam})
@@ -403,35 +402,44 @@ def returan():
     
     
 
-# <codecell>
+
+# In[7]:
 
 
-# <codecell>
+
+
+# In[8]:
 
 #updatedict('omg', 'not again')
 
-# <codecell>
+
+# In[9]:
 
 returan()
 
-# <codecell>
+
+# In[10]:
 
 returntime()
 
-# <codecell>
+
+# In[11]:
 
 #DictNows.dictcreate('check')
 
-# <codecell>
+
+# In[12]:
 
 dictcreate('name', 'wcm')
 #updatedict()
 
-# <codecell>
+
+# In[13]:
 
 #updatedict('checking', 'this works')
 
-# <codecell>
+
+# In[15]:
 
 newprof = raw_input('New Profile y/n: ')
 
@@ -453,19 +461,23 @@ elif 'n' in newprof:
     signin = ('Reason: ')
     usecom = ('Comments: ')
 
-# <codecell>
+
+# In[16]:
 
 #bitdict = 
 
-# <codecell>
+
+# In[17]:
 
 betdict = dict()
 
-# <codecell>
+
+# In[18]:
 
 #betdict.update({'lastname': lasnam})
 
-# <codecell>
+
+# In[19]:
 
 dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
 hrmn = time.strftime("%H:%M:%S")
@@ -478,50 +490,63 @@ betdict.update({'signin-comment': usecom})
 betdict.update({'signin-date': returndate()})
 betdict.update({'signin-hrmin': returntime()})
 
-# <codecell>
+
+# In[20]:
 
 betdict
 
-# <codecell>
+
+# In[21]:
 
 betjsn = json.dumps(betdict)
 betjsn
 
-# <codecell>
+
+# In[22]:
 
 #for itz in updatedict():
 #    print itz
 
-# <codecell>
+
+# In[23]:
 
 opind = open('/home/wcmckee/visignsys/index.json', 'r')
 opred = opind.read()
 
-# <codecell>
+
+# In[24]:
 
 opred
 
-# <codecell>
+
+# In[25]:
 
 opjsnd = json.dumps(opred)
 
-# <codecell>
+
+# In[26]:
 
 str(opjsnd)
 
-# <codecell>
+
+# In[26]:
 
 
-# <codecell>
+
+
+# In[27]:
 
 #json.load(opred)
 
-# <codecell>
+
+# In[27]:
 
 
-# <codecell>
 
-# -*- coding: utf-8 -*-
+
+# In[28]:
+
+
 # <nbformat>3.0</nbformat>
 
 # <markdowncell>
@@ -615,38 +640,50 @@ savpos.close()
 
 print ('sign in complete')
 
-# <codecell>
+
+# In[29]:
 
 reser = pd.Series(opred)
 
-# <codecell>
+
+# In[30]:
 
 #pd.DataFrame(reser)
 
-# <codecell>
+
+# In[31]:
 
 rezda = []
 
-# <codecell>
+
+# In[32]:
 
 for res in reser:
     print res
     rezda.append(res)
 
-# <codecell>
+
+# In[33]:
 
 rezda
 
-# <codecell>
+
+# In[34]:
 
 len(rezda)
 
-# <codecell>
+
+# In[34]:
 
 
-# <codecell>
 
 
-# <codecell>
+# In[32]:
+
+
+
+
+# In[ ]:
+
 
 
