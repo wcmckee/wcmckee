@@ -6,75 +6,75 @@
 # script that displays coffees sold by hour at lca2015.
 # Currently it opens a .json file and converts it into a python dict. 
 
-# In[43]:
+# In[65]:
 
 import json
 import os
 import csv
 
 
-# In[44]:
+# In[66]:
 
 opcvs = open('/home/wcmckee/Downloads/convertcsv.json', 'r')
 
 
-# In[45]:
+# In[67]:
 
 opzrd = opcvs.read()
 
 
-# In[46]:
+# In[68]:
 
 jdunp = json.loads(opzrd)
 
 
-# In[47]:
+# In[69]:
 
 valia = []
 
 
-# In[48]:
+# In[70]:
 
 jdunp.sort()
 
 
-# In[49]:
+# In[71]:
 
 jdunp.count(int)
 
 
-# In[50]:
+# In[72]:
 
 for jdr in jdunp[0]:
     print jdr
 
 
-# In[50]:
+# In[72]:
 
 
 
 
-# In[51]:
+# In[73]:
 
 for dej in jdunp:
     print dej.values()
     valia.append(dej.values())
 
 
-# In[52]:
+# In[74]:
 
 dezrand = len(valia)
 
 
-# In[53]:
+# In[75]:
 
 azlis = []
 
 
-# In[54]:
+# In[76]:
 
 for vals in valia:    
-    print vals[0:20]
+    print vals
     azlis.append(vals)
 
 
@@ -86,30 +86,30 @@ for vals in valia:
 # 
 # New dict that shows only the times that coffee were sold and the amount of coffgfges that were solf. Maybe that would works. 
 
-# In[55]:
+# In[77]:
 
 betra = []
 
 
-# In[56]:
+# In[78]:
 
 for azl in azlis:
     betra.append(azl)
 
 
-# In[57]:
+# In[79]:
 
 anoe = []
 anez = []
 
 
-# In[58]:
+# In[80]:
 
 for betr in betra:
     betr.append(anoe)
 
 
-# In[59]:
+# In[81]:
 
 for deta in betr:
     #print deta
@@ -119,18 +119,29 @@ for deta in betr:
         anez.append(deta)
 
 
-# In[60]:
+# In[82]:
+
+fdic = []
+
+
+# In[83]:
 
 for resut in anez:
     print resut
+    fdic.append(resut)
 
 
-# In[60]:
+# In[84]:
+
+fdic
+
+
+# In[84]:
 
 
 
 
-# In[104]:
+# In[84]:
 
 
 
