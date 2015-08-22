@@ -25,38 +25,32 @@
 # 
 # 
 
-# In[9]:
+# In[2]:
 
 import os
 import getpass
 from walkdir import filtered_walk, dir_paths, all_paths, file_paths
 import arrow
-import nikola
+#import nikola
 
 
-# In[33]:
+# In[3]:
 
 raw = arrow.utcnow()
 
 
-# In[35]:
-
-print raw
-
-
-# In[45]:
-
+# In[5]:
 
 def returntime():
     return raw.strftime('%H:%M:%S')
 
 
-# In[47]:
+# In[6]:
 
 returntime()
 
 
-# In[36]:
+# In[7]:
 
 yraw = raw.strftime("%Y")
 mntaw = raw.strftime("%m")
@@ -64,32 +58,32 @@ dytaw = raw.strftime("%d")
 #gmtz.strftime("%Y")
 
 
-# In[37]:
+# In[8]:
 
 fulda = yraw + '/' + mntaw + '/' + dytaw
 
 
-# In[48]:
+# In[9]:
 
 fultim = fulda + ' ' + returntime()
 
 
-# In[49]:
+# In[10]:
 
 #fultim
 
 
-# In[9]:
+# In[11]:
 
 #gtur = getpass.getuser()
 
 
-# In[10]:
+# In[12]:
 
 #lisbbkn = os.listdir('/home/' + gtur + '/brobeurkidsdotcom/posts')
 
 
-# In[12]:
+# In[13]:
 
 #lisbbkn
 
@@ -101,14 +95,39 @@ fultim = fulda + ' ' + returntime()
 #        print lisb  
 
 
-# In[1]:
+# In[15]:
 
 #Name of notebook you want to turn into a blog
+#Could check the folder (walkdir) for files not 
+#in the wcmckee.com posts folder.
+#Tags. Modules used. 
+#Look at the file and extract out modules imported,
+#using these as tags.
 
 
-# In[65]:
+# In[18]:
 
-nbog = raw_input('Name of notebook to blog: ')
+nbog = input('Name of file to blog: ')
+
+
+# In[21]:
+
+etnam = input('Extension of file to blog: ')
+
+
+# In[22]:
+
+tagmak = input('post tags: ')
+
+
+# In[20]:
+
+pear = input('path to search: ')
+
+
+# In[ ]:
+
+
 
 
 # In[66]:
@@ -116,12 +135,12 @@ nbog = raw_input('Name of notebook to blog: ')
 #Search for blog through folders. 
 
 
-# In[67]:
+# In[23]:
 
-files = file_paths(filtered_walk('/home/wcmckee/github/', depth=100, included_files=[nbog + '.ipynb']))
+files = file_paths(filtered_walk(pear, depth=100, included_files=[nbog + etnam]))
 
 
-# In[68]:
+# In[24]:
 
 #print files
 
@@ -133,26 +152,35 @@ opblog = ('/home/wcmckee/github/')
 
 # In[74]:
 
-podir = ('/home/wcmckee/github/wcmckee.com/posts/')
+#podir = ('/home/wcmckee/github/wcmckee.com/posts/')
 
 
-# In[75]:
+# In[25]:
 
-podir
+podir = input('blog dir: ')
+
+
+# In[26]:
+
+postsdir = podir + ('/posts/' )
+
+
+# In[ ]:
+
+
 
 
 # In[70]:
 
 for fie in files:
     #print fie
-    print fie
     os.system('cp ' + fie + ' ' + podir)
 
 
 # In[71]:
 
 opeza = open(podir + nbog + '.meta', 'w')
-opeza.write(nbog + '\n' + nbog + '\n' + fultim)
+opeza.write(nbog + '\n' + nbog + '\n' + fultim + '\n' + tagmak)
 opeza.close()
 
 
@@ -163,6 +191,6 @@ opeza.close()
 
 # In[ ]:
 
-os.chdir('/home/wcmckee/github/wcmckee.com/')
+os.chdir(podir)
 os.system('nikola build')
 
