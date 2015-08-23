@@ -25,7 +25,7 @@
 # 
 # 
 
-# In[2]:
+# In[29]:
 
 import os
 import getpass
@@ -34,23 +34,23 @@ import arrow
 #import nikola
 
 
-# In[3]:
+# In[30]:
 
 raw = arrow.utcnow()
 
 
-# In[5]:
+# In[31]:
 
 def returntime():
     return raw.strftime('%H:%M:%S')
 
 
-# In[6]:
+# In[32]:
 
 returntime()
 
 
-# In[7]:
+# In[33]:
 
 yraw = raw.strftime("%Y")
 mntaw = raw.strftime("%m")
@@ -58,44 +58,44 @@ dytaw = raw.strftime("%d")
 #gmtz.strftime("%Y")
 
 
-# In[8]:
+# In[34]:
 
 fulda = yraw + '/' + mntaw + '/' + dytaw
 
 
-# In[9]:
+# In[35]:
 
 fultim = fulda + ' ' + returntime()
 
 
-# In[10]:
+# In[36]:
 
 #fultim
 
 
-# In[11]:
+# In[37]:
 
 #gtur = getpass.getuser()
 
 
-# In[12]:
+# In[38]:
 
 #lisbbkn = os.listdir('/home/' + gtur + '/brobeurkidsdotcom/posts')
 
 
-# In[13]:
+# In[39]:
 
 #lisbbkn
 
 
-# In[14]:
+# In[40]:
 
 #for lisb in lisbbkn:
 #    if '.ipynb' in lisb:
 #        print lisb  
 
 
-# In[15]:
+# In[41]:
 
 #Name of notebook you want to turn into a blog
 #Could check the folder (walkdir) for files not 
@@ -105,22 +105,22 @@ fultim = fulda + ' ' + returntime()
 #using these as tags.
 
 
-# In[18]:
+# In[42]:
 
 nbog = input('Name of file to blog: ')
 
 
-# In[21]:
+# In[43]:
 
 etnam = input('Extension of file to blog: ')
 
 
-# In[22]:
+# In[44]:
 
 tagmak = input('post tags: ')
 
 
-# In[20]:
+# In[45]:
 
 pear = input('path to search: ')
 
@@ -130,37 +130,37 @@ pear = input('path to search: ')
 
 
 
-# In[66]:
+# In[18]:
 
 #Search for blog through folders. 
 
 
-# In[23]:
+# In[46]:
 
 files = file_paths(filtered_walk(pear, depth=100, included_files=[nbog + etnam]))
 
 
-# In[24]:
+# In[47]:
 
 #print files
 
 
-# In[69]:
+# In[48]:
 
 opblog = ('/home/wcmckee/github/')
 
 
-# In[74]:
+# In[49]:
 
 #podir = ('/home/wcmckee/github/wcmckee.com/posts/')
 
 
-# In[25]:
+# In[50]:
 
 podir = input('blog dir: ')
 
 
-# In[26]:
+# In[55]:
 
 postsdir = podir + ('/posts/' )
 
@@ -170,14 +170,16 @@ postsdir = podir + ('/posts/' )
 
 
 
-# In[70]:
+# In[56]:
 
 for fie in files:
     #print fie
-    os.system('cp ' + fie + ' ' + podir)
+    print (fie)
+    print ('Copy ' + fie ' to ' + postsdir)
+    os.system('cp ' + fie + ' ' + postsdir)
 
 
-# In[71]:
+# In[57]:
 
 opeza = open(podir + nbog + '.meta', 'w')
 opeza.write(nbog + '\n' + nbog + '\n' + fultim + '\n' + tagmak)
@@ -189,8 +191,13 @@ opeza.close()
 
 
 
-# In[ ]:
+# In[58]:
 
 os.chdir(podir)
 os.system('nikola build')
+
+
+# In[ ]:
+
+
 
