@@ -27,7 +27,13 @@
 # Depending on prepost folder deturms the post folder it's moved to. 
 # Sequale and post certain times a day. 
 
-# In[61]:
+# This script creates a blog post and saves it in posts folder along with the .meta file for it. 
+# Config file for the script. Specify a list of blog names. 
+# Reads a json file that contains: blog name (school name), author (input username), twitter config dir, domain name (school name - space and crap),
+# 
+# Do login/logout via blog post. 
+
+# In[1]:
 
 import os
 import getpass
@@ -40,11 +46,6 @@ from TwitterFollowBot import TwitterBot
 # In[62]:
 
 raw = arrow.utcnow()
-
-
-# In[63]:
-
-bro_bot = TwitterBot('/home/wcmckee/wcmnot/wcmckee-notebook/config.txt')
 
 
 # In[64]:
@@ -108,7 +109,12 @@ fultim = fulda + ' ' + returntime()
 #using these as tags.
 
 
-# In[ ]:
+# In[49]:
+
+podir = input('blog dir: ')
+
+
+# In[74]:
 
 nbog = input('Name of file to blog: ')
 
@@ -228,9 +234,10 @@ jsve = dict({'filename' : nbog + etnam, 'tags' : tagmak, 'date' : fulda, 'time' 
 #podir = ('/home/wcmckee/github/wcmckee.com/posts/')
 
 
-# In[49]:
+# In[63]:
 
-podir = input('blog dir: ')
+bro_bot = TwitterBot('/home/wcmckee/wcmnot/wcmckee-notebook/config.txt')
+#bro_ot = TwitterBot(podir + '/config.txt')
 
 
 # In[50]:
