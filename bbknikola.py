@@ -33,28 +33,28 @@
 # 
 # Do login/logout via blog post. 
 
-# In[1]:
+# In[45]:
 
 import os
 import getpass
 from walkdir import filtered_walk, dir_paths, all_paths, file_paths
 import arrow
 #import nikola
-from TwitterFollowBot import TwitterBot
+#from TwitterFollowBot import TwitterBot
 
 
-# In[62]:
+# In[46]:
 
 raw = arrow.utcnow()
 
 
-# In[64]:
+# In[47]:
 
 def returntime():
     return raw.strftime('%H:%M:%S')
 
 
-# In[65]:
+# In[48]:
 
 yraw = raw.strftime("%Y")
 mntaw = raw.strftime("%m")
@@ -62,44 +62,44 @@ dytaw = raw.strftime("%d")
 #gmtz.strftime("%Y")
 
 
-# In[66]:
+# In[49]:
 
 fulda = yraw + '/' + mntaw + '/' + dytaw
 
 
-# In[67]:
+# In[50]:
 
 fultim = fulda + ' ' + returntime()
 
 
-# In[68]:
+# In[51]:
 
 #fultim
 
 
-# In[69]:
+# In[52]:
 
 #gtur = getpass.getuser()
 
 
-# In[70]:
+# In[53]:
 
 #lisbbkn = os.listdir('/home/' + gtur + '/brobeurkidsdotcom/posts')
 
 
-# In[71]:
+# In[54]:
 
 #lisbbkn
 
 
-# In[72]:
+# In[55]:
 
 #for lisb in lisbbkn:
 #    if '.ipynb' in lisb:
 #        print lisb  
 
 
-# In[73]:
+# In[56]:
 
 #Name of notebook you want to turn into a blog
 #Could check the folder (walkdir) for files not 
@@ -109,67 +109,123 @@ fultim = fulda + ' ' + returntime()
 #using these as tags.
 
 
-# In[49]:
+# In[57]:
 
 podir = input('blog dir: ')
 
 
-# In[74]:
+# In[32]:
 
 nbog = input('Name of file to blog: ')
 
 
-# In[14]:
+# In[33]:
 
 etnam = input('Extension of file to blog: ')
 
 
-# In[15]:
+# In[34]:
 
 tagmak = input('post tags: ')
 
 
-# In[56]:
+# In[89]:
+
+#pear = input('path to search: ')
+
+
+# In[38]:
+
+jsve = dict()
+
+
+# In[39]:
 
 #Write the blog post
-contenmak = input('content: ')
+#Ask to write content or publish 
+writecont = input('Write content? y/N ')
+if 'y' in writecont:
+    contenmak = input('content: ')
+
+else:
+    pear = input('path to search: ')
+    files = file_paths(filtered_walk(pear, depth=100, included_files=[nbog + etnam]))
+    for fil in files:
+        print (fil)
+        jsve.update({'filefound' : fil})
 
 
-# In[16]:
+# In[ ]:
+
+#add extra tags in 
+
+
+# In[132]:
+
+lastbit = contenmak[:50]
+
+
+# In[133]:
+
+contenmak[-50:]
+
+
+# In[135]:
+
+sampb = lastbit + '... ' + contenmak[-50:]
+
+
+# In[136]:
+
+sampb
+
+
+# In[ ]:
+
+
+
+
+# In[80]:
 
 #savewhere = input('dir to save post: ')
 
 
-# In[17]:
+# In[81]:
 
 my_list = tagmak.split(",")
 
 
-# In[18]:
+# In[82]:
 
 my_list
 
 
-# In[19]:
+# In[83]:
 
 hashtag = list()
 
 
-# In[20]:
+# In[84]:
 
 for myl in my_list:
     #print ('#' + myl.replace(' ', ''))
     hashtag.append(('#' + myl.replace(' ', '')))
 
 
-# In[65]:
+# In[85]:
 
-for has in hashtag:
-    print (has)
-    bro_bot.auto_follow(has, count=1)
+#bro_bot = TwitterBot('/home/wcmckee/wcmnot/wcmckee-notebook/config.txt')
+#bro_ot = TwitterBot(podir + '/config.txt')
 
 
-# In[21]:
+# In[86]:
+
+#for has in hashtag:
+#    print (has)
+#    bro_bot.auto_follow(has, count=1)
+
+
+# In[87]:
 
 endstring = ''
 for s in hashtag:
@@ -177,7 +233,7 @@ for s in hashtag:
 
 
 
-# In[22]:
+# In[88]:
 
 endstring
 
@@ -187,75 +243,64 @@ endstring
 
 
 
-# In[43]:
-
-#pear = input('path to search: ')
-
-
-# In[ ]:
+# In[90]:
 
 jsve = dict({'filename' : nbog + etnam, 'tags' : tagmak, 'date' : fulda, 'time' : returntime()})
 
 
-# In[45]:
+# In[91]:
 
 #Search for blog through folders. 
 
 
-# In[46]:
+# In[92]:
 
 #files = file_paths(filtered_walk(pear, depth=100, included_files=[nbog + etnam]))
 
 
-# In[34]:
+# In[93]:
 
 #print files
 
 
-# In[35]:
+# In[94]:
 
 #for fil in files:
 #    print (fil)
 #    jsve.update({'filefound' : fil})
 
 
-# In[36]:
+# In[95]:
 
 #jsve['filefound']
 
 
-# In[47]:
+# In[96]:
 
 #opblog = ('/home/wcmckee/github/')
 
 
-# In[48]:
+# In[97]:
 
 #podir = ('/home/wcmckee/github/wcmckee.com/posts/')
 
 
-# In[63]:
-
-bro_bot = TwitterBot('/home/wcmckee/wcmnot/wcmckee-notebook/config.txt')
-#bro_ot = TwitterBot(podir + '/config.txt')
-
-
-# In[50]:
+# In[98]:
 
 jsve.update({'blogdir' : podir})
 
 
-# In[51]:
+# In[41]:
 
 postsdir = podir + ('/posts/' )
 
 
-# In[52]:
+# In[42]:
 
 #os.system('cp ' + jsve['filefound'] + ' ' + postsdir)
 
 
-# In[53]:
+# In[43]:
 
 #for fie in files:
     #print fie
@@ -264,22 +309,22 @@ postsdir = podir + ('/posts/' )
     #os.system('cp ' + fie + ' ' + postsdir)
 
 
-# In[54]:
-
-oprst = open(podir + '/posts/' + nbog + etnam, 'w')
+# In[ ]:
 
 
-# In[57]:
-
-oprst.write(contenmak)
 
 
-# In[58]:
+# In[44]:
 
-oprst.close()
+if 'y' in writecont:
+    oprst = open(podir + '/posts/' + nbog + etnam, 'w')
+    oprst.write(contenmak)
+    oprst.close()
+else:
+    os.system('cp ' + jsve['filefound'] + ' ' + postsdir)
 
 
-# In[59]:
+# In[105]:
 
 opeza = open(podir + '/posts/' + nbog + '.meta', 'w')
 opeza.write(nbog + '\n' + nbog + '\n' + fultim + '\n' + tagmak)
@@ -287,15 +332,30 @@ opeza.write(nbog + '\n' + nbog + '\n' + fultim + '\n' + tagmak)
 opeza.close()
 
 
-# In[60]:
+# In[106]:
 
-os.chdir(podir)
-os.system('nikola build')
+#print (podir + '/posts/' + nbog + '.meta')
 
 
-# In[44]:
+# In[107]:
 
-bro_bot.send_tweet(nbog + ' ' + endstring + ' http://brobeur.com/blog/output/posts/' + nbog + '.html')
+#os.chdir(podir)
+#os.system('nikola build')
+
+
+# In[108]:
+
+#os.system('rsync -azP ' + postsdir + ' ' + 'wcmckee@brobeur.com:/home/wcmckee/bb/blog/posts')
+
+
+# In[110]:
+
+#bro_bot.search_tweets(ndstring)
+
+
+# In[111]:
+
+#bro_bot.send_tweet(nbog + ' ' + endstring + ' http://brobeur.com/blog/output/posts/' + nbog + '.html')
 
 
 # In[ ]:
