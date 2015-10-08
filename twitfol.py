@@ -1,6 +1,12 @@
 
 # coding: utf-8
 
+# TwitFol
+# 
+# script to send tweet from random list of subreddits containing a random submission of the subreddit.
+# 
+# Also searches twitter for something containing a hashtag of gamejams currently happening etc.
+
 # In[36]:
 
 from TwitterFollowBot import TwitterBot
@@ -8,7 +14,6 @@ import requests
 import json
 import praw
 import random
-my_bot = TwitterBot()
 
 
 # In[ ]:
@@ -16,197 +21,167 @@ my_bot = TwitterBot()
 
 
 
-# In[ ]:
+# In[37]:
+
+bb_bot = TwitterBot('/home/wcmckee/brobeur-tweet/brobeur.txt')
 
 
+# In[68]:
+
+wcm_bot = TwitterBot('/home/wcmckee/wcm-tweet/config.txt')
 
 
-# In[101]:
+# In[38]:
 
 r = praw.Reddit(user_agent='wcmckeepython')
 
 
-# In[112]:
+# In[69]:
 
-scribred = ['python', 'programming', 'web_design', 'coding', 'hacking', 'opensource', 'compsci']
+wcmsubreds = ['python', 'ipython', 'webdev', 'coding', 'databases', 'hacking', 'haskell', 'linux']
 
 
-# In[113]:
+# In[49]:
+
+scribred = ['writing', 'gaming', 'InternetIsBeautiful', 'Minecraft', 'skyrim', 'linux', 'opensource', 'wow']
+
+
+# In[70]:
+
+wcmrasub = random.choice(wcmsubreds)
+
+
+# In[71]:
+
+hashwcm = ('#' + wcmrasub)
+
+
+# In[50]:
 
 randscr = random.choice(scribred)
 
 
-# In[114]:
+# In[51]:
 
 hashse = ('#' + randscr)
 
 
-# In[115]:
-
-hashse
-
-
-# In[ ]:
-
-
-
-
-# In[116]:
+# In[52]:
 
 getnewr = r.get_subreddit(randscr)
 
 
-# In[117]:
+# In[53]:
+
+randscr
+
+
+# In[73]:
+
+getwcms = r.get_subreddit(wcmrasub)
+
+
+# In[74]:
+
+twcm = getwcms.get_random_submission()
+
+
+# In[75]:
+
+wtit = twcm.title
+
+
+# In[76]:
+
+wurl = twcm.url
+
+
+# In[77]:
+
+wcm_bot.send_tweet(wtit + ' ' + wurl + ' ' + hashwcm)
+
+
+# In[54]:
 
 #for getr in getnewr:
 #    print (getr)
 
 
-# In[118]:
+# In[55]:
 
 getrsub = getnewr.get_random_submission()
 
 
-# In[119]:
+# In[56]:
 
 gtia = getrsub.title
 
 
-# In[ ]:
-
-
-
-
-# In[120]:
+# In[57]:
 
 gurl = getrsub.url
 
 
-# In[ ]:
+# In[58]:
+
+bb.send_tweet(gtia + ' ' + gurl + ' ' + hashse)
 
 
-
-
-# In[121]:
-
-my_bot.send_tweet(gtia + ' ' + gurl + ' ' + hashse)
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[3]:
+# In[59]:
 
 #reqjok = requests.get('http://tambal.azurewebsites.net/joke/random')
 
 
-# In[4]:
+# In[60]:
 
 #jsjok = reqjok.text
 
 
-# In[5]:
+# In[61]:
 
 #dicjok = json.loads(jsjok)
 
 
-# In[ ]:
-
-
-
-
-# In[6]:
+# In[62]:
 
 #str(dicjok.values())
 
 
-# In[92]:
+# In[63]:
 
 #for dicv in dicjok.values():
 #    print (dicv)
 #    my_bot.send_tweet(dicv)
 
 
-# In[ ]:
-
-
-
-
-# In[73]:
+# In[64]:
 
 #my_bot.sync_follows()
 
 
-# In[9]:
+# In[65]:
 
 #my_bot.auto_unfollow_nonfollowers()
 
 
-# In[88]:
+# In[79]:
 
-my_bot.auto_follow_followers()
-
-
-# In[89]:
-
-mybowp = my_bot.search_tweets('wordpress')
+wcmretw = ['#ForgeConf', '#lascot15', '#code', '#programming', '#linux']
 
 
-# In[90]:
+# In[66]:
 
-mybp = mybowp['statuses'][0]['user']['screen_name']
-
-
-# In[91]:
-
-my_bot.send_tweet('@' + mybp + ' ' + 'Check out Nikola - secure and simple unlike Wordpress ' + 'https://getnikola.com/')
+tweval = ['#gamedev', '#ludumdare', '#1GAM', '#gaming', '#gta', '#uncharted', '#unity3d', ]
 
 
-# In[ ]:
+# In[78]:
+
+bbranrt = random.choice(tweval)
 
 
+# In[80]:
 
-
-# In[13]:
-
-sectalk = my_bot.search_tweets('blackhat2015')
-
-
-# In[95]:
-
-sectalk['search_metadata']
-
-
-# In[128]:
-
-sectalk['statuses'][0]
+wcretw = random.choice(wcmretw)
 
 
 # In[ ]:
@@ -214,59 +189,14 @@ sectalk['statuses'][0]
 
 
 
-# In[ ]:
+# In[67]:
+
+bb_bot.auto_rt(tweval, count = 1 )
 
 
+# In[81]:
 
-
-# In[ ]:
-
-
-
-
-# In[125]:
-
-sectalk
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[100]:
-
-my_bot.auto_follow("#hackfest")
-
-
-# In[ ]:
-
-
+wcm_bot.auto_rt(wcretw, count= 1 )
 
 
 # In[ ]:
