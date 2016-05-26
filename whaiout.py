@@ -3,52 +3,72 @@
 
 # <markdowncell>
 
-# This is the signout script that opens the xl file and fill in signout info.
+# <h3>WhaiOut</h3>
+# 
+# This is the signout script that opens the login file and fills in signout info.
 # 
 # Opens up list of signin data. This is date of sign in, time, name, and reason.
 # This is .meta. This script appends sign out data. This is signout date, signout time, and comments.
 # 
 # 8 urandom 128 keys are generated. Used these in saving the achieve, as .html, and .meta files.
+# Why not save as yr-month-day-hr-min.meta /html
+# 
+# Turn it into a Nikola blog. Three blog posts. login (whaxlu.py), logout (whaiout.py), and the result of both of them. Perhaps it
 # 
 # creates date and time mark and asks for comment
 
+# <markdowncell>
+
+# This needs rewriten to remove xl stuff opening. keep it to json and dict. 
+
 # <codecell>
 
-import xlrd
+#import xlrd
 import os
 import time
-from xlutils.copy import copy
-from xlrd import *
+#from xlutils.copy import copy
+#from xlrd import *
 import dominate
 import json
+from dominate.tags import *
+from time import strftime, gmtime
 
 # <codecell>
 
-wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+#wrkbook = xlrd.open_workbook('/home/wcmckee/whai/index.xls')
+
+# <codecell>
+
+jsopn = open('/home/wcmckee/visignsys/index.json', 'r')
+jsrdv = jsopn.read()
+
+# <codecell>
+
+jsrdv
 
 # <codecell>
 
 #print wrkbook.sheet_names()
 
-worksheet = wrkbook.sheet_by_name('visitor sign database')
-swlis = []
-num_rows = worksheet.nrows - 1
-curr_row = -1
-while curr_row < num_rows:
-    curr_row += 1
-    row = worksheet.row(curr_row)
+#worksheet = wrkbook.sheet_by_name('visitor sign database')
+#swlis = []
+#num_rows = worksheet.nrows - 1
+#curr_row = -1
+#while curr_row < num_rows:
+#    curr_row += 1
+#    row = worksheet.row(curr_row)
     #print row
-    swlis.append(row)
+#    swlis.append(row)
 
 # <codecell>
 
-valis = []
+#valis = []
 
 # <codecell>
 
-for swl in swlis[1]:
-    print swl.value
-    valis.append(swl.value)
+#for swl in swlis[1]:
+#    print swl.value
+#    valis.append(swl.value)
 
 # <codecell>
 
@@ -91,13 +111,14 @@ signkeys = signoutdic.keys()
 
 # <codecell>
 
+wha = open('/home/wcmckee/visignsys/index.json', 'a')
 
-w = copy(open_workbook('/home/wcmckee/whai/index.xls'))
-w.get_sheet(0).write(1,5, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
-w.get_sheet(0).write(1,6, time.strftime("%H:%M"))
-w.get_sheet(0).write(1,7, tiran)
+#w = copy(open_workbook('/home/wcmckee/whai/index.xls'))
+#w.get_sheet(0).write(1,5, time.strftime("%d" + "-" + "%b" + "-" + "%Y"))
+#w.get_sheet(0).write(1,6, time.strftime("%H:%M"))
+#w.get_sheet(0).write(1,7, tiran)
 
-w.save('/home/wcmckee/whai/index.xls')
+#w.save('/home/wcmckee/whai/index.xls')
 
 # <codecell>
 
@@ -108,9 +129,6 @@ indsav = ('/home/wcmckee/whai/index.html')
 opind = open(indsav, 'w')
 
 # <codecell>
-
-import dominate
-from dominate.tags import *
 
 doc = dominate.document(title=wrkbook.sheet_names())
 
@@ -158,17 +176,26 @@ trsor = tiran[0:12]
 
 # <codecell>
 
-trsor
+yearz = strftime("%y", gmtime())
+monthz = strftime("%m", gmtime())
+dayz = strftime("%d", gmtime())
+
+hurz = strftime("%H", gmtime())
+minz = strftime("%M", gmtime())
 
 # <codecell>
 
-optrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.meta', 'w')
+dform = (yearz + monthz + dayz +hurz + minz)
+
+# <codecell>
+
+optrd = open('/home/wcmckee/visignsys/posts/' + dform + '.meta', 'w')
 optrd.write(oplsav)
 optrd.close()
 
 # <codecell>
 
-jsnrd = open('/home/wcmckee/visignsys/posts/' + trsor + '.json', 'w')
+jsnrd = open('/home/wcmckee/visignsys/posts/' + dform + '.json', 'w')
 jsnrd.write(oplsav)
 jsnrd.close()
 
@@ -180,7 +207,7 @@ signindi = savpos.read()
 # <codecell>
 
 jsnaccept = signindi.replace("'", "\"")
-d = json.loads(jsnaccept)
+snoutm = json.loads(jsnaccept)
 
 # <codecell>
 

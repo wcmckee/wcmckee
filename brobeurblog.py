@@ -260,6 +260,18 @@ with doc:
 
 # <codecell>
 
+doc()
+
+# <codecell>
+
+docre = doc.
+
+# <codecell>
+
+docre
+
+# <codecell>
+
 brobeurblogpz = ('/home/wcmckee/brobeur-blog-post')
 
 # <codecell>
@@ -282,11 +294,18 @@ jsnd.close()
 
 # <codecell>
 
-wriind.write(str(doc))
+yourstring = docre.encode('ascii', 'ignore').decode('ascii')
+
+# <codecell>
+
+wriind.write(yourstring)
 
 # <codecell>
 
 wriind.close()
+
+# <codecell>
+
 
 # <codecell>
 

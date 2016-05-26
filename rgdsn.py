@@ -11,6 +11,17 @@
 # Contains artwork replies to each thread
 # 
 # This is a Python script that takes data from reddit and posts it to another subreddit. It also creates a html file with the images embed into. The images are the most recent 25 on r/redditgetsdrawn.
+# 
+# The script returns the comments from the most recent 25 posts along with the comments of comments.
+# 
+# Pandas is used to append everything into a series and DataFrame. 
+# The pandas allows youto easily append these together. 
+# 
+# get all artwork and append into reference image -> 
+# artwork. 
+# 
+# Generate sites again.
+# 
 
 # <markdowncell>
 
@@ -56,6 +67,10 @@
 #  
 # photos section: latest 25 photos submitted to redditgetsdrawn.
 # art section: latest 25 art submitted to redditgetsdrawn. 
+# 
+# cleanup code 
+# 
+# import pandas into it and removed things i dont need like dominate
 
 # <codecell>
 
@@ -70,10 +85,11 @@ import praw
 import dominate
 from dominate.tags import *
 from time import gmtime, strftime
-import nose
-import unittest
-
-# <codecell>
+#import nose
+#import unittest
+import numpy as np
+import pandas as pd
+from pandas import *
 
 # <codecell>
 
@@ -113,23 +129,35 @@ getrddraw = reddraw.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
+decict = dict()
+
+# <codecell>
+
 subz = getrddraw.get_new()
 
 # <codecell>
 
-class TestRedditFunction(unittest.TestCase):
+#class TestRedditFunction(unittest.TestCase):
     
-    def setUp(self):
-        self.seq = reddraw.get_subreddit('redditgetsdrawn')
+#    def setUp(self):
+#        self.seq = reddraw.get_subreddit('redditgetsdrawn')
         
-    def testredit(self):
-        drawnew('redditgetsdrawn') 
+#    def testredit(self):
+#        drawnew('redditgetsdrawn') 
 
 # <codecell>
 
 def drawnew(subred):
     getrdraw = reddraw.get_subreddit(subred)
     return getrdraw
+
+def apred(deciz):
+    
+    return (deciz)
+
+# <codecell>
+
+apred('omg')
 
 # <codecell>
 
@@ -144,10 +172,6 @@ rtohr = rdrws.get_controversial_from_all()
 for imgz in rtohr:
     #print imgz.selftext
     print imgz.num_comments
-
-# <codecell>
-
-rdnew = []
 
 # <codecell>
 
@@ -171,7 +195,7 @@ for uz in rdnewz:
 
 datelis = []
 refdic = {}
-rgdef = {'test': 'testvalue'}
+rgdef = dict()
 comdefz = []
 
 # <codecell>
@@ -190,6 +214,19 @@ for rdz in rdnew:
     datelis.append(rdz.author)
     comdict = {'comtxt':rdz.comments}
     rgdef.update({rdz.author: rdz.url})
+    pandic = DataFrame(rdz.json_dict)
+    decict.update({'url':rdz.url})
+    decict.update({'title':rdz.title})
+    decict.update({'ups': rdz.ups})
+    decict.update({'downs': rdz.downs})
+
+# <codecell>
+
+decict
+
+# <codecell>
+
+pandic
 
 # <codecell>
 
@@ -201,7 +238,11 @@ comply = []
 
 # <codecell>
 
-fddict = {'test': 'test'}
+fddict = dict()
+
+# <codecell>
+
+fdz.body
 
 # <codecell>
 
@@ -211,8 +252,46 @@ for comaq in comdefz:
         print fdz.author
         print fdz.created_utc
         print fdz.replies
-        fddict.update({fdz.author: fdz.body})
+        fddict.update({'combody': fdz.body})
+        fddict.update({'comauthor': fdz.author})
+        fddict.update({'comup': fdz.ups})
+        fddict.update({'comdown': fdz.downs})
+        
         comply.append(fdz.replies)
+        decict.update({'created':fdz.created_utc})
+        decict.update({'author': fdz.author})
+        decict.update({'body':fdz.body})
+        decict.update({'replies':fdz.replies})
+
+# <codecell>
+
+decict
+
+# <codecell>
+
+fddict
+
+# <codecell>
+
+qwedict = decict.items() + fddict.items()
+
+# <codecell>
+
+alldixz = dict()
+
+# <codecell>
+
+for qwpz in qwedict:
+    print qwpz
+    alldixz.update({qwpz: 'test'})
+
+# <codecell>
+
+alldixz
+
+# <codecell>
+
+qwedict
 
 # <codecell>
 
@@ -221,6 +300,14 @@ for coaz in comply:
     for coa in coaz:
         print coa.body
         print coa.author
+
+# <codecell>
+
+serz = Series(fddict)
+
+# <codecell>
+
+fddict
 
 # <codecell>
 
@@ -238,10 +325,6 @@ def extractlinks(html):
 
 # <codecell>
 
-parseText("The website google.com is often user to search the internet, I used it to discover news.ycombinator.com which in turn led me to www.paulgraham.com/articles.html")
-
-# <codecell>
-
 cydict = fddict.values()
 
 # <codecell>
@@ -255,7 +338,7 @@ chedict = {'blah': 'testing'}
 
 # <codecell>
 
-fixurl = BeautifulSoup(fddict.values())
+#fixurl = BeautifulSoup(fddict.values())
 
 # <codecell>
 
@@ -268,11 +351,19 @@ for coma in comdefz:
 
 # <codecell>
 
+getsdrdir = ('/home/wcmckee/getsdrawndotcom/')
+
+# <codecell>
+
+os.listdir(getsdrdir)
+
+# <codecell>
+
 chedict
 
 # <codecell>
 
-jsdum = json.loads(chedict)
+#jsdum = json.loads(chedict)
 
 # <codecell>
 
@@ -294,7 +385,7 @@ imcom
 
 # <codecell>
 
-fuldoc = doc.render()
+#fuldoc = doc.render()
 
 # <codecell>
 
@@ -338,48 +429,48 @@ doc.body.parent.children
 
 # <codecell>
 
-soup = BeautifulSoup(doc)
+#soup = BeautifulSoup(doc)
 
 #print(soup.prettify())
 
 # <codecell>
 
-extractlinks()
+#extractlinks()
 
 # <codecell>
 
-for imc in imcom:
-    print imc
+#for imc in imcom:
+#    print imc
 
 # <codecell>
 
-doc.body
-
-# <codecell>
-
-
-# <codecell>
-
-doc.render()
-
-# <codecell>
-
-for dicaz in doc.children:
-    print dicaz
+#doc.body
 
 # <codecell>
 
 
 # <codecell>
 
-for imz in imcom:
+#doc.render()
+
+# <codecell>
+
+#for dicaz in doc.children:
+#    print dicaz
+
+# <codecell>
+
+
+# <codecell>
+
+#for imz in imcom:
     
-    print imz
+#    print imz
 
 # <codecell>
 
-for rez in rcoms:
-    print rez
+#for rez in rcoms:
+#    print rez
     
 
 # <codecell>
@@ -387,9 +478,9 @@ for rez in rcoms:
 
 # <codecell>
 
-for rgt in rgdef.values():
-    if '.jpg' in rgt:
-        print rgt
+#for rgt in rgdef.values():
+#    if '.jpg' in rgt:
+#        print rgt
 
 # <codecell>
 
@@ -440,13 +531,17 @@ rgdir = ('/home/wcmckee/rgdrecentReference/')
 
 # <codecell>
 
+doc.render()
+
+# <codecell>
+
 os.chdir(rgdir)
 
 # <codecell>
 
-#mkindex = open('index.html', 'w')
-#mkindex.write(str(doc))
-#mkindex.close()
+mkindex = open('index.html', 'w')
+mkindex.write(str(doc))
+mkindex.close()
 
 # <codecell>
 
@@ -458,7 +553,30 @@ print strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 # <codecell>
 
-savedate = strftime("%d" + "-" + "%M" + "-" + "%Y" + "-" + "%H")
+savedate = strftime("%d" + "-" + "%m" + "-" + "%Y" + "-" + "%H")
+
+# <codecell>
+
+def timeret():
+    return strftime("%d" + "-" + "%m" + "-" + "%Y" + "-" + "%H")
+
+def givmd():
+    return str(savedate + '.md')
+
+def givdic():
+    return rgdir.replace('/', '-')
+
+# <codecell>
+
+givdic()
+
+# <rawcell>
+
+# timeret()
+
+# <codecell>
+
+givmd()
 
 # <codecell>
 
@@ -487,7 +605,7 @@ deepone
 
 # <codecell>
 
-redposts = ('/home/wcmckee/rgdrecentReference/posts')
+redposts = ('/home/wcmckee/rgdrecentReference/posts/pandas')
 
 # <codecell>
 
@@ -508,6 +626,91 @@ savinx.write(str(rgdef))
 # <codecell>
 
 savinx.close()
+
+# <codecell>
+
+deepone
+
+# <codecell>
+
+decict
+
+# <codecell>
+
+decict.update({'datehour': givmd()})
+
+# <codecell>
+
+depan = Series(decict)
+
+# <codecell>
+
+fepan = Series(fddict)
+
+# <codecell>
+
+mepan = (fepan)+(depan)
+
+# <codecell>
+
+depan
+
+# <codecell>
+
+feram = pd.DataFrame(fepan)
+
+# <codecell>
+
+fepan
+
+# <codecell>
+
+feram
+
+# <codecell>
+
+mepan
+
+# <codecell>
+
+defed = DataFrame(depan)
+
+# <codecell>
+
+#defed.append(fepan)
+
+# <codecell>
+
+depan
+
+# <codecell>
+
+fepan
+
+# <codecell>
+
+mergz = depan.append(fepan)
+
+# <codecell>
+
+mergz
+
+# <codecell>
+
+
+# <codecell>
+
+defed
+
+# <codecell>
+
+defhtml = defed.to_html()
+
+# <codecell>
+
+wrhtm = open('index.html', 'w')
+wrhtm.write(defhtml)
+wrhtm.close()
 
 # <codecell>
 

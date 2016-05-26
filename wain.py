@@ -1,16 +1,5 @@
-# -*- coding: utf-8 -*-
-# <nbformat>3.0</nbformat>
 
-# <codecell>
-
-import os
-import time
-import dominate
-import sys
-from dominate.tags import *
-import json
-
-# <markdowncell>
+# coding: utf-8
 
 # Visitor Sign System
 # 
@@ -20,8 +9,6 @@ import json
 # The script is basic. It saves the time, date, name, reason, and added in comments as an html page and json object. Archieve of past logins are saved.
 # It is split into two scripts. The first wain or whaxlu is used for the login. 
 # The second script is whaiout which is the logout script. It takes the output of wain or whaxlu and appends logout data - time, date, and comment.
-
-# <markdowncell>
 
 # Currently I use the script to sign in and out at a early learning centre that I am employed to work 2 hours a day, 5 days a week. 
 # It could be applied in any area where you want to keep a record of time, comments, 
@@ -36,12 +23,11 @@ import json
 # 
 # Generates summery
 # 
-
-# <markdowncell>
+# 
 
 # The site was live. It was running on a simple python web server but it worked. The script was exacuted by the Raspberry Pi B+ computer running Debian. Red pixels appeared on the screen, or #543243 if you want to be fussy. 
 # Luck had nothing to do with it. Testing was the key.
-# 
+# 22
 # The text had rendered. 
 # 
 # 1. Alfred Bunnings
@@ -111,20 +97,47 @@ import json
 # Janet rose from her chair.
 # 'Time for a coffee I believe', she said.
 # Janet hadn't aged a day csince Alfred met her. She had long straiht brunette hair. Light complection skin, with frekles covering her face. She wore skinny horozonal glasses that had a light blue tint. On this day she wore a long silky dress. Her black leather jacket was spread out over the back of her computer chair. 
-# On her desk sat three wireless 22 inch monitors. 
+# On her desk sat three wireless 22 inch monitors. One keyboard. One mouse. One drawing tablet. One tablet pen. 
+# Janet spent her days at work either coding or digital painting. She had the freedom to choose. If she didn't feel like painting that day, she could code instead.
+# Her paintings were quick. Nothing took more than 45 mins. She was working on a logo. 'Spike InfoSec' it read. A furry spikey character held the sign. It's long sloopy tail weiving between the rocks on the ground. The software used for the digital painting was GIMP. Like all software developed and used by Spike InfoSec it is open source and free. 
+# 
+# The dinosaur roared as Alfred held a large piece of steak. It's nose drew near and sniffed. 
+# 'Smells delicious', the dinosaur thought to itself.
+# Alfred pushed the meat closer to the dinos nostrols. It spat green slime at Alfred and turned it's back and left in a huff.
+# Jsnet hid in the bush nearby waiting for the dino to move out of sight. Alfred was covered in a green slime liquid. It had caused his body to go into shock and shutdown. 
+# Janet had to reach Alfred and reboot his system. She creeped closer to Alfreds still body. The dino sniffed the air. Janet stopped moving frozen. The dino continued walking. Janet rushed towards Alfred and grabbed his body. The Dino looked back and saw her moving away. He turned and bagan to give chase to Janet and Alfred. Scrabbambing up a tree Janet was safe from the dino. She had saved Alfred. The dino growed and circed the tree. It scratched the bark from the tree as it grew inpatienct. 
+# Janet reached for her backpack and revealed a cellphone. She dialed the number 6 3  2 1 4 5 1. Suddently the dino froze, it had been shutdown. Janet climbed down the tree, still holding onto Alfreds lifeless body. She stepped over the dinos body. Lifeless but the dino never was alive. It was another machine created to hunt her down. She had created them to help people, to make peoples lives easier. But they took her ideas and created evil. The Dark Shape was created by them. Janet never programmed her robots to kill people but others had taken the software and added kill commands. It had created great evil in the universe. 
+# 
+# The planet Earth population had dropped to just a few thousand people in a matter of days. The machines released a toxin into the oxagin which caused the humans to choke to death. It was a quick death, but it spread quickly and was extremely contagious. Within an hour of the toxin being released half of the worlds population was dead. Over the next twenty four hour it wiped out 99.9% of mankind. 
+# Some people that held a special gene were immune. These people were scattedd about the world. 
+# Research was to be taken by a group of machines loyal to the humans which wanted to restore mankind. Working together with the few remaining humans they developed a device which allowed dispursion in time. 
+# The toxic grew complex and inserted itself into the dispursion of time and then spread the mutated toxic to people in the future, where they had found a cure. This caused the cycle to happen again - 99.9% of the world population was dead in under 24 hours. 
+# The remaining human had to find a way to give the cure to a large amount of humans without the machines noticing. They relized that having the machines help them in the cure was useless. They machines would spread their knowlege of the cure to enemy machines which would then develop a mutated toxic that the cure was useless against. The humans worked on traveling back with the cure and stopping the toxic waas being created in the first place. 
+# This is their story.
+# 
+# 
 # 
 # The ground that Janet walked on was rough. Stones cut into her barefeet. The sun blinded her view, she held her arm above her eyes. Attempting to block out the rays. 
 # A figure amurged in the distance.. Squinting she made haste towards the figure. As she drew closer she noticed the figure was a copy of herself. A clone. 
 # 'You must be Janet', Janet exampled.
+# 'Yes, how do you know?', replied the machine.
+# 'Because you are a clone of myself, and my name is Janet'.
+# The machine stood still.
+# 'Do you know why I am here', Janet asked the machine.
+# 'Because you are afraid of the evils that you brought into this world', the machine spoke slowly.
+# 'You are here to find a cure', the machine went on.
+# 'But I will warn you young one, there is no cure here, only toxics', the machine collabsed to the ground covered in a green slime texture. 
 # 
 # The number generater returned Noel Locksmart, Elizebeth Goodwill, Trist Gardens, and Ali Turbon. They were inserted into the text in order. Identitys were created. Credit Cards were the main source. Creating a fake identity and building up depit, and not paying it back. 
 # Janet scanned the card. Elizebeth Goodwill it the name on the license read. Born 06/11/2014. Spike Infosec: Help Desk 4. The photo was of a straight hair brunete in her early 20s, with frekles covering her face, petite.
 # The room reveled a server room with walkways. 
-# Goodwill plugged the patch cable from the Vodafone router. Connected on the otherside was a Raspberry Pi. A green and yellow light turned on by the ethernet port. It had a network. For development and testing Elizebeth perfered to use her own network connection. 
+# Goodwill plugged the patch cable from the router. Connected on the otherside was a Raspberry Pi. A green and yellow light turned on by the ethernet port. It had a network. For development and testing Elizebeth perfered to use her own network connection. 
 # Truck skretched to a halt on the street. Three toots. Both truck doors opened and two men leaped out. They begain walking towards the propatery at the end of the street. 
-# Goodwill could hear several people moving about outside. 
+# Goodwill could hear several people moving about outside. She triggered her rewind time script. Time slipped back thirty mins. This gave her enough time to exit her home and make it to saftely before the assassians arrived again. 
 # The drone showed three people exiting the truck. Two men and a woman. As they scretched to a halt outside the house of Elizebeth Goodwill, was in fact Janet lived there. It was a setup. The house was trapped so that when they entered - they were never going to leave again. 
-# Thirty years Noel Locksmart had been a prisnor in the house. He will never forget the night. It was just a standard robbery. Locksmart had recieved word of a computer scientice by the name of Elizebeth Goodwill that had developed software that allowed the replaying of events in the past. The system was complex but started with just one script when Goodwill was just six years old. It was a login and logout script. The first script was the login script. This created a JSON object that included firstname, lastname, date (04/Nov/2014), time (hr:min), reason, and comment. The logout script added to the JSON object logout date, time, and comment. She wrote the script in the programming language Python. Her father  -  Charlie MacDonald had taught her from an early age the basics of programming. She enjoyed it so carried on. At a four year old she was involved in setting up a programming club for children. This idea spread to other towns, cities, and countries. 
+# Thirty years Noel Locksmart had been a prisnor in the house. He will never forget the night. It was just a standard robbery. Locksmart had recieved word of a computer scientice by the name of Elizebeth Goodwill that had developed software that allowed the replaying of events in the past. The system was complex but started with just one script when Goodwill was just six years old. It was a login and logout script. The first script was the login script. This created a JSON object that included firstname, lastname, date (04/Nov/2014), time (hr:min), reason, and comment. The logout script added to the JSON object logout date, time, and comment. She wrote the script in the programming language Python. Her father  -  Charlie MacDonald had taught her from an early age the basics of programming. She enjoyed it so carried on. At a four year old she was involved in setting up a programming club for children. This idea spread to other towns, cities, and countries. Goodwill would travel with her Father and give demos and talks on their software development. Goodwill went on to co-founder the software development, infomation security, robotics design company: Spike InfoSec.
+# 
+# 
 # 
 # Ali Turbon wislied as he mixed the Indian spice together. Pandora radio was playing from his bluetooth speaker. It was on the family dinner table. Next to the speaker was a nonbranded laptop running Fedora. KDE was the desktop enviorment. Firefox was open with a IPython Notebook on the screen. This window was on the left side of the monitor. On the right top side of the monitor a television show played. It was   George Benson played. 'Onions are ready to go, confirm? Y/n', a device in Turbon's left chefs jacket beeped. Turbon reached for his phone and hit enter. Three claws reached inside the cubord and picked up an onion each. The bench was a woodern bench. The claws dropped the onions on the bench then went back to the cubard to collect more onions. Several more trips back and forward then the claws switched into the next phase - cutting of the onion. The onions were lined up perfectly on the bench. Three rows, five collums. Fifteen onions. Chef knives snapped out of the claws of the device and started to cut up the onions. Each onion was cut in half, then quarters, and finally sliced. The onions were scopped up and droped into a pan of oil to fry. Once the onions were a lovely gold color they were tiped into a slow cooker. 
 # 'Carrots are ready to go, confirm? Y/n', the device The claws grabbed a orange carrot and dropped it on the bench. The same amount of carrots were used as onions. The knives cut the carrots by a slice lengthways in half, then quarters, and finally slicing. Scopped up by the claws they are dropped in a pan to be fried with oil. Once goldern the carrots are tipped into the slow cooker. Fifteen cups of soft chickpeas are tipped into the pan of oil and fried. They are tipped into the slow cooker. Fifteen medium sized tomatoes travel through the room, being griped by the claw. They are crushed and tipped into the slowcooker.  
@@ -159,6 +172,8 @@ import json
 # Turbons had to be careful of these anonous bots that were being created. Last time he did an order of curries the bot attacked him and this lab. He had yet to figure out who sent the attack bot but had captured it for tests. He had increased secutiry in order to protect himself and business. 
 # Anon Bots that enter the building are now scanned with anti-malware software to test if it had code to attack. Turbons created a white list of bots that he allows to enter. Some of these do have attack code on their system but Turbons trusted the owner that they would not attack. 
 # 'Why would people want to attack a kitchen?', was the thought going through his brain. 
+# The Police arrived quickly after recieving the emergency signal. Detective Henry Pharrs was in charge of the case. Pharrs was in his late 50s, he had been in the force for 25 year. For 8 years before joining the force he worked as a computer analizt for Spike InfoSec. Today he was investagating a robots that opened fire in a room of humans. Robots created by humans were unable to kill other humans but the robots built robots that had the kill command in the system. 
+# Pharrs had studied the kill comand in robots his whole life. His father - Johns Pharrs had studied the kill command much of his life. His Son continued to reasearch the kill command. The goal was to find a cure.
 # 
 # The door slammed behind the dark shaped as it entered the building. Three security guards stood in front. He moved forward ignoring the guards. They said nothing and didn't move. 
 # The alarm went off as the dark shape passed through the dectoror. A guard hit a switch and the alarm stopped. 
@@ -179,7 +194,7 @@ import json
 # He noticed a humon figure in the room. It was sitting in the far corner sitting at the desk typing on a keyboard.
 # 'Must be a bot, can't be human', the fighter thought to himself. He moved closed to the humanold typing. 
 # The fact it didn't stopped typing is strange. Usually an emergeny mode activates when the bots are in danger. The activates a call to authorities and begins a self-repair task.
-# The fighter sprayed the bot with anti flame powder. It contined to  type.  
+# The fighter sprayed the bot with anti flame powder. It continued to  type.  
 # 
 # Charlie MacDonald. Rest in Peace. The grave stone read. Born 24 October 2014. Died 12 December 2093. Trist Gardens stood over the grave. Tears flowing from her eyes. It had been two months since MacDonald passed away. She had worked with him for fifteen years at Spike InfoSec. Together they worked on a automatic cooking device. It was used in billions of home and businesses around the world. Spike InfoSec realeased blueprints of the device so anyone with a 3d printer can just print the device. 
 # 
@@ -198,7 +213,7 @@ import json
 # 'Kill Jones', MacDonald spoke, his eyes fixed on Jones. 
 # The knife snapped out of the claw and started  traveling towards Jones. 
 # Jones terrified started moving backwards towards the door. He turned and began running towards the door. 
-# The knife traveled faster through the air.
+# The knife traveled faster through the air.Janet Pears
 # A cracking sound shoock the room as the knife impayed the brain of Jones. His head was attached to the door. Part of the knife was impayed into the door. It was a instant death. MacDonald didn't have a choice. He was on orders from Trist Gardens. If he didn't follow through and kill his assistant his whole families lives were in danger. 
 # 'Clean this up', MacDonald spoke as he walked out of his office. 
 # He stood in the foylor. Light blue covered the area. MacDonald could see Janet in distance. She was interviewing a new comer. Alfred Bunnings his name was. MacDonald watched as Janet and Alfred shook hands and took a seat.
@@ -229,15 +244,31 @@ import json
 # Bunnings whisiled a tune as he walked past the Onion Gardens. Harvesting was excellent with the onions this year. They were experiencing a demand in onions and had increased the amount of The Claw that worked on the gardens. 
 # Bunnings entereded the carrot gardens. These parsely like vegetables added sweetness to the companies curries. Bunnings watched a The Claw plucked the carrots from the ground and dropped them in large containers. The next step for the carrots was washing, then it entered the kitchen.
 # Bunnings entereed the tomatoe gardens. Rich red tomatoes grew on the stalk. In this garden the company used humonald robots as a majority over the claw. The humonalds were given custom arms that allows for careful picking of the tomatoes. The tomatoes were dropped into containers where they were washed and moved into the kitchen. 
-# The herb gardens were next. Here coroondir and other herbs were grown for the Indian Spice Mix. 
+# The herb gardens were next. Here coroondir and other herbs were grown for the Indian Spice Mix.
+# 
+# The Resturent was where customers could come and eat, or take away curry. Open 24hour/7days. They also offered a delivery service. 
+# Humanold robots greeted the customers and showed them to their seat. 
+# If they were takeaway they offered a room to sit and read magazines/books. A room that is filled with computers - these are running 24 hours and offer swipe card assess. Security cameras and drones operate in the building to keep an eye on everything. Secuirity drones analze the cameras for any unusual activity. Tonight they had found a human bot spiking the food with toxin. Camera 532 had spoted the crime. A Claw drone spoted the activity on the monitor. Alarms had already activated. Secutiry drones and bots headed towards the area. The human bot that was spiking the food activated a self return to base mode. It caused the bot to turn invisible and extremely tiny - the size of a mouse. The bot was still able to travel at fast speeds but it was also small like a mouse, and invisible. Devices had been developed that allowed for tracking of invisible units. The Claw Drones had invisible cloaking devices build in. This allowed them to become invisible for up to 48 hours. They can enter a sleep mode that allows them to run for months without needed to land. They are able to charge themselves remotly by downloading charge off a connection. This allowed more advance space travel by allowing humans to send robots which could self repair and charge. This allowed robots leaving earth to a far away planet that took thousands of years to reach. The robots finally reached the planet and sent back message to earth on the news. It took the robots 8,500 years to reach the planet. The news took 2,500 years to arrive. The message reached Earth on December 18th 3543. The humans that sent the bots into space and to the  planet had long since extint. Some of the older robots on Earth rememberd the mission and were able to decode the news file. It gave the robots great exciment that these robots had reached the planet and news had arrived back. The Robots of Earth created a time warp portal and linked to the robots on the planet. They ere able to travel between planets instantly. For the robots it felt like they had just woken up from a sleep. They work with the robots in order to get a toxic sent back in time to wipe out a certain group of humans that later develop a toxin that wipes out the human race. The toxin that is sent back is a success but spreads to forign targets - only activating again in 6 generations. 
+# When the toxin activates the nervious system in the throat stop working, causing the person to choke to death. A similar kill program was writen for the robots. It caused the robots harddrive to corrupt spreading the corruption to other systems.
+# "I'm feeling better now", The Claw said to the humanold robot. The Claw was loading onions from the garden to the containers. These onions had been enjected with a toxin that would later cause much of the human race to die. The toxins had been placed in the onions by robots in the future with the help from a few remainings humans. Their plan was to wipeout a certain amount of humans, presuving human life in the future. Robots more in the future realized that this was a mistake and sent robots back in order to revirse the toxin.
+# The only way for the toxin to not be created was to make sure the Spike InfoSec never waas founded. Humans were sent back in order to stop the foundation. Janet Goodwill was the number one target. The humans killed Goodwill many times but each time it was a clone. If the human form of Janet Goodwill is killed then the humans can insert the toxin into her system - sending it back generations. This simple exercise causes the company Spike InfoSec to never be founded. 
+# Alfred stood outside an empty building. He looked up. He remembers there was a Spike InfoSec sign hanging here. Instead it's a old video game store mixed with a coke logo, both fading and pealing off. The glass sliding doors didnt excist. A woodern door stood in front of Alfred. He turned the handle. It opened to a small foylor that looks like it was used for a small supermarket. Old broken trolies were scatted around the room. Cobwebs covered the room. A rat scatted accross the room. Followed by a black cat. Alfred walked down the hallway - it was filled with posters from ancient movies. They were faded and pealing off the room. Behind was a light blue textured wallpaper. the ground was a grey-blue carpet. It despritly needed a clean as dirt and grime covered it. 
+# 
+# The humanolid robot monitored the children. Four children to every one humanold robot. The robots only monitored and did not interact with them. For every eight children one human teacher. Sixteen children, one support worker.
+# It was all in the math. 
+# 113
+#                                 
+# How shell this day end? 
+# 
+# on top of tht shr hda to decife to fire him for the leaking of private documents. her private key was broken 
+# 
 # 
 #  He had plans to create his own Infomation Security company.                                               
-
-# <markdowncell>
 
 # TODO
 # 
 # html page of page 100 logins/logouts - append all json as one html
+# different ways of viewing the data - current loged in, day view, 
 # 
 # graph of weekly/day hours and how they change.
 # 
@@ -248,7 +279,7 @@ import json
 # fake name encription for kids/everyone?
 # Take a name and turn into into a new name, run a script again to turn it back
 # 
-# records time when child eats/drinks
+# records time when child eats/drinks. Keeps track of childrens hunger levels. Alerts if kids havnt aten after certain time. Tag what kids eat - data over time. 
 # 
 # Sig for parents when signing in/out kids
 # 
@@ -288,27 +319,45 @@ import json
 # 
 # Panic Button. Signal to call for assistence, part-tag, allow for image/sound record. 
 # 
+# 
 
-# <codecell>
+# In[1]:
+
+import os
+import time
+import dominate
+import sys
+from dominate.tags import *
+import json
+import pandas as pd
+
+
+# Profile. Profile has data in it that is then used in sign system
+# 
+# 
+
+# In[2]:
 
 valname = ('lasnam', 'signin', 'usercom', 'dayr', 'htmn')
 
-# <codecell>
+
+# In[2]:
 
 
-# <codecell>
+
+
+# In[3]:
 
 for itzval in valname:
     print itzval
 
-# <markdowncell>
 
 # This function creates a dict, another updates it. 
 # Function is working to create it but update is coming back with error.
 # 
 # How do I refer to the created dict as the one to update?
 
-# <codecell>
+# In[4]:
 
 class DictNows():
 
@@ -318,15 +367,18 @@ class DictNows():
     def updatedict(keyvalz, othnam):
         return dictcreate.update({keyvalz: othnam})
 
-# <codecell>
+
+# In[5]:
 
 #checkdict = dictcreate('check', 'this')
 
-# <codecell>
+
+# In[6]:
 
 #checkdict
 
-# <codecell>
+
+# In[7]:
 
 def dictcreate(keyval, firnam):
     return dict({keyval: firnam})
@@ -350,57 +402,82 @@ def returan():
     
     
 
-# <codecell>
+
+# In[7]:
 
 
-# <codecell>
+
+
+# In[8]:
 
 #updatedict('omg', 'not again')
 
-# <codecell>
+
+# In[9]:
 
 returan()
 
-# <codecell>
+
+# In[10]:
 
 returntime()
 
-# <markdowncell>
 
-# DictNows.dictcreate('check')
+# In[11]:
 
-# <codecell>
+#DictNows.dictcreate('check')
+
+
+# In[12]:
 
 dictcreate('name', 'wcm')
 #updatedict()
 
-# <codecell>
+
+# In[13]:
 
 #updatedict('checking', 'this works')
 
-# <codecell>
 
-lasnam = raw_input('Last Name: ')
-firnam = raw_input('First Name: ')
-dopz = raw_input('dob: ')
-mname = ('William Mckee')
-ename = raw_input('Email: ')
-signin = raw_input('Reason: ')
-usecom = raw_input('Comments: ')
+# In[15]:
 
-# <codecell>
+newprof = raw_input('New Profile y/n: ')
+
+if 'y' in newprof:
+    lasnam = raw_input('Last Name: ')
+    firnam = raw_input('First Name: ')
+    dopz = raw_input('dob: ')
+    mname = ('William Mckee')
+    ename = raw_input('Email: ')
+    signin = raw_input('Reason: ')
+    usecom = raw_input('Comments: ')
+    
+elif 'n' in newprof:
+    lasnam = ("mckee")
+    firnam = ('First Name: ')
+    dopz = ('dob: ')
+    mname = ('William Mckee')
+    ename = ('Email: ')
+    signin = ('Reason: ')
+    usecom = ('Comments: ')
+
+
+# In[16]:
 
 #bitdict = 
 
-# <codecell>
 
-betdict = {'first-name': firnam}
+# In[17]:
 
-# <codecell>
+betdict = dict()
+
+
+# In[18]:
 
 #betdict.update({'lastname': lasnam})
 
-# <codecell>
+
+# In[19]:
 
 dayr = time.strftime("%d" + "-" + "%b" + "-" + "%Y")
 hrmn = time.strftime("%H:%M:%S")
@@ -410,53 +487,66 @@ hrmn = time.strftime("%H:%M:%S")
 betdict.update({'last-name': lasnam})
 betdict.update({'reason': signin})
 betdict.update({'signin-comment': usecom})
-betdict.update({'signin-date': dayr})
-betdict.update({'signin-hrmin': hrmn})
+betdict.update({'signin-date': returndate()})
+betdict.update({'signin-hrmin': returntime()})
 
-# <codecell>
+
+# In[20]:
 
 betdict
 
-# <codecell>
+
+# In[21]:
 
 betjsn = json.dumps(betdict)
 betjsn
 
-# <codecell>
+
+# In[22]:
 
 #for itz in updatedict():
 #    print itz
 
-# <codecell>
+
+# In[23]:
 
 opind = open('/home/wcmckee/visignsys/index.json', 'r')
 opred = opind.read()
 
-# <codecell>
+
+# In[24]:
 
 opred
 
-# <codecell>
+
+# In[25]:
 
 opjsnd = json.dumps(opred)
 
-# <codecell>
+
+# In[26]:
 
 str(opjsnd)
 
-# <codecell>
+
+# In[26]:
 
 
-# <codecell>
+
+
+# In[27]:
 
 #json.load(opred)
 
-# <codecell>
+
+# In[27]:
 
 
-# <codecell>
 
-# -*- coding: utf-8 -*-
+
+# In[28]:
+
+
 # <nbformat>3.0</nbformat>
 
 # <markdowncell>
@@ -550,6 +640,50 @@ savpos.close()
 
 print ('sign in complete')
 
-# <codecell>
+
+# In[29]:
+
+reser = pd.Series(opred)
+
+
+# In[30]:
+
+#pd.DataFrame(reser)
+
+
+# In[31]:
+
+rezda = []
+
+
+# In[32]:
+
+for res in reser:
+    print res
+    rezda.append(res)
+
+
+# In[33]:
+
+rezda
+
+
+# In[34]:
+
+len(rezda)
+
+
+# In[34]:
+
+
+
+
+# In[32]:
+
+
+
+
+# In[ ]:
+
 
 

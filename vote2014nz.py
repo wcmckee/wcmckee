@@ -14,9 +14,9 @@
 
 # <codecell>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ````````````````````````````````````````````````````````````````````````````````````````````````````````import requests
 from bs4 import BeautifulSoup
 import dominate
+import requests
 
 # <codecell>
 
@@ -129,17 +129,6 @@ soup.find_all('tr')
 # <codecell>
 
 X
-
-# <headingcell level=1>
-
-# TODO:
-#     
-
-# <codecell>
-
-
-# <codecell>
-
 
 # <codecell>
 
