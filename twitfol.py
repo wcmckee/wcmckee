@@ -7,7 +7,7 @@
 # 
 # Also searches twitter for something containing a hashtag of gamejams currently happening etc.
 
-# In[36]:
+# In[1]:
 
 from TwitterFollowBot import TwitterBot
 import requests
@@ -16,92 +16,212 @@ import praw
 import random
 
 
+# In[2]:
+
+#bb_bot = TwitterBot('/home/wcmckee/brobeur-tweet/brobeur.txt')
+
+
+# In[102]:
+
+wcm_bot = TwitterBot('/home/pi/bro-tweet/config.txt')
+
+
+# In[103]:
+
+r = praw.Reddit(user_agent='wcmckeepython')
+
+
+# In[104]:
+
+wcmretw = ['#gamedev', '#ludumdare', '#android', '#gaming', '#pokemon', '#uncharted', '#unity3d']
+
+
+# In[105]:
+
+randhab = random.choice(wcmretw)
+
+
 # In[ ]:
 
 
 
 
-# In[37]:
+# In[ ]:
 
-bb_bot = TwitterBot('/home/wcmckee/brobeur-tweet/brobeur.txt')
-
-
-# In[68]:
-
-wcm_bot = TwitterBot('/home/wcmckee/wcm-tweet/config.txt')
+wcmbots = wcm_bot.search_tweets(randhab, count=1)
 
 
-# In[38]:
+# In[83]:
 
-r = praw.Reddit(user_agent='wcmckeepython')
-
-
-# In[69]:
-
-wcmsubreds = ['python', 'ipython', 'webdev', 'coding', 'databases', 'hacking', 'haskell', 'linux']
+wcmbots['search_metadata']
 
 
-# In[49]:
-
-scribred = ['writing', 'gaming', 'InternetIsBeautiful', 'Minecraft', 'skyrim', 'linux', 'opensource', 'wow']
+# In[ ]:
 
 
-# In[70]:
+
+
+# In[84]:
+
+mylist = list()
+hashlist = list()
+
+
+# In[85]:
+
+mylist.append(wcmbots['statuses'])
+
+
+# In[86]:
+
+for myl in mylist:
+    myle = len(myl[0]['entities']['hashtags'])
+    for mya in range(myle):
+        print(myl[0]['entities']['hashtags'][mya]['text'])
+        hashlist.append((myl[0]['entities']['hashtags'][mya]['text']))
+
+
+# In[87]:
+
+hashlist
+
+
+# In[98]:
+
+hashlist
+
+
+# In[5]:
+
+wcmsubreds = ['writing', 'gaming', 'InternetIsBeautiful', 'Minecraft', 'skyrim', 'linux', 'opensource', 'warcraft']
+
+
+# In[6]:
+
+#scribred = ['writing', 'gaming', 'InternetIsBeautiful', 'Minecraft', 'skyrim', 'linux', 'opensource', 'warcraft']
+
+
+# In[7]:
 
 wcmrasub = random.choice(wcmsubreds)
 
 
-# In[71]:
+# In[8]:
 
 hashwcm = ('#' + wcmrasub)
 
 
-# In[50]:
+# In[9]:
 
-randscr = random.choice(scribred)
-
-
-# In[51]:
-
-hashse = ('#' + randscr)
+#randscr = random.choice(scribred)
 
 
-# In[52]:
+# In[10]:
 
-getnewr = r.get_subreddit(randscr)
-
-
-# In[53]:
-
-randscr
+#hashse = ('#' + randscr)
 
 
-# In[73]:
+# In[11]:
+
+#getnewr = r.get_subreddit(randscr)
+
+
+# In[12]:
+
+#randscr
+
+
+# In[13]:
 
 getwcms = r.get_subreddit(wcmrasub)
 
 
-# In[74]:
+# In[14]:
+
+getwcms
+
+
+# In[15]:
 
 twcm = getwcms.get_random_submission()
 
 
-# In[75]:
+# In[16]:
 
 wtit = twcm.title
 
 
-# In[76]:
+# In[83]:
 
 wurl = twcm.url
 
 
-# In[77]:
+# In[84]:
 
-wcm_bot.send_tweet(wtit + ' ' + wurl + ' ' + hashwcm)
+wjson = twcm.json_dict
 
 
-# In[54]:
+# In[86]:
+
+wurl
+
+
+# In[87]:
+
+hashpy = ('#{}'.format(wcmrasub))
+
+
+# In[88]:
+
+sublen = len(hashpy)
+
+
+# In[89]:
+
+sublen
+
+
+# In[90]:
+
+matot = 139 - sublen
+
+
+# In[91]:
+
+matot
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+
+
+
+# In[ ]:
+
+#wcmsendtw = wcm_bot.send_tweet('{} {} {}'.format(wtit, wurl, hashwcm)) 
+
+
+# In[ ]:
+
+
+
+
+# In[25]:
+
+#wcm_bot.send_tweet(wtit + ' ' + wurl + ' ' + hashwcm)
+
+
+# In[26]:
 
 #for getr in getnewr:
 #    print (getr)
@@ -109,22 +229,22 @@ wcm_bot.send_tweet(wtit + ' ' + wurl + ' ' + hashwcm)
 
 # In[55]:
 
-getrsub = getnewr.get_random_submission()
+#getrsub = getnewr.get_random_submission()
 
 
 # In[56]:
 
-gtia = getrsub.title
+#gtia = getrsub.title
 
 
 # In[57]:
 
-gurl = getrsub.url
+#gurl = getrsub.url
 
 
 # In[58]:
 
-bb.send_tweet(gtia + ' ' + gurl + ' ' + hashse)
+#bb.send_tweet(gtia + ' ' + gurl + ' ' + hashse)
 
 
 # In[59]:
@@ -164,24 +284,24 @@ bb.send_tweet(gtia + ' ' + gurl + ' ' + hashse)
 #my_bot.auto_unfollow_nonfollowers()
 
 
-# In[79]:
+# In[52]:
 
-wcmretw = ['#ForgeConf', '#lascot15', '#code', '#programming', '#linux']
+ranhash = random.choice(hashlist)
 
 
 # In[66]:
 
-tweval = ['#gamedev', '#ludumdare', '#1GAM', '#gaming', '#gta', '#uncharted', '#unity3d', ]
+#tweval = ['#gamedev', '#ludumdare', '#1GAM', '#gaming', '#gta', '#uncharted', '#unity3d', ]
 
 
 # In[78]:
 
-bbranrt = random.choice(tweval)
+#bbranrt = random.choice(tweval)
 
 
-# In[80]:
+# In[53]:
 
-wcretw = random.choice(wcmretw)
+wcretw = random.choice(ranhash)
 
 
 # In[ ]:
@@ -189,12 +309,12 @@ wcretw = random.choice(wcmretw)
 
 
 
-# In[67]:
+# In[54]:
 
-bb_bot.auto_rt(tweval, count = 1 )
+#bb_bot.auto_rt(tweval, count = 1 )
 
 
-# In[81]:
+# In[55]:
 
 wcm_bot.auto_rt(wcretw, count= 1 )
 
